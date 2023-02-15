@@ -1,4 +1,7 @@
-/* Bootstrap tools */
+/* Google Fonts | Omonjon */
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&display=swap');
+
+/* Bootstrap tools | Omonjon */
 * {
     margin: 0;
     padding: 0;
@@ -63,6 +66,16 @@
     z-index: 10;
 }
 
-.outline-none{
+input,
+button {
     outline: none;
+}
+
+li,
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
 }
