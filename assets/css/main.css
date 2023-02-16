@@ -8,12 +8,6 @@
     box-sizing: border-box;
 }
 
-body{
-    font-family: 'Arimo', 'sans-serif';
-    font-weight: 400;
-    font-size: 16px;
-}
-
 :root {
     --title-color: #2E3038;
     --title-color-light: #121212;
@@ -72,46 +66,16 @@ body{
     z-index: 10;
 }
 
-.fs-6{
-    font-size: 16px;
-}
-
-.fs-7{
-    font-size: 14px;
-}
-
-.transition{
-    transition: .4s;
-}
-
-.fs-title{
- font-size: 36px;
-
-}.fs-title-sec{
- font-size: 26px;
-}
-
 input,
 button {
     outline: none;
 }
 
 li,
-ul,
-ol{
+ul {
     list-style: none;
-    padding: 0;
 }
 
 a {
     text-decoration: none;
-}
-
-
-
-/* Header */
-.nav-link:hover,
-.nav-link:focus{
-    color: var(--title-color);
-    border-bottom: 1px solid var(--bs-primary);
 }
