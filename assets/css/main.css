@@ -90,8 +90,10 @@ button {
 }
 
 li,
-ul {
+ul,
+ol{
     list-style: none;
+    padding: 0;
 }
 
 a {
