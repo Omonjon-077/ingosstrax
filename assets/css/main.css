@@ -11,6 +11,17 @@
     --text-color: #9DA1AF;
 }
 
+a,a:hover {
+    text-decoration: none;
+}
+
+
+h1,h2,h3,h4,h5,h6,p,label,ul,li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
 .title-color {
     color: var(--title-color);
 }
@@ -65,4 +76,57 @@
 
 .outline-none{
     outline: none;
+}
+
+
+<!*****--================ SEARCH LINKS | Sirojiddin ================*****-->
+
+.margin-top {
+    margin-top: 140px;
+}
+
+.bg-src {
+    background: #F7F7F7;
+    border-radius: 20px;
+    padding: 31px 102px 51px 103px;
+}
+
+.p4 {
+    padding: 4px;
+}
+.h-58 {
+    height: 58px;
+}
+
+.src_btn {
+    background: #B9BCC6;
+    border-radius: 8px;
+    padding: 13px 48px;
+    color: #fff;
+}
+
+.search-wrapper form input[type=search]::placeholder{
+    color: #9DA1AF;
+    opacity: 0.7;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 130%;
+}
+
+.search-wrapper .form-control:focus {
+    border: none;
+    box-shadow: none;
+}
+
+.search_links a {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #165AB7;
+    border-bottom: 1px dashed #165AB7;
+    margin-left: 28px;
+}
+
+.search_links a:nth-last-child(2){
+    margin-left: 0;
 }
