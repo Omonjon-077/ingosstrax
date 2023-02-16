@@ -84,6 +84,13 @@ body{
     transition: .4s;
 }
 
+.fs-title{
+ font-size: 36px;
+
+}.fs-title-sec{
+ font-size: 26px;
+}
+
 input,
 button {
     outline: none;
