@@ -2,106 +2,254 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--================ DESCRIPTION | Omonjon ================-->
-    <meta name="description" content="ИНГОССТРАХ Страховой компании">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--================ DESCRIPTION | Omonjon ================-->
+  <meta name="description" content="ИНГОССТРАХ Страховой компании">
 
-    <!--================ SWIPER CSS 8.1.1v | Omonjon ================-->
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <!--================ BOX ICONS CSS 2.1.4v | Omonjon ================-->
+  <link rel="stylesheet" href="assets/css/boxicons.min.css">
 
-    <!--================ BOOTSTRAP CSS 5.3v | Omonjon ================-->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <!--================ SWIPER CSS 8.1.1v | Omonjon ================-->
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
 
-    <!--================ STYLE CSS | Omonjon ================-->
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/breakpoints.css">
-    <title>Ingosstrax</title>
+  <!--================ BOOTSTRAP CSS 5.3v | Omonjon ================-->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+  <!--================ STYLE CSS | Omonjon ================-->
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/breakpoints.css">
+  <title>Ingosstrax</title>
 </head>
 
 <body>
+<!--==================== LOADER | Omonjon ====================-->
+<div class="load" id="load">
+  <lottie-player autoplay loop mode="normal" src="assets/jsons/loader.json" class="load-gif">
+  </lottie-player>
+</div>
 
-    <!--==================== HEADER | Omonjon ====================-->
-    <header class="header" id="header">
-            <nav class="navbar navbar-expand-lg">
-             <nav class="navbar navbar-expand-lg">
-                <div class="container border-bottom">
-                    <a class="navbar-brand" href="#"><img src="assets/images/logo.png" class="w-100 h-100" alt=""></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse d-lg-flex align-items-lg-center justify-content-lg-between" id="navbarNavAltMarkup">
-                        <div class="navbar-nav ms-lg-5 ps-lg-3">
-                            <a class="nav-link text-color p-2 me-4 fs-7 transition" href="#">Клиентам</a>
-                            <a class="nav-link text-color p-2 me-4 fs-7 transition" href="#">Бизнесу</a>
-                            <a class="nav-link text-color p-2 me-4 fs-7 transition" href="#">Агентам</a>
-                            <a class="nav-link text-color p-2 fs-7 transition" href="#">VIP</a>
-                        </div>
-                        <div class="nav-top">
-                            <a class="text-color p-2 fs-7 transition me-3" href="#"><span class="me-2"><img src="assets/images/icons/location.svg" alt=""></span>Офисы</a>
-                            <a class="text-color p-2 fs-7 transition me-3" href="#">Поддержка</a>
-<!--                            <a class="p-2 fs-7 transition" href="#">Агентам</a>-->
-                            <a class="text-color p-2 fs-7 transition" href="#"><span class="me-2"><img src="assets/images/icons/person.svg" alt=""></span>Константин...</a>
-                        </div>
-                    </div>
+<!--==================== HEADER | Omonjon ====================-->
+  <header class="header" id="header">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container border-bottom">
+        <a class="navbar-brand" href="#"><img src="assets/images/logo.png" class="w-100 h-100" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-lg-flex align-items-lg-center justify-content-lg-between"
+          id="navbarNavAltMarkup">
+          <div class="navbar-nav ms-lg-5 ps-lg-3">
+            <a class="nav-link text-color p-2 me-4 fs-7 transition" href="#" style="padding: 0.7rem !important;">Клиентам</a>
+            <a class="nav-link text-color p-2 me-4 fs-7 transition" href="#" style="padding: 0.7rem !important;">Бизнесу</a>
+            <a class="nav-link text-color p-2 me-4 fs-7 transition" href="#" style="padding: 0.7rem !important;">Агентам</a>
+            <a class="nav-link text-color p-2 fs-7 transition" href="#" style="padding: 0.7rem !important;">VIP</a>
+          </div>
+          <div class="nav-top d-flex align-items-center justify-content-center">
+            <a class="text-color p-2 fs-7 transition me-3" href="#"><span class="me-2"><img
+                  src="assets/images/icons/location.svg" alt=""></span>Офисы</a>
+            <a class="text-color p-2 fs-7 transition me-3" href="#">Поддержка</a>
+            <div class="d-flex align-items-center me-3">
+              <a class="dropdown-item w-auto noDefalult" href="#">
+                <div class="position-relative z-index-9 darkmode">
+                  <input type="checkbox" id="toggleThemeMode" class="mode__theme"/>
+                  <label class="label" for="toggleThemeMode"></label>
                 </div>
-            </nav>
-            <nav class="nav-bottom">
-                <div class="container">
-                    <div class="d-lg-flex align-items-lg-center justify-content-lg-between">
-                        <ul class="nav-list d-lg-flex align-items-lg-center">
-                            <a href="#" class="nav-link text-color pt-2 pb-2 me-lg-4">Авто</a>
-                            <a href="#" class="nav-link text-color pt-2 pb-2 me-lg-4">Путешествие</a>
-                            <a href="#" class="nav-link text-color pt-2 pb-2 me-lg-4">Имущество</a>
-                            <a href="#" class="nav-link text-color pt-2 pb-2 me-lg-4">Здоровье</a>
-                            <a href="#" class="nav-link text-color pt-2 pb-2 me-lg-4">Другие продукты</a>
-                            <a href="#" class="nav-link text-color pt-2 pb-2 me-lg-4">Все сервисы</a>
-                            <a href="#" class="text-color pt-2 pb-2"><img src="assets/images/icons/src.svg"></a>
-                        </ul>
-                        <a href="#" class="text-primary ms-2"><img src="assets/images/icons/warning.svg" alt=""> Страховой случай</a>
-                    </div>
-                </div>
-
-            </nav>
-    </header>
-
-    <!--================ NEWS COMPANY | Sobirovs ================-->
-
-<section>
-    <div class="container-xl">
-        <h4>Новости компании</h4>
-        <div class="d-flex justify-content-between">
-            <div class="card" style="width: 22rem;">
-                <div class="card-body">
-                  <h5 class="card-title">Взлёт 20%</h5>
-                  <p class="card-text">Сборы «Ингосстраха»
-                    в Приволжье в 1 полугодии 2021 года выросли на 20%</p>
-                  <a href="#" class="card-link text-primary">Подробнее</a>
-                  <a href="#" class="card-link">Another link</a>
-                </div>
-              </div>
-            <div class="card" style="width: 22rem;">
-                <div class="card-body">
-                  <h5 class="card-title">Выросли на 20%</h5>
-                  <p class="card-text">Сборы «Ингосстраха»
-                    в Приволжье в 1 полугодии 2021 года выросли на 20%</p>
-                  <a href="#" class="card-link">Подробнее</a>
-                  <a href="#" class="card-link">Another link</a>
-                </div>
-              </div>
-            <div class="card" style="width: 22rem;">
-                <div class="card-body">
-                  <h5 class="card-title">Сборы «Ингосстраха» </h5>
-                  <p class="card-text">Сборы «Ингосстраха»
-                    в Приволжье в 1 полугодии 2021 года выросли на 20%</p>
-                  <a href="#" class="card-link">Подробнее</a>
-                  <a href="#" class="card-link">Another link</a>
-                </div>
-              </div>
+              </a>
+            </div>
+            <a class="text-color p-2 fs-7 transition" href="#"><span class="me-2"><img
+                  src="assets/images/icons/person.svg" alt=""></span>Константин...</a>
+          </div>
         </div>
+      </div>
+    </nav>
+    <nav class="nav-bottom">
+      <div class="container">
+        <div class="d-lg-flex align-items-lg-center justify-content-lg-between">
+          <ul class="nav-list d-lg-flex align-items-lg-center">
+            <a href="#" class="nav-link text-color pt-2 pb-2 me-lg-4">Авто</a>
+            <a href="#" class="nav-link text-color pt-2 pb-2 me-lg-4">Путешествие</a>
+            <a href="#" class="nav-link text-color pt-2 pb-2 me-lg-4">Имущество</a>
+            <a href="#" class="nav-link text-color pt-2 pb-2 me-lg-4">Здоровье</a>
+            <a href="#" class="nav-link text-color pt-2 pb-2 me-lg-4">Другие продукты</a>
+            <a href="#" class="nav-link text-color pt-2 pb-2 me-lg-4">Все сервисы</a>
+            <a href="#" data-bs-toggle="modal" data-bs-target="#headerSearch" class="search-action text-color pt-2 pb-2 d-flex align-items-center"><img src="assets/images/icons/src.svg" alt=""></a>
+          </ul>
+          <a href="#" class="text-primary d-flex align-items-center"><img class="me-2" src="assets/images/icons/warning.svg" alt=""> Страховой случай</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!--================ INTRO | Omonjon ================-->
+  <section class="intro-section mt-5 mb-5" id="introSection">
+    <div class="container">
+      <div class="tabs-general rounded-5">
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane fade bg-danger rounded-top show active" id="pills-osago" role="tabpanel" aria-labelledby="pills-osago-tab" tabindex="0">
+            <div class="d-flex align-items-lg-center justify-content-lg-between h-for-intro">
+              <div class="d-flex flex-column align-content-lg-start ps-5 ms-4">
+                <h1 class="title-color mb-3 fw-bolder">ОСАГО</h1>
+                <p class="title-color-light mb-4 w-75">
+                  Узнайте стоимость полиса за 10 секунд
+                  и оформите онлайн
+                </p>
+                <form action="" class="form-control d-flex mb-3">
+                  <div class="flex-column position-relative w-100">
+                    <label for="check_number" class="text-color position-relative z-index-2">Регистрационный номер</label>
+                    <input type="text" class="border-none title-color-light pt-4 pe-2 position-absolute bottom-0 start-0 h-100 w-100" id="check_number" required placeholder="A 000 AA 000">
+                  </div>
+                  <button class="bg-primary text-white rounded-2 border-none w-auto ms-auto">
+                    <img src="assets/images/icons/right_arrow.svg" class="py-75rem px-75rem h-42px w-42px" alt="">
+                  </button>
+                </form>
+                <a href="#" class="card-link d-flex text-primary">У меня нет номера</a>
+              </div>
+              <div class="d-flex">
+                <img src="assets/images/car-osago.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade rounded-top bg-warning" id="pills-travel" role="tabpanel" aria-labelledby="pills-travel-tab" tabindex="0">
+            <div class="d-flex align-items-lg-center justify-content-lg-between h-for-intro">
+              <div class="d-flex flex-column align-content-lg-start ps-5 ms-4">
+                <h1 class="title-color mb-3 fw-bolder">Страхование для путешественников</h1>
+                <p class="title-color-light mb-4 w-100">
+                  Введите данные и рассчитайте стоимость полиса онлайн
+                </p>
+                <form action="" class="form-control d-flex mb-3">
+                  <div class="flex-column">
+                    <div class="flex-column position-relative w-100">
+                      <label for="check_number2" class="text-color position-relative z-index-2">Регистрационный номер</label>
+                      <input type="text" class="border-none title-color-light pt-4 pe-2 position-absolute bottom-0 start-0 h-100 w-100" id="check_number2" required placeholder="A 000 AA 000">
+                    </div>
+                  </div>
+                  <button class="bg-primary text-white rounded-2 border-none ms-auto">
+                    <img src="assets/images/icons/right_arrow.svg" class="py-3 px-3" alt="">
+                  </button>
+                </form>
+              </div>
+              <div class="d-flex">
+                <img src="assets/images/travel.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade rounded-top bg-info" id="pills-kasko" role="tabpanel" aria-labelledby="pills-kasko-tab" tabindex="0">
+            <div class="d-flex align-items-lg-center justify-content-lg-between h-for-intro">
+              <div class="d-flex flex-column align-content-lg-start ps-5 ms-4">
+                <h1 class="title-color mb-3 fw-bolder">Каско онлайн</h1>
+                <p class="title-color-light mb-4 w-75">
+                  Узнайте стоимость за 2 минуты
+                  и оформите полис без визита в офис
+                </p>
+                <form action="" class="form-control d-flex mb-3">
+                  <div class="flex-column position-relative w-100">
+                    <label for="check_number3" class="text-color position-relative z-index-2">Регистрационный номер</label>
+                    <input type="text" class="border-none title-color-light pt-4 pe-2 position-absolute bottom-0 start-0 h-100 w-100" id="check_number3" required placeholder="A 000 AA 000">
+                  </div>
+                  <button class="bg-primary text-white rounded-2 border-none ms-auto">
+                    <img src="assets/images/icons/right_arrow.svg" class="py-3 px-3" alt="">
+                  </button>
+                </form>
+                <a href="#" class="card-link d-flex text-primary">У меня нет номера</a>
+              </div>
+              <div class="d-flex">
+                <img src="assets/images/car-kasko.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade rounded-top bg-success" id="pills-ipoteka" role="tabpanel" aria-labelledby="pills-ipoteka-tab" tabindex="0">
+            <div class="d-flex align-items-lg-center justify-content-lg-between h-for-intro">
+              <div class="d-flex flex-column align-content-lg-start ps-5 ms-4">
+                <h1 class="title-color mb-3 fw-bolder">Ипотечное страхование</h1>
+                <p class="title-color-light mb-4 w-100">
+                  Введите данные и рассчитайте стоимость полиса онлайн
+                </p>
+                <form action="" class="form-control d-flex mb-3">
+                  <div class="flex-column position-relative w-100">
+                    <label for="check_number4" class="text-color position-relative z-index-2">Регистрационный номер</label>
+                    <input type="text" class="border-none title-color-light pt-4 pe-2 position-absolute bottom-0 start-0 h-100 w-100" id="check_number4" required placeholder="A 000 AA 000">
+                  </div>
+                  <button class="bg-primary text-white rounded-2 border-none ms-auto">
+                    <img src="assets/images/icons/right_arrow.svg" class="py-3 px-3" alt="">
+                  </button>
+                </form>
+              </div>
+              <div class="d-flex">
+                <img src="assets/images/ipoteka.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <ul class="nav nav-pills position-relative" id="pills-tab" role="tablist">
+          <li class="nav-item rounded-start-0 h-100 bg-white bg-danger position-absolute z-index-4 start-0 border rounded-3 border-1 w-27 active"  role="presentation">
+            <button class="nav-link h-100 w-100 bg-transparent text-color d-flex flex-column ps-5 active" id="pills-osago-tab" data-bs-toggle="pill" data-bs-target="#pills-osago" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+              <span class="fs-8 fw-bolder pt-2">ОСАГО</span>
+              <p class="text-start pb-3">Помощь при ДТП 24/7</p>
+            </button>
+          </li>
+          <li class="nav-item h-100 bg-white position-absolute z-index-3 start-25 border rounded-3 border-1 w-27" role="presentation">
+            <button class="nav-link h-100 w-100 bg-transparent text-color d-flex flex-column ps-5" id="pills-travel-tab" data-bs-toggle="pill" data-bs-target="#pills-travel" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+              <span class="fs-8 fw-bolder pt-2">Путешествия</span>
+              <p class="text-start pb-3">Для любых видов виз</p>
+            </button>
+          </li>
+          <li class="nav-item h-100 bg-white position-absolute z-index-2 start-50 border rounded-3 border-1 w-27" role="presentation">
+            <button class="nav-link h-100 w-100 bg-transparent text-color d-flex flex-column ps-5" id="pills-kasko-tab" data-bs-toggle="pill" data-bs-target="#pills-kasko" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">
+              <span class="fs-8 fw-bolder pt-2">Каско</span>
+              <p class="text-start pb-3">Направление на ремонт за час</p>
+            </button>
+          </li>
+          <li class="nav-item rounded-end-0 h-100 bg-white position-absolute z-index-1 border rounded-3 border-1 w-27 end-0" role="presentation">
+            <button class="nav-link h-100 w-100 bg-transparent text-color d-flex flex-column ps-5" id="pills-ipoteka-tab" data-bs-toggle="pill" data-bs-target="#pills-ipoteka" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">
+              <span class="fs-8 fw-bolder pt-2">Ипотека</span>
+              <p class="text-start pb-3">Решение о страховании за день</p>
+            </button>
+          </li>
+        </ul>
+      </div>
     </div>
-</section>
+  </section>
+
+
+  <!--================ NEWS COMPANY | Sobirovs ================-->
+
+  <section>
+    <div class="container-xl">
+      <h4>Новости компании</h4>
+      <div class="d-flex justify-content-between">
+        <div class="card" style="width: 22rem;">
+          <div class="card-body">
+            <h5 class="card-title">Взлёт 20%</h5>
+            <p class="card-text">Сборы «Ингосстраха»
+              в Приволжье в 1 полугодии 2021 года выросли на 20%</p>
+            <a href="#" class="card-link text-primary">Подробнее</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
+        <div class="card" style="width: 22rem;">
+          <div class="card-body">
+            <h5 class="card-title">Выросли на 20%</h5>
+            <p class="card-text">Сборы «Ингосстраха»
+              в Приволжье в 1 полугодии 2021 года выросли на 20%</p>
+            <a href="#" class="card-link">Подробнее</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
+        <div class="card" style="width: 22rem;">
+          <div class="card-body">
+            <h5 class="card-title">Сборы «Ингосстраха» </h5>
+            <p class="card-text">Сборы «Ингосстраха»
+              в Приволжье в 1 полугодии 2021 года выросли на 20%</p>
+            <a href="#" class="card-link">Подробнее</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
 
@@ -114,17 +262,54 @@
 
 
 
-    <!--================ SWIPER JS 8.1.1v | Omonjon ================-->
-    <script src="assets/js/swiper-bundle.min.js"></script>
 
-    <!--================ BOOTSTRAP JS 5.3.1v | Omonjon ================-->
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
 
-    <!--================ SWIPER JS 3.6.3v | Omonjon ================-->
-    <script src="assets/js/jquery-3.6.3.js"></script>
+  <!--================ BOOTSTRAP MODALS | Omonjon ================-->
+  <div class="modal fade modal-shortcut" id="headerSearch" tabindex="-1" aria-labelledby="headerSearchLabel"
+       aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 text-black" id="headerSearchLabel">Поиск</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="d-flex py-4" role="search">
+            <input class="search-action-input form-control me-2 box-shodow" required type="search"
+                   placeholder="Поиск..." aria-label="Search">
+            <button class="btn d-flex justify-content-center align-items-center btn-outline-primary rounded-2 d-inline-block rounded-3 text-uppercase fs-5 fw-bold"
+                    type="submit"><svg width="17" height="17" viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M7.38271 1.33387C4.0423 1.33387 1.33436 4.04181 1.33436 7.38222C1.33436 10.7226 4.0423 13.4306 7.38271 13.4306C10.7231 13.4306 13.4311 10.7226 13.4311 7.38222C13.4311 4.04181 10.7231 1.33387 7.38271 1.33387ZM0.786426 7.38222C0.786426 3.73919 3.73968 0.785937 7.38271 0.785937C11.0257 0.785937 13.979 3.73919 13.979 7.38222C13.979 9.11412 13.3115 10.6901 12.2198 11.867C12.2557 11.8803 12.2893 11.9014 12.3182 11.9302L16.0062 15.6182C16.1132 15.7252 16.1132 15.8987 16.0062 16.0057C15.8992 16.1127 15.7257 16.1127 15.6187 16.0057L11.9307 12.3177C11.9019 12.2888 11.8808 12.2552 11.8675 12.2193C10.6906 13.311 9.11461 13.9785 7.38271 13.9785C3.73968 13.9785 0.786426 11.0252 0.786426 7.38222Z" fill="#9DA1AF"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.680176 7.38222C0.680176 3.68051 3.681 0.679688 7.38271 0.679688C11.0844 0.679688 14.0852 3.68051 14.0852 7.38222C14.0852 9.09628 13.4417 10.6603 12.3832 11.8454C12.3866 11.8485 12.39 11.8518 12.3933 11.8551L16.0813 15.5431C16.2298 15.6916 16.2298 15.9323 16.0813 16.0808C15.9328 16.2293 15.6921 16.2293 15.5436 16.0808L11.8556 12.3928C11.8523 12.3895 11.849 12.3861 11.8459 12.3827C10.6608 13.4412 9.09677 14.0847 7.38271 14.0847C3.681 14.0847 0.680176 11.0839 0.680176 7.38222ZM7.38271 0.892187C3.79836 0.892187 0.892676 3.79787 0.892676 7.38222C0.892676 10.9666 3.79836 13.8722 7.38271 13.8722C9.08677 13.8722 10.6372 13.2156 11.7953 12.1414C11.8213 12.1173 11.8577 12.1077 11.8922 12.116C11.9267 12.1242 11.9548 12.1491 11.9672 12.1824C11.9753 12.2042 11.9881 12.2248 12.0058 12.2425L15.6939 15.9306C15.7594 15.9961 15.8656 15.9961 15.9311 15.9306C15.9965 15.8651 15.9965 15.7589 15.9311 15.6934L12.243 12.0054C12.2252 11.9876 12.2047 11.9748 12.1829 11.9667C12.1496 11.9543 12.1247 11.9262 12.1165 11.8917C12.1082 11.8572 12.1178 11.8208 12.1419 11.7948C13.2161 10.6367 13.8727 9.08628 13.8727 7.38222C13.8727 3.79787 10.9671 0.892187 7.38271 0.892187ZM7.38271 1.44012C4.10098 1.44012 1.44061 4.10049 1.44061 7.38222C1.44061 10.6639 4.10098 13.3243 7.38271 13.3243C10.6644 13.3243 13.3248 10.6639 13.3248 7.38222C13.3248 4.10049 10.6644 1.44012 7.38271 1.44012ZM1.22811 7.38222C1.22811 3.98313 3.98362 1.22762 7.38271 1.22762C10.7818 1.22762 13.5373 3.98313 13.5373 7.38222C13.5373 10.7813 10.7818 13.5368 7.38271 13.5368C3.98362 13.5368 1.22811 10.7813 1.22811 7.38222Z" fill="#9DA1AF"/>
+            </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <!--================ MAIN JS | Omonjon ================-->
-    <script src="assets/js/main.js"></script>
+
+
+
+
+
+
+
+<!--================ SWIPER JS 3.6.3v | Omonjon ================-->
+<script src="assets/js/jquery-3.6.3.js"></script>
+
+<!--================ LOTTIE JS | Omonjon ================-->
+<script src="assets/js/lottie-player.js"></script>
+
+<!--================ SWIPER JS 8.1.1v | Omonjon ================-->
+<script src="assets/js/swiper-bundle.min.js"></script>
+
+<!--================ BOOTSTRAP JS 5.3.1v | Omonjon ================-->
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+
+  <!--================ MAIN JS | Omonjon ================-->
+  <script src="assets/js/main.js"></script>
 
 </body>
 
