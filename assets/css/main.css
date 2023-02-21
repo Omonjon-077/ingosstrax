@@ -14,6 +14,7 @@
     --text-color: #9DA1AF;
     --card-text-color: #121212;
     --card-bg-color: #F1F2F4;
+    --btn-color: #B9BCC6;
 }
 
 body{
@@ -124,9 +125,9 @@ body{
 
 /*****--================ SEARCH LINKS | Sirojiddin ================*****/
 
-.margin-top {
+.mt-140px {
     margin-top: 140px;
-
+}
 
 .bg-src {
     background: #F7F7F7;
@@ -357,6 +358,7 @@ html.blind {
 }
 .search-link {
     margin-right: 28px;
+}
 .tabs-general .rounded-top {
     border-top-left-radius: 25px !important;
     border-top-right-radius: 25px !important;
@@ -382,6 +384,7 @@ html.blind {
 
 .mt-140px {
     margin-top: 140px;
+}
 intro-section .nav-pills .nav-link.active span{
     color: var(--title-color);
 }
@@ -389,7 +392,18 @@ intro-section .nav-pills .nav-link.active span{
 .offers-card {
     border: 1px solid #E3E4E8;
     border-radius: 15px;
-    padding: 30px 0 0 30px;
+}
+.py-30px {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.px-30px {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.offers-card:hover {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.04), 0 4px 32px rgba(0, 0, 0, 0.16);
+    border: 1px solid #E3E4E8;
 }
 
 .offers-card h4 {
@@ -418,4 +432,14 @@ intro-section .nav-pills .nav-link.active span{
 .intro-section .card-link {
     width: max-content;
     border-bottom: 1px dashed var(--bs-primary);
+}
+
+.transition-default {
+    transition: 300ms all ease;
+}
+
+
+.custom-btn {
+    border: 1px solid var(--btn-color);
+    color: var(--btn-color);
 }
