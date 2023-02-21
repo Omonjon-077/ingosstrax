@@ -9,6 +9,8 @@
     --title-color: #2E3038;
     --title-color-light: #121212;
     --text-color: #9DA1AF;
+    --card-text-color: #121212;
+    --card-bg-color: #F1F2F4;
 }
 
 a,a:hover {
@@ -74,12 +76,20 @@ h1,h2,h3,h4,h5,h6,p,label,ul,li {
     z-index: 10;
 }
 
+.lh-20 {
+    line-height: 20px;
+}
+
+.opacity-7 {
+    opacity: 0.7;
+}
+
 .outline-none{
     outline: none;
 }
 
 
-<!*****--================ SEARCH LINKS | Sirojiddin ================*****-->
+/*****--================ SEARCH LINKS | Sirojiddin ================*****/
 
 .margin-top {
     margin-top: 140px;
@@ -94,17 +104,28 @@ h1,h2,h3,h4,h5,h6,p,label,ul,li {
 .p4 {
     padding: 4px;
 }
-.h-58 {
+.h-58px {
     height: 58px;
 }
-
-.src_btn {
-    background: #B9BCC6;
+.w-50px {
+    width: 50px;
+}
+.search-btn {
     border-radius: 8px;
+}
+.search-btn-text {
+    background: #B9BCC6;
     padding: 13px 48px;
     color: #fff;
 }
 
+.search-btn-icon {
+    background: #B9BCC6;
+    padding: 13px;
+    right: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+}
 .search-wrapper form input[type=search]::placeholder{
     color: #9DA1AF;
     opacity: 0.7;
@@ -119,14 +140,33 @@ h1,h2,h3,h4,h5,h6,p,label,ul,li {
 }
 
 .search_links a {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    color: #165AB7;
     border-bottom: 1px dashed #165AB7;
-    margin-left: 28px;
+   /* margin-left: 28px;*/
+}
+.search_links .search-link:first-child {
+    margin-left: 28px !important;
+}
+.search-link {
+    margin-right: 28px;
 }
 
-.search_links a:nth-last-child(2){
-    margin-left: 0;
+.mt-140px {
+    margin-top: 140px;
 }
+
+.offers-card {
+    border: 1px solid #E3E4E8;
+    border-radius: 15px;
+    padding: 30px 0 0 30px;
+}
+
+.offers-card h4 {
+    color: var(--card-text-color);
+    font-size: 36px;
+}
+
+.offers-card p {
+    color: var(--card-text-color);
+    font-size: 16px;
+}
+
