@@ -1,4 +1,4 @@
-/*=============== Loader ===============*/
+/*=============== Loader | Omonjon ===============*/
 document.addEventListener('DOMContentLoaded', function (eventObject) {
     $('.load').fadeIn();
 })
@@ -6,7 +6,7 @@ window.addEventListener("load", function (eventObject) {
     $('.load').fadeOut("slow");
 });
 
-// For Dark Light mode //
+// For Dark Light mode | Omonjon //
 let darkMode = localStorage.getItem("darkMode");
 const darkModeToggle = document.querySelector(".mode__theme");
 let svgNone = document.querySelectorAll(".svg-none");
@@ -67,7 +67,7 @@ darkModeToggle.addEventListener("click", () => {
     }
 });
 
-// Header top | search input autofocus ********************** */
+// Header top | search input autofocus | Omonjon ********************** */
 if ($(".search-action").length) {
     $(".search-action").click(function () {
         // $(".search-action-input").attr("autofocus", "autofocus");
@@ -129,3 +129,15 @@ if ($(".partnersSlider").length) {
 }
 
 /* ********************************************************** */
+
+
+/*=============== SCROLL UP | Omonjon ===============*/
+if ($("#scroll-up").length) {
+    function scrollUp() {
+        const scrollUp = document.getElementById('scroll-up');
+        // When the scroll is higher than 350 viewport height, add the show-scroll class to the a tag with the scroll-top class
+        if (this.scrollY >= 350) scrollUp.classList.add('show-scroll');
+        else scrollUp.classList.remove('show-scroll')
+    }
+    window.addEventListener('scroll', scrollUp)
+}

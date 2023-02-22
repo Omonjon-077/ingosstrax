@@ -23,13 +23,13 @@
     --service-color: #F1F9FF;
     --color-warning: #FFF278;
     --gray-bg-color: #F1F9FF;
+    --footer-link-color: #737373;
 }
 
 body{
     font-family: IngoStem,Arial,Verdana,Courier,serif;
     font-weight: 400;
     font-size: 16px;
-
 }
 
 .title-color {
@@ -49,6 +49,10 @@ body{
 }
 .transform-translate-y-minus-50 {
     transform: translateY(-50%);
+}
+
+.footer-link-color{
+    color: var(--footer-link-color);
 }
 
 .start-25{
@@ -136,6 +140,10 @@ body{
 
 .z-index-10 {
     z-index: 10;
+}
+
+.fs-7{
+
 }
 
 .fs-8 {
@@ -725,8 +733,38 @@ html.blind {
     margin-top: -48px;
 }
 
-/*------------ WORKSHOP SECTION/SOBIROVS ------------*/
-
+/*------------ WORKSHOP SECTION | SOBIROVS ------------*/
+.self-dashed{
+    border-bottom: 2px dashed var(--text-color);
+}
 .card-p{
     font-size: 14px;
+}
+
+
+/* SCROLL UP | Omonjon */
+.scrollup {
+    position: fixed;
+    right: 3rem;
+    bottom: -30%;
+    background-color: var(--bs-primary);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: inline-flex;
+    padding: .35rem;
+    border-radius: .25rem;
+    color: var(--bs-white);
+    font-size: 1.25rem;
+    transition: .3s;
+    text-decoration: none !important;
+}
+
+.scrollup:hover {
+    transform: translateY(-.35rem);
+    color: var(--bs-primary);
+    background-color: var(--bs-black);
+}
+
+/* Show Scroll Up*/
+.show-scroll {
+    bottom: 5rem;
 }
