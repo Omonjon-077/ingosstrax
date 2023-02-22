@@ -26,8 +26,8 @@
     --footer-link-color: #737373;
 }
 
-body{
-    font-family: IngoStem,Arial,Verdana,Courier,serif;
+body {
+    font-family: IngoStem, Arial, Verdana, Courier, serif;
     font-weight: 400;
     font-size: 16px;
 }
@@ -47,15 +47,16 @@ body{
 .transform-translate-x-minus-50 {
     transform: translateX(-50%);
 }
+
 .transform-translate-y-minus-50 {
     transform: translateY(-50%);
 }
 
-.footer-link-color{
+.footer-link-color {
     color: var(--footer-link-color);
 }
 
-.start-25{
+.start-25 {
     left: 25%;
 }
 
@@ -98,7 +99,7 @@ body{
     padding-right: 0.75rem;
 }
 
-.gray-bg{
+.gray-bg {
     background-color: var(--gray-bg-color);
 }
 
@@ -142,7 +143,7 @@ body{
     z-index: 10;
 }
 
-.fs-7{
+.fs-7 {
 
 }
 
@@ -158,6 +159,7 @@ body{
 .fs-2dot25 {
     font-size: 2.25rem;
 }
+
 .fs-26px {
     font-size: 26px;
 }
@@ -169,6 +171,7 @@ body{
 .lh-22px {
     line-height: 22.4px;
 }
+
 .opacity-7 {
     opacity: 0.7;
 }
@@ -256,11 +259,11 @@ body{
 }
 
 
-.fs-title{
+.fs-title {
     font-size: 36px;
 }
 
-.fs-title-sec{
+.fs-title-sec {
     font-size: 26px;
 }
 
@@ -289,30 +292,33 @@ p {
 a {
     text-decoration: none;
 }
+
 /*------------ WORKSHOP SECTION/SOBIROVS ------------*/
-.workshop-img{
+.workshop-img {
     margin-top: -18px
 }
-.workshop-h5{
+
+.workshop-h5 {
     font-size: 36px;
     padding-bottom: 42px;
 }
 
-.work-h4{
+.work-h4 {
     padding-top: 32px;
 }
 
 /*------------ SADDEN SECTION/SOBIROVS ------------*/
 
-.sadden-sec{
+.sadden-sec {
     background-color: #FEF5E7;
     border-radius: 15px;
 }
-.sadden-one{
+
+.sadden-one {
     padding-left: 35px;
 }
 
-.sadden-h3{
+.sadden-h3 {
     padding-top: 43px;
     padding-bottom: 16px;
 }
@@ -377,6 +383,7 @@ html.blind {
     background: url("../images/icons/moon.svg") no-repeat right/contain var(--text-color);
     background-size: 21px 13px !important;
 }
+
 .darkmode .label::after {
     content: "";
     display: block;
@@ -502,9 +509,11 @@ html.blind {
     z-index: 10 !important;
     border-bottom: 2px solid var(--bs-primary);
 }
-.intro-section .nav-pills .nav-link.active span{
+
+.intro-section .nav-pills .nav-link.active span {
     color: var(--title-color);
 }
+
 .mt-140px {
     margin-top: 140px;
 }
@@ -512,6 +521,7 @@ html.blind {
 .mt-50px {
     margin-top: 50px;
 }
+
 .mt-minus-18px {
     margin-top: -18px;
 }
@@ -594,7 +604,7 @@ html.blind {
     border-radius: 42px;
 }
 
-.right-minus-38px{
+.right-minus-38px {
     right: -38px;
 }
 
@@ -637,6 +647,58 @@ html.blind {
 
 
 /*=============== Partners | Swiper ===============*/
+.swiper-container {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    max-width: 1230px;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .swiper-container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .swiper-container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .swiper-container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .swiper-container {
+        max-width: 992px;
+    }
+}
+@media (min-width: 1140px) {
+    .swiper-container {
+        max-width: 1114px;
+    }
+}
+@media (min-width: 1200px) {
+    .swiper-container {
+        max-width: 1168px;
+    }
+}
+@media (min-width: 1262px) {
+    .swiper-container {
+        max-width: 1230px;
+    }
+}
+
+
+
 .swiper {
     width: 100%;
     height: 600px;
@@ -694,7 +756,7 @@ html.blind {
 .swiper-rtl .swiper-button-next {
     left: 14px;
     right: 80px;
-    box-shadow: 1px 1px 19px rgba(50, 50, 71, 0.08) , 0px 4px 8px rgba(50, 50, 71, 0.06);
+    box-shadow: 1px 1px 19px rgba(50, 50, 71, 0.08), 0px 4px 8px rgba(50, 50, 71, 0.06);
     transition: all 300ms ease;
 }
 
@@ -718,9 +780,10 @@ html.blind {
 .swiper-rtl .swiper-button-next {
     left: initial;
     right: 14px;
-    box-shadow: 1px 1px 19px rgba(50, 50, 71, 0.08) , 0px 4px 8px rgba(50, 50, 71, 0.06);
+    box-shadow: 1px 1px 19px rgba(50, 50, 71, 0.08), 0px 4px 8px rgba(50, 50, 71, 0.06);
     transition: all 300ms ease;
 }
+
 .swiper-partners-btn-next:hover {
     background-color: var(--bs-primary) !important;
     color: var(--bs-white) !important;
@@ -729,15 +792,16 @@ html.blind {
 }
 
 
-.sadden-img{
+.sadden-img {
     margin-top: -48px;
 }
 
 /*------------ WORKSHOP SECTION | SOBIROVS ------------*/
-.self-dashed{
+.self-dashed {
     border-bottom: 2px dashed var(--text-color);
 }
-.card-p{
+
+.card-p {
     font-size: 14px;
 }
 
