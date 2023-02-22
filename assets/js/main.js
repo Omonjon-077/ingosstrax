@@ -1,3 +1,11 @@
+/*=============== Loader ===============*/
+document.addEventListener('DOMContentLoaded', function (eventObject) {
+    $('.load').fadeIn();
+})
+window.addEventListener("load", function (eventObject) {
+    $('.load').fadeOut("slow");
+});
+
 // For Dark Light mode //
 let darkMode = localStorage.getItem("darkMode");
 const darkModeToggle = document.querySelector(".mode__theme");
