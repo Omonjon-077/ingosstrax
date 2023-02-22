@@ -12,6 +12,7 @@
     --title-color: #2E3038;
     --title-color-light: #121212;
     --text-color: #9DA1AF;
+    --gray-bg-color: #F1F9FF;
 }
 
 .title-color {
@@ -24,6 +25,10 @@
 
 .text-color {
     color: var(--text-color);
+}
+
+.gray-bg{
+    background-color: var(--gray-bg-color);
 }
 
 .z-index-1 {
@@ -66,6 +71,15 @@
     z-index: 10;
 }
 
+
+.fs-title{
+    font-size: 36px;
+}
+
+.fs-title-sec{
+    font-size: 26px;
+}
+
 input,
 button {
     outline: none;
@@ -78,4 +92,41 @@ ul {
 
 a {
     text-decoration: none;
+}
+/*------------ WORKSHOP SECTION/SOBIROVS ------------*/
+.workshop-img{
+    margin-top: -18px
+}
+.workshop-h5{
+    font-size: 36px;
+    padding-bottom: 42px;
+}
+
+.work-h4{
+    padding-top: 32px;
+}
+
+/*------------ SADDEN SECTION/SOBIROVS ------------*/
+
+.sadden-sec{
+    background-color: #FEF5E7;
+    border-radius: 15px;
+}
+.sadden-one{
+    padding-left: 35px;
+}
+
+.sadden-h3{
+    padding-top: 43px;
+    padding-bottom: 16px;
+}
+
+.sadden-img{
+    margin-top: -48px;
+}
+
+/*------------ WORKSHOP SECTION/SOBIROVS ------------*/
+
+.card-p{
+    font-size: 14px;
 }
