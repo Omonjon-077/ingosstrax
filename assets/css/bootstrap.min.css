@@ -8439,6 +8439,7 @@ fieldset:disabled .btn {
     --bs-border-opacity: 1;
     border-color: rgba(var(--bs-primary-rgb), var(--bs-border-opacity)) !important
 }
+
 .border-secondary {
     --bs-border-opacity: 1;
     border-color: rgba(var(--bs-secondary-rgb), var(--bs-border-opacity)) !important
