@@ -83,9 +83,9 @@
                        class="search-action text-color pt-2 pb-2 d-flex align-items-center"><img
                             src="assets/images/icons/src.svg" alt=""></a>
                 </ul>
-                <a href="#" class="text-primary d-flex align-items-center"><img class="me-2"
-                                                                                src="assets/images/icons/warning.svg"
-                                                                                alt=""> Страховой случай</a>
+                <a href="#" class="text-primary d-flex align-items-center">
+                    <img class="me-2" src="assets/images/icons/warning.svg" alt=""> Страховой случай
+                </a>
             </div>
         </div>
     </nav>
@@ -94,8 +94,8 @@
 <section class="intro-section mt-5 mb-5" id="introSection">
     <div class="container">
         <div class="tabs-general rounded-5">
-            <div class="tab-content" id="pills-tabContent">
-                <div class="tab-pane fade bg-danger rounded-top show active" id="pills-osago" role="tabpanel"
+            <div class="tab-content pb-2" id="pills-tabContent">
+                <div class="tab-pane fade bg-first rounded-3 show active" id="pills-osago" role="tabpanel"
                      aria-labelledby="pills-osago-tab" tabindex="0">
                     <div class="d-flex align-items-lg-center justify-content-lg-between h-for-intro">
                         <div class="d-flex flex-column align-content-lg-start ps-5 ms-4">
@@ -124,7 +124,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade rounded-top bg-warning" id="pills-travel" role="tabpanel"
+                <div class="tab-pane fade rounded-3 bg-second" id="pills-travel" role="tabpanel"
                      aria-labelledby="pills-travel-tab" tabindex="0">
                     <div class="d-flex align-items-lg-center justify-content-lg-between h-for-intro">
                         <div class="d-flex flex-column align-content-lg-start ps-5 ms-4">
@@ -133,14 +133,12 @@
                                 Введите данные и рассчитайте стоимость полиса онлайн
                             </p>
                             <form action="" class="form-control d-flex mb-3">
-                                <div class="flex-column">
-                                    <div class="flex-column position-relative w-100">
-                                        <label for="check_number2" class="text-color position-relative z-index-2">Регистрационный
-                                            номер</label>
-                                        <input type="text"
-                                               class="border-none title-color-light pt-4 pe-2 position-absolute bottom-0 start-0 h-100 w-100"
-                                               id="check_number2" required placeholder="A 000 AA 000">
-                                    </div>
+                                <div class="flex-column position-relative w-100">
+                                    <label for="check_number2" class="text-color position-relative z-index-2">Регистрационный
+                                        номер</label>
+                                    <input type="text"
+                                           class="border-none title-color-light pt-4 pe-2 position-absolute bottom-0 start-0 h-100 w-100"
+                                           id="check_number2" required placeholder="A 000 AA 000">
                                 </div>
                                 <button class="bg-primary text-white rounded-2 border-none ms-auto">
                                     <img src="assets/images/icons/right_arrow.svg" class="py-3 px-3" alt="">
@@ -152,7 +150,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade rounded-top bg-info" id="pills-kasko" role="tabpanel"
+                <div class="tab-pane fade rounded-3 bg-third" id="pills-kasko" role="tabpanel"
                      aria-labelledby="pills-kasko-tab" tabindex="0">
                     <div class="d-flex align-items-lg-center justify-content-lg-between h-for-intro">
                         <div class="d-flex flex-column align-content-lg-start ps-5 ms-4">
@@ -180,7 +178,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade rounded-top bg-success" id="pills-ipoteka" role="tabpanel"
+                <div class="tab-pane fade rounded-3 bg-fourth" id="pills-ipoteka" role="tabpanel"
                      aria-labelledby="pills-ipoteka-tab" tabindex="0">
                     <div class="d-flex align-items-lg-center justify-content-lg-between h-for-intro">
                         <div class="d-flex flex-column align-content-lg-start ps-5 ms-4">
@@ -207,41 +205,41 @@
                     </div>
                 </div>
             </div>
-            <ul class="nav nav-pills position-relative" id="pills-tab" role="tablist">
-                <li class="nav-item rounded-start-0 h-100 bg-white bg-danger position-absolute z-index-4 start-0 border rounded-3 border-1 w-27 active"
+            <ul class="nav nav-pills position-relative mt-minus-6 mx-1px" id="pills-tab" role="tablist">
+                <li class="nav-item h-100 bg-white bg-danger position-absolute z-index-4 start-0 border rounded-3 border-1 w-26 active"
                     role="presentation">
                     <button class="nav-link h-100 w-100 bg-transparent text-color d-flex flex-column ps-5 active"
                             id="pills-osago-tab" data-bs-toggle="pill" data-bs-target="#pills-osago" type="button"
                             role="tab" aria-controls="pills-home" aria-selected="true">
                         <span class="fs-8 fw-bolder pt-2">ОСАГО</span>
-                        <p class="text-start pb-3">Помощь при ДТП 24/7</p>
+                        <h6 class="text-start fw-light pb-3">Помощь при ДТП 24/7</h6>
                     </button>
                 </li>
-                <li class="nav-item h-100 bg-white position-absolute z-index-3 start-25 border rounded-3 border-1 w-27"
+                <li class="nav-item h-100 bg-white position-absolute z-index-3 start-25 border rounded-3 border-1 w-26"
                     role="presentation">
                     <button class="nav-link h-100 w-100 bg-transparent text-color d-flex flex-column ps-5"
                             id="pills-travel-tab" data-bs-toggle="pill" data-bs-target="#pills-travel" type="button"
                             role="tab" aria-controls="pills-profile" aria-selected="false">
                         <span class="fs-8 fw-bolder pt-2">Путешествия</span>
-                        <p class="text-start pb-3">Для любых видов виз</p>
+                        <h6 class="text-start fw-light pb-3">Для любых видов виз</h6>
                     </button>
                 </li>
-                <li class="nav-item h-100 bg-white position-absolute z-index-2 start-50 border rounded-3 border-1 w-27"
+                <li class="nav-item h-100 bg-white position-absolute z-index-2 start-50 border rounded-3 border-1 w-26"
                     role="presentation">
                     <button class="nav-link h-100 w-100 bg-transparent text-color d-flex flex-column ps-5"
                             id="pills-kasko-tab" data-bs-toggle="pill" data-bs-target="#pills-kasko" type="button"
                             role="tab" aria-controls="pills-contact" aria-selected="false">
                         <span class="fs-8 fw-bolder pt-2">Каско</span>
-                        <p class="text-start pb-3">Направление на ремонт за час</p>
+                        <h6 class="text-start fw-light pb-3">Направление на ремонт за час</h6>
                     </button>
                 </li>
-                <li class="nav-item rounded-end-0 h-100 bg-white position-absolute z-index-1 border rounded-3 border-1 w-27 end-0"
+                <li class="nav-item h-100 bg-white position-absolute z-index-1 border rounded-3 border-1 w-26 end-0"
                     role="presentation">
                     <button class="nav-link h-100 w-100 bg-transparent text-color d-flex flex-column ps-5"
                             id="pills-ipoteka-tab" data-bs-toggle="pill" data-bs-target="#pills-ipoteka" type="button"
                             role="tab" aria-controls="pills-contact" aria-selected="false">
                         <span class="fs-8 fw-bolder pt-2">Ипотека</span>
-                        <p class="text-start pb-3">Решение о страховании за день</p>
+                        <h6 class="text-start fw-light pb-3">Решение о страховании за день</h6>
                     </button>
                 </li>
             </ul>
@@ -302,7 +300,7 @@
         <div class="offers-wrapper mt-5">
             <div class="row align-items-stretch gy-4">
                 <div class="col-6">
-                    <div class="offers-card transition-default  row overflow-hidden w-100 h-100">
+                    <div class="offers-card transition-default row overflow-hidden w-100 h-100">
                         <div class="col-7 offers-card-text align-items-start py-30px px-30px pe-0 card-body d-flex justify-content-between flex-column">
                             <h4 class="card-title opacity-7 fw-bold lh-1">Каско</h4>
                             <p class="card-text mt-2 opacity-7 fw-light">Узнайте стоимость за 2 минуты <br> и оформите
@@ -312,7 +310,8 @@
                                 <span class="badge rounded bg-body-secondary d-inline-block text-dark fs-7 p-2">Без осмотра авто</span>
                             </div>
                             <div class="offers-card-btn d-flex align-items-center mt-4 gap-4">
-                                <a href="#" class="btn custom-btn btn-outline-primary px-4 py-2 btn-outline-primary px-4 py-2">Рассчитать</a>
+                                <a href="#"
+                                   class="btn custom-btn btn-outline-primary px-4 py-2 btn-outline-primary px-4 py-2">Рассчитать</a>
                                 <span class="">от 120 ₽/мес </span>
                             </div>
                         </div>
@@ -325,7 +324,8 @@
                     <div class="offers-card transition-default  row overflow-hidden w-100 h-100">
                         <div class="col-7 offers-card-text align-items-start py-30px px-30px pe-0 card-body d-flex justify-content-between flex-column">
                             <h4 class="card-title opacity-7 fw-bold lh-1">Жизнь</h4>
-                            <p class="card-text mt-2 opacity-7 fw-light">Для оформления полиса понадобится только паспорт</p>
+                            <p class="card-text mt-2 opacity-7 fw-light">Для оформления полиса понадобится только
+                                паспорт</p>
                             <div class="offers-card-wrapper-span mt-4 d-flex flex-wrap gap-3">
                                 <span class="badge rounded bg-body-secondary d-inline-block text-dark fs-7 p-2">От 100 ₽ в месяц</span>
                                 <span class="badge rounded bg-body-secondary d-inline-block text-dark fs-7 p-2">Семейный полис</span>
@@ -385,6 +385,69 @@
     </div>
 </section>
 
+
+<!--========================================================================-->
+<!-- |PARTNERS| SWIPER| -->
+<!--========================================================================-->
+<section class="py-5">
+    <div class="container py-5">
+        <h2 class="text-secondary fw-bold text-start text-uppercase my-4">Нам доверяют</h2>
+        <div class="swiper partnersSlider px-3">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="card partner-card border-0 filter-hover-gray w-100 mx-3 bg-slider">
+                        <img src="assets/images/partners-logos/dropbox.svg"
+                             class="card-img-top object-fit-contain w-100 h-100 partner-img px-2 py-2"
+                             alt="Partner Slide">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card partner-card border-0 filter-hover-gray w-100 mx-3 bg-slider">
+                        <img src="assets/images/partners-logos/dropbox.svg"
+                             class="card-img-top object-fit-contain w-100 h-100 partner-img px-2 py-2"
+                             alt="Partner Slide">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card partner-card border-0 filter-hover-gray w-100 mx-3 bg-slider">
+                        <img src="assets/images/partners-logos/dropbox.svg"
+                             class="card-img-top object-fit-contain w-100 h-100 partner-img px-2 py-2"
+                             alt="Partner Slide">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card partner-card border-0 filter-hover-gray w-100 mx-3 bg-slider">
+                        <img src="assets/images/partners-logos/dropbox.svg"
+                             class="card-img-top object-fit-contain w-100 h-100 partner-img px-2 py-2"
+                             alt="Partner Slide">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card partner-card border-0 filter-hover-gray w-100 mx-3 bg-slider">
+                        <img src="assets/images/partners-logos/dropbox.svg"
+                             class="card-img-top object-fit-contain w-100 h-100 partner-img px-2 py-2"
+                             alt="Partner Slide">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card partner-card border-0 filter-hover-gray w-100 mx-3 bg-slider">
+                        <img src="assets/images/partners-logos/dropbox.svg"
+                             class="card-img-top object-fit-contain w-100 h-100 partner-img px-2 py-2"
+                             alt="Partner Slide">
+                    </div>
+                </div>
+            </div>
+            <div
+                    class="swiper-button-next swiper-partners-btn-next shadow-hover rounded-pill w-35px h-35px bg-white">
+                <i class="bx text-gray bx-chevron-right"></i>
+            </div>
+            <div
+                    class="swiper-button-prev swiper-partners-btn-prev shadow-hover rounded-pill w-35px h-35px bg-white">
+                <i class="bx text-gray bx-chevron-left"></i>
+            </div>
+        </div>
+    </div>
+</section>
 <!--================ NEWS COMPANY | Sobirovs ================-->
 
 <section>
@@ -466,7 +529,14 @@
 
 <!--================ MAIN JS | Omonjon ================-->
 <script src="assets/js/main.js"></script>
-
+<script>
+    /*=============== Loader ===============*/
+    document.addEventListener('DOMContentLoaded', function (eventObject) {
+        $('.load').fadeIn();
+    })
+    window.addEventListener("load", function (eventObject) {
+        $('.load').fadeOut("slow");
+    });</script>
 </body>
 
 </html>

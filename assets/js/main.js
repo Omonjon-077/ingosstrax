@@ -1,11 +1,3 @@
-/*=============== Loader ===============*/
-document.addEventListener('DOMContentLoaded', function (eventObject) {
-    $('.load').fadeIn();
-})
-window.addEventListener("load", function (eventObject) {
-    $('.load').fadeOut("slow");
-});
-
 // For Dark Light mode //
 let darkMode = localStorage.getItem("darkMode");
 const darkModeToggle = document.querySelector(".mode__theme");
@@ -81,3 +73,51 @@ if ($(".search-action").length) {
         }, interval);
     });
 }
+/* ########################################################## */
+// Partners | Swiper ********************************** */
+if ($(".partnersSlider").length) {
+    var swiper = new Swiper(".partnersSlider", {
+        autoplay: {
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+            delay: 1000,
+        },
+        speed: 1000,
+        slidesPerView: 5,
+        grabCursor: true,
+        loop: true,
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 3,
+                // spaceBetween: 20
+            },
+            // when window width is >= 480px
+            480: {
+                slidesPerView: 3,
+                spaceBetween: 5
+            },
+            // when window width is >= 640px
+            640: {
+                slidesPerView: 3,
+                spaceBetween: 5
+            },
+            // when window width is >= 768px
+            768: {
+                slidesPerView: 4,
+                spaceBetween: 5
+            },
+            // when window width is >= 1024px
+            1024: {
+                slidesPerView: 5,
+                spaceBetween: 10
+            },
+        },
+        navigation: {
+            nextEl: ".swiper-partners-btn-next",
+            prevEl: ".swiper-partners-btn-prev",
+        },
+    });
+}
+
+/* ********************************************************** */

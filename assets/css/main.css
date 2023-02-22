@@ -15,9 +15,14 @@
     --card-text-color: #121212;
     --card-bg-color: #F1F2F4;
     --btn-color: #B9BCC6;
+    --bg-first: linear-gradient(0deg, #E0F8FF, #E0F8FF), linear-gradient(254.32deg, #CEE3FF 6.59%, #C8EEF7 74.8%);
+    --bg-second: linear-gradient(0deg, #FFEEDD, #FFEEDD), linear-gradient(254.32deg, #CEE3FF 6.59%, #C8EEF7 74.8%);
+    --bg-thirdy: linear-gradient(0deg, #EFFFEA, #EFFFEA), linear-gradient(254.32deg, #CEE3FF 6.59%, #C8EEF7 74.8%);
+    --bg-fourth: linear-gradient(0deg, #FFECF6, #FFECF6), linear-gradient(254.32deg, #CEE3FF 6.59%, #C8EEF7 74.8%);
+    --color-gray: #F1F2F4;
 }
 
-body{
+body {
     font-family: 'Arimo', 'sans-serif';
     font-weight: 400;
     font-size: 16px;
@@ -35,32 +40,45 @@ body{
     color: var(--text-color) !important;
 }
 
-.start-25{
+.start-25 {
     left: 25%;
 }
 
-.start-75{
+.start-75 {
     left: 75%;
 }
 
-.w-27{
+.w-26 {
+    width: 26%;
+}
+
+.w-27 {
     width: 27%;
 }
 
-.w-42px{
+.w-35px {
+    width: 35px;
+}
+
+.h-35px {
+    height: 35px;
+}
+
+
+.w-42px {
     width: 42px;
 }
 
-.h-42px{
+.h-42px {
     height: 42px;
 }
 
-.py-75rem{
+.py-75rem {
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
 }
 
-.px-75rem{
+.px-75rem {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
 }
@@ -104,12 +122,15 @@ body{
 .z-index-10 {
     z-index: 10;
 }
-.fs-8{
+
+.fs-8 {
     font-size: 20px;
 }
-.fs-6{
+
+.fs-6 {
     font-size: 16px;
 }
+
 .lh-20 {
     line-height: 20px;
 }
@@ -118,15 +139,32 @@ body{
     opacity: 0.7;
 }
 
-.outline-none{
+.outline-none {
     outline: none;
 }
 
 
 /*****--================ SEARCH LINKS | Sirojiddin ================*****/
 
+.mx-1px {
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
 .mt-140px {
     margin-top: 140px;
+}
+
+.mt-minus-2 {
+    margin-top: -0.5rem;
+}
+
+.mt-minus-3 {
+    margin-top: -1rem;
+}
+
+.mt-minus-6 {
+    margin-top: -6rem;
 }
 
 .bg-src {
@@ -138,15 +176,19 @@ body{
 .p4 {
     padding: 4px;
 }
+
 .h-58px {
     height: 58px;
 }
+
 .w-50px {
     width: 50px;
 }
+
 .search-btn {
     border-radius: 8px;
 }
+
 .search-btn-text {
     background: #B9BCC6;
     padding: 13px 48px;
@@ -160,18 +202,19 @@ body{
     top: 50%;
     transform: translateY(-50%);
 }
-.search-wrapper form input[type=search]::placeholder{
+
+.search-wrapper form input[type=search]::placeholder {
     color: #9DA1AF;
     opacity: 0.7;
     font-weight: 300;
     font-size: 16px;
 }
 
-.fs-7{
+.fs-7 {
     font-size: 14px;
 }
 
-.transition{
+.transition {
     transition: .4s;
 }
 
@@ -180,21 +223,23 @@ button {
     outline: none;
 }
 
-.border-none{
+.border-none {
     border: none;
 }
 
 li,
 ul,
-ol{
+ol {
     list-style: none;
     padding: 0;
     margin: 0;
 }
-p{
+
+p {
     padding: 0;
     margin: 0;
 }
+
 a {
     text-decoration: none;
 }
@@ -259,6 +304,7 @@ html.blind {
     background: url("../images/icons/moon.svg") no-repeat right/contain var(--text-color);
     background-size: 21px 13px !important;
 }
+
 .darkmode .label::after {
     content: "";
     display: block;
@@ -287,12 +333,12 @@ html.blind {
     z-index: 2;
 }
 
-#toggleThemeMode[type=checkbox]:checked+.label:before {
+#toggleThemeMode[type=checkbox]:checked + .label:before {
     transform: translateX(20px);
     background-color: var(--bs-white);
 }
 
-#toggleThemeMode[type=checkbox]:checked+.label {
+#toggleThemeMode[type=checkbox]:checked + .label {
     background-color: var(--text-color);
 }
 
@@ -311,19 +357,19 @@ html.blind {
     border-bottom: 2px solid transparent;
 }
 
-.modal-shortcut .btn-outline-primary svg>path{
+.modal-shortcut .btn-outline-primary svg > path {
     fill: var(--bs-primary);
 }
 
 .modal-shortcut .form-control:focus,
 .modal-shortcut .btn-outline-primary:focus,
-.modal-shortcut .btn-outline-primary:hover{
+.modal-shortcut .btn-outline-primary:hover {
     box-shadow: none;
     background: transparent;
 }
 
 .header .nav-link:hover,
-.header .nav-link:focus{
+.header .nav-link:focus {
     color: var(--title-color);
     border-bottom: 2px solid var(--bs-primary);
     border-radius: 36px 36px 0 0;
@@ -338,7 +384,7 @@ html.blind {
 }
 
 /* Intro section | Omonjon */
-.intro-section .form-control{
+.intro-section .form-control {
     background: #FFFFFF;
     border: 1px solid #165AB7;
     box-shadow: 4px 4px 20px rgba(22, 90, 183, 0.25);
@@ -353,30 +399,33 @@ html.blind {
 .search_links a {
     border-bottom: 1px dashed #165AB7;
 }
+
 .search_links .search-link:first-child {
     margin-left: 28px !important;
 }
+
 .search-link {
     margin-right: 28px;
 }
+
 .tabs-general .rounded-top {
     border-top-left-radius: 25px !important;
     border-top-right-radius: 25px !important;
 }
 
-.intro-section .border-none::placeholder{
+.intro-section .border-none::placeholder {
     font-weight: 300;
     font-size: 14px;
     line-height: 22px;
     color: #E3E4E8;
 }
 
-.intro-section .nav-pills .nav-link{
+.intro-section .nav-pills .nav-link {
     border-bottom: 2px solid transparent;
 }
 
 .intro-section .nav-pills .nav-link.active {
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.04), 0 4px 32px rgba(0, 0, 0, 0.16) !important;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.04), 0 4px 32px rgba(0, 0, 0, 0.16) !important;
     color: var(--title-color) !important;
     z-index: 10 !important;
     border-bottom: 2px solid var(--bs-primary);
@@ -385,7 +434,8 @@ html.blind {
 .mt-140px {
     margin-top: 140px;
 }
-intro-section .nav-pills .nav-link.active span{
+
+.intro-section .nav-pills .nav-link.active span {
     color: var(--title-color);
 }
 
@@ -393,14 +443,17 @@ intro-section .nav-pills .nav-link.active span{
     border: 1px solid #E3E4E8;
     border-radius: 15px;
 }
+
 .py-30px {
     padding-top: 30px;
     padding-bottom: 30px;
 }
+
 .px-30px {
     padding-left: 30px;
     padding-right: 30px;
 }
+
 .offers-card:hover {
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.04), 0 4px 32px rgba(0, 0, 0, 0.16);
     border: 1px solid #E3E4E8;
@@ -417,7 +470,7 @@ intro-section .nav-pills .nav-link.active span{
 }
 
 
-.h-for-intro{
+.h-for-intro {
     height: 500px;
 }
 
@@ -443,3 +496,130 @@ intro-section .nav-pills .nav-link.active span{
     border: 1px solid var(--btn-color);
     color: var(--btn-color);
 }
+
+
+/*    | Omonjon   */
+
+.bg-first {
+    background: var(--bg-first);
+}
+
+.bg-second {
+    background: var(--bg-second);
+}
+
+.bg-third {
+    background: var(--bg-thirdy);
+}
+
+.bg-fourth {
+    background: var(--bg-fourth);
+}
+
+.bg-slider {
+    background: var(--color-gray);
+}
+
+.filter-hover-gray {
+    filter: grayscale(1) opacity(0.3);
+    transition: filter 300ms ease;
+}
+
+.filter-hover-gray:hover {
+    filter: grayscale(0) opacity(1);
+    transition: filter 300ms ease;
+}
+
+
+/*=============== Partners | Swiper ===============*/
+.swiper {
+    width: 100%;
+    height: 600px;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-pagination-bullet {
+    background-color: #fff;
+    opacity: .9;
+    scale: 1.4;
+    margin: 0 6px !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--bs-primary);
+    opacity: 1;
+    scale: 1.7;
+}
+
+.partnersSlider {
+    height: auto !important;
+}
+
+.partner-card {
+    height: 120px;
+}
+
+.swiper-partners-btn-prev,
+.swiper-rtl .swiper-button-next {
+    left: 14px;
+    right: 80px;
+    box-shadow: 1px 1px 19px rgba(50, 50, 71, 0.08) , 0px 4px 8px rgba(50, 50, 71, 0.06);
+    transition: all 300ms ease;
+}
+
+.swiper-partners-btn-prev:hover {
+    background-color: var(--bs-primary) !important;
+    color: var(--bs-white) !important;
+    transition: all 300ms ease;
+}
+
+.swiper-partners-btn-prev::after,
+.swiper-partners-btn-next::after {
+    content: '';
+}
+
+.swiper-partners-btn-prev i,
+.swiper-partners-btn-next i {
+    font-size: 25px;
+}
+
+.swiper-partners-btn-next,
+.swiper-rtl .swiper-button-next {
+    left: initial;
+    right: 14px;
+    box-shadow: 1px 1px 19px rgba(50, 50, 71, 0.08) , 0px 4px 8px rgba(50, 50, 71, 0.06);
+    transition: all 300ms ease;
+}
+.swiper-partners-btn-next:hover {
+    background-color: var(--bs-primary) !important;
+    color: var(--bs-white) !important;
+    transition: all 300ms ease;
+
+}
+
