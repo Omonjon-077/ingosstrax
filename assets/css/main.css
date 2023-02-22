@@ -20,9 +20,11 @@
     --bg-thirdy: linear-gradient(0deg, #EFFFEA, #EFFFEA), linear-gradient(254.32deg, #CEE3FF 6.59%, #C8EEF7 74.8%);
     --bg-fourth: linear-gradient(0deg, #FFECF6, #FFECF6), linear-gradient(254.32deg, #CEE3FF 6.59%, #C8EEF7 74.8%);
     --color-gray: #F1F2F4;
+    --service-color: #F1F9FF;
+    --color-warning: #FFF278;
 }
 
-body {
+body{
     font-family: 'Arimo', 'sans-serif';
     font-weight: 400;
     font-size: 16px;
@@ -40,7 +42,14 @@ body {
     color: var(--text-color) !important;
 }
 
-.start-25 {
+.transform-translate-x-minus-50 {
+    transform: translateX(-50%);
+}
+.transform-translate-y-minus-50 {
+    transform: translateY(-50%);
+}
+
+.start-25{
     left: 25%;
 }
 
@@ -131,10 +140,21 @@ body {
     font-size: 16px;
 }
 
+
+.fs-2dot25 {
+    font-size: 2.25rem;
+}
+.fs-26px {
+    font-size: 26px;
+}
+
 .lh-20 {
     line-height: 20px;
 }
 
+.lh-22px {
+    line-height: 22.4px;
+}
 .opacity-7 {
     opacity: 0.7;
 }
@@ -143,6 +163,9 @@ body {
     outline: none;
 }
 
+.bg-yellow {
+    background-color: var(--color-warning);
+}
 
 /*****--================ SEARCH LINKS | Sirojiddin ================*****/
 
@@ -304,7 +327,6 @@ html.blind {
     background: url("../images/icons/moon.svg") no-repeat right/contain var(--text-color);
     background-size: 21px 13px !important;
 }
-
 .darkmode .label::after {
     content: "";
     display: block;
@@ -430,14 +452,32 @@ html.blind {
     z-index: 10 !important;
     border-bottom: 2px solid var(--bs-primary);
 }
-
+.intro-section .nav-pills .nav-link.active span{
+    color: var(--title-color);
+}
 .mt-140px {
     margin-top: 140px;
 }
 
-.intro-section .nav-pills .nav-link.active span {
-    color: var(--title-color);
+.mt-50px {
+    margin-top: 50px;
 }
+.mt-minus-18px {
+    margin-top: -18px;
+}
+
+.pt-40px {
+    padding-top: 40px;
+}
+
+.pb-40px {
+    padding-bottom: 40px;
+}
+
+.ps-35px {
+    padding-left: 35px;
+}
+
 
 .offers-card {
     border: 1px solid #E3E4E8;
@@ -491,10 +531,25 @@ html.blind {
     transition: 300ms all ease;
 }
 
+.service-bg {
+    background-color: var(--service-color);
+}
 
 .custom-btn {
     border: 1px solid var(--btn-color);
     color: var(--btn-color);
+}
+
+.rounded-42px {
+    border-radius: 42px;
+}
+
+.right-minus-38px{
+    right: -38px;
+}
+
+.top-16px {
+    top: 16px;
 }
 
 
