@@ -22,12 +22,14 @@
     --color-gray: #F1F2F4;
     --service-color: #F1F9FF;
     --color-warning: #FFF278;
+    --gray-bg-color: #F1F9FF;
 }
 
 body{
     font-family: IngoStem,Arial,Verdana,Courier,serif;
     font-weight: 400;
     font-size: 16px;
+
 }
 
 .title-color {
@@ -90,6 +92,10 @@ body{
 .px-75rem {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
+}
+
+.gray-bg{
+    background-color: var(--gray-bg-color);
 }
 
 .z-index-1 {
@@ -241,6 +247,15 @@ body{
     transition: .4s;
 }
 
+
+.fs-title{
+    font-size: 36px;
+}
+
+.fs-title-sec{
+    font-size: 26px;
+}
+
 input,
 button {
     outline: none;
@@ -265,6 +280,33 @@ p {
 
 a {
     text-decoration: none;
+}
+/*------------ WORKSHOP SECTION/SOBIROVS ------------*/
+.workshop-img{
+    margin-top: -18px
+}
+.workshop-h5{
+    font-size: 36px;
+    padding-bottom: 42px;
+}
+
+.work-h4{
+    padding-top: 32px;
+}
+
+/*------------ SADDEN SECTION/SOBIROVS ------------*/
+
+.sadden-sec{
+    background-color: #FEF5E7;
+    border-radius: 15px;
+}
+.sadden-one{
+    padding-left: 35px;
+}
+
+.sadden-h3{
+    padding-top: 43px;
+    padding-bottom: 16px;
 }
 
 /* Loader | Omonjon */
@@ -678,3 +720,13 @@ html.blind {
 
 }
 
+
+.sadden-img{
+    margin-top: -48px;
+}
+
+/*------------ WORKSHOP SECTION/SOBIROVS ------------*/
+
+.card-p{
+    font-size: 14px;
+}
