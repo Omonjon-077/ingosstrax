@@ -15,6 +15,8 @@
     --card-text-color: #121212;
     --card-bg-color: #F1F2F4;
     --btn-color: #B9BCC6;
+    --service-color: #F1F9FF;
+    --color-warning: #FFF278;
 }
 
 body{
@@ -35,6 +37,12 @@ body{
     color: var(--text-color) !important;
 }
 
+.transform-translate-x-minus-50 {
+    transform: translateX(-50%);
+}
+.transform-translate-y-minus-50 {
+    transform: translateY(-50%);
+}
 .start-25{
     left: 25%;
 }
@@ -110,10 +118,21 @@ body{
 .fs-6{
     font-size: 16px;
 }
+
+.fs-2dot25 {
+    font-size: 2.25rem;
+}
+.fs-26px {
+    font-size: 26px;
+}
+
 .lh-20 {
     line-height: 20px;
 }
 
+.lh-22px {
+    line-height: 22.4px;
+}
 .opacity-7 {
     opacity: 0.7;
 }
@@ -122,6 +141,9 @@ body{
     outline: none;
 }
 
+.bg-yellow {
+    background-color: var(--color-warning);
+}
 
 /*****--================ SEARCH LINKS | Sirojiddin ================*****/
 
@@ -385,6 +407,26 @@ html.blind {
 .mt-140px {
     margin-top: 140px;
 }
+
+.mt-50px {
+    margin-top: 50px;
+}
+.mt-minus-18px {
+    margin-top: -18px;
+}
+
+.pt-40px {
+    padding-top: 40px;
+}
+
+.pb-40px {
+    padding-bottom: 40px;
+}
+
+.ps-35px {
+    padding-left: 35px;
+}
+
 intro-section .nav-pills .nav-link.active span{
     color: var(--title-color);
 }
@@ -438,8 +480,23 @@ intro-section .nav-pills .nav-link.active span{
     transition: 300ms all ease;
 }
 
+.service-bg {
+    background-color: var(--service-color);
+}
 
 .custom-btn {
     border: 1px solid var(--btn-color);
     color: var(--btn-color);
+}
+
+.rounded-42px {
+    border-radius: 42px;
+}
+
+.right-minus-38px{
+    right: -38px;
+}
+
+.top-16px {
+    top: 16px;
 }
