@@ -67,20 +67,6 @@ darkModeToggle.addEventListener("click", () => {
     }
 });
 
-// Header top | search input autofocus | Omonjon ********************** */
-if ($(".search-action").length) {
-    $(".search-action").click(function () {
-        // $(".search-action-input").attr("autofocus", "autofocus");
-        // $(".search-action-input").autocomplete({
-        //     autoFocus: true
-        // });
-        var interval = 500;
-        setTimeout(() => {
-            $('.search-action-input').focus();
-            console.log('work');
-        }, interval);
-    });
-}
 /* ########################################################## */
 // Partners | Swiper ********************************** */
 if ($(".partnersSlider").length) {
@@ -141,3 +127,9 @@ if ($("#scroll-up").length) {
     }
     window.addEventListener('scroll', scrollUp)
 }
+
+var e = ".dropdown-backdrop",
+    f = '[data-toggle="dropdown"]',
+    g = function(b) {
+        a(b).on("click.bs.dropdown", this.toggle)
+    };

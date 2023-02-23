@@ -432,19 +432,37 @@ html.blind {
 
 
 /* Header | Omonjon */
+.header .nav-bottom .navbar,
+.header .nav-bottom .dropdown{
+    position: initial;
+}
+
+.header .nav-bottom .dropdown-item:hover {
+    background-color: transparent;
+}
+
+.header .nav-bottom .nav-link:nth-last-child(1).dropdown-toggle:after,
+.header .nav-bottom .nav-link:nth-last-child(6).dropdown-toggle:after {
+    border: none !important;
+}
+
+.header .nav-bottom .dropdown-menu {
+    border-radius: 0px 0px 24px 24px;
+    border: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.header .nav-bottom .dropdown-menu .container {
+    padding-right: 0;
+}
+
+.header .nav-bottom .col-5 {
+    padding-right: 0;
+    padding-left: 0;
+}
+
 .header .nav-link {
     border-bottom: 2px solid transparent;
-}
-
-.modal-shortcut .btn-outline-primary svg > path {
-    fill: var(--bs-primary);
-}
-
-.modal-shortcut .form-control:focus,
-.modal-shortcut .btn-outline-primary:focus,
-.modal-shortcut .btn-outline-primary:hover {
-    box-shadow: none;
-    background: transparent;
 }
 
 .header .nav-link:hover,
@@ -452,14 +470,6 @@ html.blind {
     color: var(--title-color);
     border-bottom: 2px solid var(--bs-primary);
     border-radius: 36px 36px 0 0;
-}
-
-.modal-shortcut .search-action-input:focus {
-    border-color: var(--bs-primary);
-}
-
-.modal-shortcut .btn-close:focus {
-    box-shadow: none;
 }
 
 /* Intro section | Omonjon */
