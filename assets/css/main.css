@@ -144,7 +144,7 @@ body {
 }
 
 .fs-7 {
-
+ font-size: 14px;
 }
 
 .fs-8 {
@@ -552,6 +552,11 @@ html.blind {
 .offers-card {
     border: 1px solid #E3E4E8;
     border-radius: 15px;
+}
+
+.offers-card p{
+    top: 11%;
+    right: 30%;
 }
 
 .py-30px {
