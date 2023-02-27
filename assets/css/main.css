@@ -99,6 +99,10 @@ body {
     padding-right: 0.75rem;
 }
 
+.position-lg-relative {
+    position: relative;
+}
+
 .gray-bg {
     background-color: var(--gray-bg-color);
 }
@@ -170,6 +174,10 @@ body {
 
 .lh-22px {
     line-height: 22.4px;
+}
+
+.w-max-content{
+    width: max-content;
 }
 
 .opacity-7 {
@@ -360,7 +368,7 @@ html.blind {
     position: absolute;
     left: 0;
     top: 0;
-    z-index: 99;
+    z-index: 1;
     opacity: 0;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -447,9 +455,9 @@ html.blind {
 }
 
 .header .nav-bottom .dropdown-menu {
-    border-radius: 0px 0px 24px 24px;
+    border-radius:0 0  24px 24px;
     border: none;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    box-shadow: rgba(0, 0, 0, 0.30) 0px 20px 20px 0px;
 }
 
 .header .nav-bottom .dropdown-menu .container {
@@ -459,6 +467,11 @@ html.blind {
 .header .nav-bottom .col-5 {
     padding-right: 0;
     padding-left: 0;
+}
+
+.header .navbar-brand img{
+    max-width: 200px;
+    width: 100%;
 }
 
 .header .nav-link {
@@ -771,7 +784,7 @@ html.blind {
 .swiper-rtl .swiper-button-next {
     left: 14px;
     right: 80px;
-    box-shadow: 1px 1px 19px rgba(50, 50, 71, 0.08), 0px 4px 8px rgba(50, 50, 71, 0.06);
+    box-shadow: 1px 1px 19px rgba(50, 50, 71, 0.08),0  4px 8px rgba(50, 50, 71, 0.06);
     transition: all 300ms ease;
 }
 
@@ -795,7 +808,7 @@ html.blind {
 .swiper-rtl .swiper-button-next {
     left: initial;
     right: 14px;
-    box-shadow: 1px 1px 19px rgba(50, 50, 71, 0.08), 0px 4px 8px rgba(50, 50, 71, 0.06);
+    box-shadow: 1px 1px 19px rgba(50, 50, 71, 0.08),0  4px 8px rgba(50, 50, 71, 0.06);
     transition: all 300ms ease;
 }
 
@@ -827,7 +840,7 @@ html.blind {
     right: 3rem;
     bottom: -30%;
     background-color: var(--bs-primary);
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.24)0  3px 8px;
     display: inline-flex;
     padding: .35rem;
     border-radius: .25rem;
@@ -847,3 +860,51 @@ html.blind {
 .show-scroll {
     bottom: 5rem;
 }
+
+.footer-logo img{
+    max-width: 200px;
+    width: 100%;
+}
+
+/* ============ only desktop view ============ */
+@media all and (min-width: 992px) {
+    .navbar .dropdown-menu-end {
+        right: 0;
+        left: auto;
+    }
+
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        transition: .3s;
+        margin-top: 0;
+    }
+
+    .navbar .nav-item:hover .nav-link {
+        color: var(--bs-secondary);
+    }
+
+    .navbar .dropdown-menu.fade-down {
+        top: 80%;
+        width: 100%;
+        left: 0;
+        right: 0;
+        transform: rotateX(-75deg);
+        transform-origin:0 0;
+    }
+
+    .navbar .dropdown-menu.fade-up {
+        top: 180%;
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        transition: .3s;
+        opacity: 1;
+        visibility: visible;
+        top: 100%;
+        transform: rotateX(0deg);
+    }
+}
+
+/* ============ desktop view .end// ============ */
