@@ -116,6 +116,42 @@ if ($(".partnersSlider").length) {
 
 /* ********************************************************** */
 
+/*=============== HEADER NAV | Omonjon ===============*/
+
+var navbarToggle = document.querySelector('.navbar-toggler');
+var headerCollapse = document.querySelector('.navbar-collapse');
+var navBottom = document.querySelector('.nav-bottom');
+var isActive = headerCollapse.classList.contains("show");
+
+navbarToggle.addEventListener("click",function () {
+
+        if(isActive) {
+            console.log('work');
+        }
+        else {
+            console.log('dt work');
+        }
+    })
+
+
+
+/*=============== HEADER FIXED | Omonjon ===============*/
+if ($("#myHeader").length) {
+    window.onscroll = function () {
+        myFunction()
+    };
+
+    var header = document.getElementById("myHeader");
+    var sticky = header.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        }
+    }
+}
 
 /*=============== SCROLL UP | Omonjon ===============*/
 if ($("#scroll-up").length) {

@@ -445,6 +445,15 @@ html.blind {
     position: initial;
 }
 
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    background: var(--bs-white);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
 .header .nav-bottom .dropdown-item:hover {
     background-color: transparent;
 }
@@ -480,8 +489,8 @@ html.blind {
 
 .header .nav-link:hover,
 .header .nav-link:focus {
-    color: var(--title-color);
-    border-bottom: 2px solid var(--bs-primary);
+    color: var(--bs-black);
+    border-bottom: 2px solid var(--bs-white);
     border-radius: 36px 36px 0 0;
 }
 

@@ -21,8 +21,8 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
     <!--================ STYLE CSS | Omonjon ================-->
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/breakpoints.css">
+    <link rel="stylesheet" href="assets/css/main.css?v=0.0.2">
+    <link rel="stylesheet" href="assets/css/breakpoints.css?v=0.0.2">
 
     <title>Ingosstrax</title>
 </head>
@@ -34,41 +34,17 @@
 </div>
 
 <!--==================== HEADER | Omonjon ====================-->
-<header class="header position-sticky top-0 bg-white z-index-9" id="header">
-    <nav class="navbar navbar-expand-lg">
-        <div class="container border-bottom">
-            <a class="navbar-brand" href="#"><img src="assets/images/icons/ingo_uzb.svg" class="" alt=""></a>
-            <div class="d-lg-flex align-items-lg-center justify-content-lg-between">
-                <div class="nav-top d-flex align-items-center justify-content-center ms-auto">
-                    <a class="text-color p-2 fs-7 transition me-3" href="#">Проверка Полис</a>
-
-                    <a class="text-color p-2 fs-7 transition me-3" href="#"><span class="me-2"><img
-                            src="assets/images/icons/location.svg" alt=""></span>Офисы</a>
-                    <div class="d-flex align-items-center me-3">
-                        <a class="dropdown-item w-auto noDefalult" href="#">
-                            <div class="position-relative darkmode">
-                                <input type="checkbox" id="toggleThemeMode" class="mode__theme"/>
-                                <label class="label" for="toggleThemeMode"></label>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <button class="navbar-toggler position-relative z-index-9" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
-    </nav>
-    <nav class="nav-bottom position-lg-relative position-initial">
+<header class="header" id="header">
+    <nav class="nav-bottom position-lg-relative position-initial bg-primary">
         <div class="container">
-            <div class="collapse navbar-collapse d-lg-flex align-items-lg-center justify-content-lg-between bg-white z-index-8" id="navbarNavAltMarkup">
+            <div class="collapse navbar-collapse d-lg-flex align-items-lg-center justify-content-lg-between"
+                 id="navbarNavAltMarkup">
                 <ul class="nav-list d-lg-flex align-items-lg-center">
                     <div class="navbar navbar-expand-lg text-secondaryc bg-transparent">
                         <div class="">
                             <ul class="navbar-nav ms-auto">
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link text-color pt-2 pb-2 px-md-0 me-xl-3"
+                                    <a class="nav-link text-white pt-2 pb-2 px-md-0 me-xl-3 me-md-2"
                                        href="#"
                                        data-bs-toggle="dropdown">Главная</a>
                                 </li>
@@ -79,7 +55,7 @@
                         <div class="">
                             <ul class="navbar-nav ms-auto">
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link text-color pt-2 pb-2 px-md-0 me-xl-3"
+                                    <a class="nav-link text-white pt-2 pb-2 px-md-0 me-xl-3 me-md-2"
                                        href="#"
                                        data-bs-toggle="dropdown">О компании</a>
                                     <ul class="dropdown-menu dropdown-menu-end fade-down pt-4 pb-4 show-md">
@@ -135,7 +111,7 @@
                         <div class="">
                             <ul class="navbar-nav ms-auto">
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link text-color pt-2 pb-2 px-md-0 me-xl-3"
+                                    <a class="nav-link text-white pt-2 pb-2 px-md-0 me-xl-3 me-md-2"
                                        href="#"
                                        data-bs-toggle="dropdown">Онлайн страхование</a>
                                     <ul class="dropdown-menu dropdown-menu-end fade-down pt-4 pb-4 show-md">
@@ -164,7 +140,7 @@
                         <div class="">
                             <ul class="navbar-nav ms-auto">
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link text-color pb-2 px-md-0 me-xl-3"
+                                    <a class="nav-link text-white pb-2 px-md-0 me-xl-3 me-md-2"
                                        href="#"
                                        data-bs-toggle="dropdown">Интерактивные онлайн услуги</a>
                                     <ul class="dropdown-menu dropdown-menu-end fade-down pt-4 pb-4 show-md">
@@ -193,7 +169,7 @@
                         <div class="">
                             <ul class="navbar-nav ms-auto">
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link text-color pt-2 pb-2 px-md-0 me-md-2 me-xl-3"
+                                    <a class="nav-link text-white pt-2 pb-2 px-md-0 me-md-2 me-xl-3 me-md-2"
                                        href="#"
                                        data-bs-toggle="dropdown">Тендеры</a>
                                     <ul class="dropdown-menu dropdown-menu-end fade-down pt-4 pb-4 show-md">
@@ -220,19 +196,45 @@
                         <div class="collapse navbar-collapse">
                             <ul class="navbar-nav ms-auto">
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle text-color pt-2 pb-2 px-md-0" href="#"
+                                    <a class="nav-link dropdown-toggle text-white pt-2 pb-2 px-md-0" href="#"
                                        data-bs-toggle="dropdown">контакты</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </ul>
-                <a href="#" class="text-primary d-flex align-items-center">
-                    <img class="me-2" src="assets/images/icons/warning.svg" alt=""> Страховой случай
-                </a>
             </div>
         </div>
     </nav>
+    <nav class="navbar navbar-expand-lg" id="myHeader">
+        <div class="container border-bottom pb-2">
+            <a class="navbar-brand" href="#"><img src="assets/images/icons/ingo_uzbekistan.svg" class="" alt=""></a>
+            <div class="d-lg-flex align-items-lg-center justify-content-lg-between">
+                <div class="nav-top d-flex align-items-center justify-content-center ms-auto">
+                    <a class="text-white rounded-3 px-4 bg-primary py-2 me-3" href="#">Проверка Полис</a>
+                    <a href="#" class="bg-danger text-white rounded-3 px-4 py-2 me-3">
+                        Страховой случай
+                    </a>
+                    <a class="text-color p-2 fs-7 transition me-3" href="#"><span class="me-2"><img
+                            src="assets/images/icons/location.svg" alt=""></span>Офисы</a>
+                    <div class="d-flex align-items-center me-3">
+                        <a class="dropdown-item w-auto noDefalult" href="#">
+                            <div class="position-relative darkmode">
+                                <input type="checkbox" id="toggleThemeMode" class="mode__theme"/>
+                                <label class="label" for="toggleThemeMode"></label>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <button class="navbar-toggler position-relative z-index-9" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
 </header>
 <!--================ INTRO | Omonjon ================-->
 <section class="intro-section mt-5 mb-5" id="introSection">
@@ -248,10 +250,16 @@
                                 Узнайте стоимость полиса за 10 секунд
                                 и оформите онлайн
                             </p>
-                            <p class="ttitle-color fs-6 d-flex align-items-center"><i class='bx bx-check bx-sm text-success me-2'></i>Расчет и оформление за несколько минут</p>
-                            <p class="ttitle-color fs-6 d-flex align-items-center"><i class='bx bx-check bx-sm text-success me-2'></i>Поддержка 24/7 по телефону, в чате и приложении</p>
-                            <p class="ttitle-color fs-6 d-flex align-items-center"><i class='bx bx-check bx-sm text-success me-2'></i>Для взрослых и детей</p>
-                            <a href="#" class="bg-primary text-white rounded-2 px-5 py-3 w-max-content mt-3">Оформить</a>
+                            <p class="ttitle-color fs-6 d-flex align-items-center"><i
+                                    class='bx bx-check bx-sm text-success me-2'></i>Расчет и оформление за несколько
+                                минут</p>
+                            <p class="ttitle-color fs-6 d-flex align-items-center"><i
+                                    class='bx bx-check bx-sm text-success me-2'></i>Поддержка 24/7 по телефону и в чате
+                            </p>
+                            <p class="ttitle-color fs-6 d-flex align-items-center"><i
+                                    class='bx bx-check bx-sm text-success me-2'></i>Для взрослых и детей</p>
+                            <a href="#"
+                               class="bg-primary text-white rounded-2 px-5 py-3 w-max-content mt-3">Оформить</a>
                         </div>
                         <div class="d-flex">
                             <img src="assets/images/car-osago.png" alt="">
@@ -266,10 +274,16 @@
                             <p class="title-color-light mb-3 w-100">
                                 Введите данные и рассчитайте стоимость полиса онлайн
                             </p>
-                            <p class="ttitle-color fs-6 d-flex align-items-center"><i class='bx bx-check bx-sm text-success me-2'></i>Расчет и оформление за несколько минут</p>
-                            <p class="ttitle-color fs-6 d-flex align-items-center"><i class='bx bx-check bx-sm text-success me-2'></i>Поддержка 24/7 по телефону, в чате и приложении</p>
-                            <p class="ttitle-color fs-6 d-flex align-items-center"><i class='bx bx-check bx-sm text-success me-2'></i>Для взрослых и детей</p>
-                            <a href="#" class=" bg-primary text-white rounded-2 px-5 py-3 w-max-content mt-3">Оформить</a>
+                            <p class="ttitle-color fs-6 d-flex align-items-center"><i
+                                    class='bx bx-check bx-sm text-success me-2'></i>Расчет и оформление за несколько
+                                минут</p>
+                            <p class="ttitle-color fs-6 d-flex align-items-center"><i
+                                    class='bx bx-check bx-sm text-success me-2'></i>Поддержка 24/7 по телефону и в чате
+                            </p>
+                            <p class="ttitle-color fs-6 d-flex align-items-center"><i
+                                    class='bx bx-check bx-sm text-success me-2'></i>Для взрослых и детей</p>
+                            <a href="#"
+                               class=" bg-primary text-white rounded-2 px-5 py-3 w-max-content mt-3">Оформить</a>
                         </div>
                         <div class="d-flex">
                             <img src="assets/images/travel.png" alt="">
@@ -285,10 +299,16 @@
                                 Узнайте стоимость за 2 минуты
                                 и оформите полис без визита в офис
                             </p>
-                            <p class="ttitle-color fs-6 d-flex align-items-center"><i class='bx bx-check bx-sm text-success me-2'></i>Расчет и оформление за несколько минут</p>
-                            <p class="ttitle-color fs-6 d-flex align-items-center"><i class='bx bx-check bx-sm text-success me-2'></i>Поддержка 24/7 по телефону, в чате и приложении</p>
-                            <p class="ttitle-color fs-6 d-flex align-items-center"><i class='bx bx-check bx-sm text-success me-2'></i>Для взрослых и детей</p>
-                            <a href="#" class=" bg-primary text-white rounded-2 px-5 py-3 w-max-content mt-3">Оформить</a>
+                            <p class="ttitle-color fs-6 d-flex align-items-center"><i
+                                    class='bx bx-check bx-sm text-success me-2'></i>Расчет и оформление за несколько
+                                минут</p>
+                            <p class="ttitle-color fs-6 d-flex align-items-center"><i
+                                    class='bx bx-check bx-sm text-success me-2'></i>Поддержка 24/7 по телефону и в чате
+                            </p>
+                            <p class="ttitle-color fs-6 d-flex align-items-center"><i
+                                    class='bx bx-check bx-sm text-success me-2'></i>Для взрослых и детей</p>
+                            <a href="#"
+                               class=" bg-primary text-white rounded-2 px-5 py-3 w-max-content mt-3">Оформить</a>
                         </div>
                         <div class="d-flex">
                             <img src="assets/images/car-kasko.png" alt="">
@@ -303,13 +323,19 @@
                             <p class="title-color-light mb-3 w-100">
                                 Введите данные и рассчитайте стоимость полиса онлайн
                             </p>
-                            <p class="ttitle-color fs-6 d-flex align-items-center"><i class='bx bx-check bx-sm text-success me-2'></i>Расчет и оформление за несколько минут</p>
-                            <p class="ttitle-color fs-6 d-flex align-items-center"><i class='bx bx-check bx-sm text-success me-2'></i>Поддержка 24/7 по телефону, в чате и приложении</p>
-                            <p class="ttitle-color fs-6 d-flex align-items-center"><i class='bx bx-check bx-sm text-success me-2'></i>Для взрослых и детей</p>
-                            <a href="#" class=" bg-primary text-white rounded-2 px-5 py-3 w-max-content mt-3">Оформить</a>
+                            <p class="ttitle-color fs-6 d-flex align-items-center"><i
+                                    class='bx bx-check bx-sm text-success me-2'></i>Расчет и оформление за несколько
+                                минут</p>
+                            <p class="ttitle-color fs-6 d-flex align-items-center"><i
+                                    class='bx bx-check bx-sm text-success me-2'></i>Поддержка 24/7 по телефону и в чате
+                            </p>
+                            <p class="ttitle-color fs-6 d-flex align-items-center"><i
+                                    class='bx bx-check bx-sm text-success me-2'></i>Для взрослых и детей</p>
+                            <a href="#"
+                               class=" bg-primary text-white rounded-2 px-5 py-3 w-max-content mt-3">Оформить</a>
                         </div>
                         <div class="d-flex">
-                            <img src="assets/images/ipoteka.png" alt="">
+                            <img src="assets/images/car-osago.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -377,7 +403,7 @@
                             <div class="offers-card-btn d-flex align-items-center mt-4 gap-4">
                                 <a href="#"
                                    class="btn custom-btn btn-outline-primary px-4 py-2 btn-outline-primary px-4 py-2">Рассчитать</a>
-                                <span class="">от 120 ₽/мес </span>
+                                <span class="">от 120 UZS/мес </span>
                             </div>
                         </div>
                         <div class="col-5 offers-card-img d-flex position-relative">
@@ -393,18 +419,18 @@
                             <p class="card-text mt-2 opacity-7 fw-light">Для оформления полиса понадобится только
                                 паспорт</p>
                             <div class="offers-card-wrapper-span mt-4 d-flex flex-wrap gap-3">
-                                <span class="badge rounded bg-body-secondary d-inline-block text-dark fs-7 p-2">От 100 ₽ в месяц</span>
+                                <span class="badge rounded bg-body-secondary d-inline-block text-dark fs-7 p-2">От 100 UZS в месяц</span>
                                 <span class="badge rounded bg-body-secondary d-inline-block text-dark fs-7 p-2">Семейный полис</span>
                                 <span class="badge rounded bg-body-secondary d-inline-block text-dark fs-7 p-2">Для всех видов спорта</span>
                             </div>
                             <div class="offers-card-btn d-flex align-items-center mt-4 gap-4">
                                 <a href="#" class="btn custom-btn btn-outline-primary px-4 py-2">Рассчитать</a>
-                                <span>от 120 ₽/мес </span>
+                                <span>от 120 UZS/мес </span>
                             </div>
                         </div>
                         <div class="col-5 offers-card-img d-flex position-relative">
                             <p class="position-absolute fs-7 py-1 px-3 bg-primary rounded-pill text-white">от 10 000
-                                ₽</p>
+                                UZS</p>
                             <img class="m-auto w-100" src="assets/images/offers_card2.png" alt="">
                         </div>
                     </div>
@@ -421,7 +447,7 @@
                             </div>
                             <div class="offers-card-btn d-flex align-items-center mt-4 gap-4">
                                 <a href="#" class="btn custom-btn btn-outline-primary px-4 py-2">Рассчитать</a>
-                                <span>от 120 ₽/мес </span>
+                                <span>от 120 UZS/мес </span>
                             </div>
                         </div>
                         <div class="col-5 offers-card-img d-flex position-relative">
@@ -436,16 +462,16 @@
                             <h4 class="card-title opacity-7 fw-bold lh-1">ОСГОР</h4>
                             <p class="card-text mt-2 opacity-7 fw-light">Оформите онлайн и получите полис на e-mail</p>
                             <div class="offers-card-wrapper-span mt-4 d-flex flex-wrap gap-3">
-                                <span class="badge rounded bg-body-secondary d-inline-block text-dark fs-7 p-2">От 150 ₽ в год</span>
+                                <span class="badge rounded bg-body-secondary d-inline-block text-dark fs-7 p-2">От 150 UZS в год</span>
                                 <span class="badge rounded bg-body-secondary d-inline-block text-dark fs-7 p-2">Поддержка 24/7</span>
                             </div>
                             <div class="offers-card-btn d-flex align-items-center mt-4 gap-4">
                                 <a href="#" class="btn custom-btn btn-outline-primary px-4 py-2">Рассчитать</a>
-                                <!--<span>от 120 ₽/мес </span>-->
+                                <!--<span>от 120 UZS/мес </span>-->
                             </div>
                         </div>
                         <div class="col-5 offers-card-img d-flex position-relative">
-                            <p class="position-absolute fs-7 py-1 px-3 bg-primary rounded-pill text-white">от 150 ₽ в
+                            <p class="position-absolute fs-7 py-1 px-3 bg-primary rounded-pill text-white">от 150 UZS в
                                 год</p>
                             <img class="m-auto w-100" src="assets/images/offers_card4.png" alt="">
                         </div>
@@ -537,7 +563,7 @@
             <div class="card" style="width: 22rem;">
                 <div class="card-body">
                     <h5 class="card-title fs-title-sec">Взлёт 20%</h5>
-                    <p class="card-text text-secondary">Сборы «Ингосстраха»
+                    <p class="card-text text-secondary">Сборы «Ингоузбекистан»
                         <br>
                         в Приволжье в 1 полугодии 2021 года выросли на 20%</p>
                     <div class="d-flex justify-content-between align-items-start mt-3">
@@ -549,7 +575,7 @@
             <div class="card" style="width: 22rem;">
                 <div class="card-body">
                     <h5 class="card-title fs-title-sec">Выросли на 20%</h5>
-                    <p class="card-text text-secondary">Сборы «Ингосстраха»
+                    <p class="card-text text-secondary">Сборы «Ингоузбекистан»
                         <br>
                         в Приволжье в 1 полугодии 2021 года выросли на 20%</p>
                     <div class="d-flex justify-content-between align-items-start mt-3">
@@ -560,8 +586,8 @@
             </div>
             <div class="card" style="width: 22rem;">
                 <div class="card-body">
-                    <h5 class="card-title fs-title-sec">Сборы «Ингосстраха» </h5>
-                    <p class="card-text text-secondary">Сборы «Ингосстраха»
+                    <h5 class="card-title fs-title-sec">Сборы «Ингоузбекистан» </h5>
+                    <p class="card-text text-secondary">Сборы «Ингоузбекистан»
                         <br>
                         в Приволжье в 1 полугодии 2021 года выросли на 20%</p>
                     <div class="d-flex justify-content-between align-items-start mt-3">
@@ -608,10 +634,25 @@
             <div class="row col-12">
                 <div class="col-3">
                     <div class="d-flex flex-column">
-                        <a href="#" class="footer-logo"><img src="assets/images/icons/ingo_uzb.svg" class="w-100" alt=""></a>
-                        <a href="tel:8 (495) 956-55-55" class="text-primary fs-5 fw-lighter pt-2 pb-4">8 (495)
-                            956-55-55</a>
-                        <a href="#" class="text-primary fs-7 fw-medium">Версия для слабовидящих</a>
+                        <a href="#" class="footer-logo"><img src="assets/images/icons/ingo_uzbekistan.svg" class="w-100"
+                                                             alt=""></a>
+                        <a href="tel:+998781509999" class="text-primary fs-5 fw-lighter mt-3 mb-2">+998(78) 150 9999</a>
+                        <p class="fs-7 fw-lighter mt-2 mb-2 footer-link-color">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                                <path fill="none" d="M0 0h24v24H0z"/>
+                                <path fill="var(--bs-primary)"
+                                      d="M12 20.9l4.95-4.95a7 7 0 1 0-9.9 0L12 20.9zm0 2.828l-6.364-6.364a9 9 0 1 1 12.728 0L12 23.728zM12 13a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 2a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/>
+                            </svg>
+                            100084, г.Ташкент, Юнусабад р, ул. Ш.Рашидов, 99А
+                        </p>
+                        <p class="d-flex align-items-center gap-1 fs-7 fw-lighter mt-2 footer-link-color">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                                <path fill="none" d="M0 0h24v24H0z"/>
+                                <path fill="var(--bs-primary)"
+                                      d="M3 3h18a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm17 4.238l-7.928 7.1L4 7.216V19h16V7.238zM4.511 5l7.55 6.662L19.502 5H4.511z"/>
+                            </svg>
+                            info@ingo.uz
+                        </p>
                     </div>
                 </div>
                 <div class="col-3">
@@ -647,10 +688,10 @@
                             <a href="#" class="footer-link-color fs-6">Путешествия</a>
                         </li>
                         <li class="mb-3">
-                            <a href="#" class="footer-link-color fs-6">Имущество</a>
+                            <a href="#" class="footer-link-color fs-6">Каско</a>
                         </li>
                         <li class="mb-3">
-                            <a href="#" class="footer-link-color fs-6">Здоровье и Жизнь</a>
+                            <a href="#" class="footer-link-color fs-6">Осгор</a>
                         </li>
                         <li class="">
                             <a href="#" class="footer-link-color fs-6">Другие продукты</a>
@@ -685,17 +726,9 @@
     <div class="border-top">
         <div class="container pt-4 pb-5">
             <p class="footer-link-color w-100" style="font-size: 12px">
-                СПАО «Ингосстрах» использует файлы «cookie» с целью персонализации сервисов и повышения удобства
-                пользования веб-сайтом. Если вы не хотите использовать файлы «cookie», измените настройки браузера.
-                Порядок обработки Ваших персональных данных, а также реализуемые требования к их защите, содержатся в
-                Политике СПАО «Ингосстрах».
-                <br>
-                <br>
-                © 2021 СПАО «Ингосстрах». По вопросам сопровождения сайта обращайтесь www@ingos.ru
-                Лицензии ЦБ РФ на осуществление страхования: СИ №0928, СЛ №0928, ОС №0928-03, ОС №0928-04, ОС №0928-05 и
-                на осуществление перестрахования ПС № 0928, выданные 23.09.2015 и ОС №0928-02 от 25.12.2019, все
-                лицензии без ограничения срока действия.
-                Сайт защищён reCAPTCHA с применением Политики конфиденциальности и Условий использования от Google.
+                © 2015 - 2023 Все права защищены.<br>
+                «Инго Узбекистан» При полном или частичном использовании и цитировании материалов, опубликованных на
+                данном сайте, ссылка на официальный сайт САО «www.ingo.uz» обязательна
             </p>
         </div>
     </div>
@@ -721,7 +754,7 @@
 <script src="assets/js/bootstrap.bundle.min.js"></script>
 
 <!--================ MAIN JS | Omonjon ================-->
-<script src="assets/js/main.js"></script>
+<script src="assets/js/main.js?v=0.0.2"></script>
 
 </body>
 
