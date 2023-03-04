@@ -361,6 +361,11 @@ html.blind {
     color: #333 !important;
 }
 
+.position-darklight{
+    bottom: 30px;
+    left: 20px;
+}
+
 #toggleThemeMode[type=checkbox] {
     visibility: visible;
     width: 100%;
@@ -445,13 +450,44 @@ html.blind {
     position: initial;
 }
 
+.menu-item-burger{
+    display: flex;
+    height: 0;
+    width: 0;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: left;
+    transition: all .35s;
+}
+
+.sticky .menu-item-burger{
+    height: 2.125rem;
+    width: 2.125rem;
+    opacity: 1;
+    transform: scale(1);
+    margin: 0;
+}
+
 .sticky{
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 10;
     background: var(--bs-white);
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px -10px 28px, rgba(0, 0, 0, 0.22) 0px 5px 10px;
+}
+
+.sticky .d-none {
+    display: flex !important;
+}
+
+
+.d-grid-custom{
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.typeIns .card-img-top{
+    width: 80px;
 }
 
 .header .nav-bottom .dropdown-item:hover {
@@ -606,6 +642,11 @@ html.blind {
     font-size: 16px;
 }
 
+.soon {
+    top: 20px;
+    right: -34px;
+    transform: rotate(45deg);
+}
 
 .h-for-intro {
     height: 500px;
@@ -873,6 +914,11 @@ html.blind {
 .footer-logo img{
     max-width: 200px;
     width: 100%;
+}
+
+.footer-social-fixed{
+    bottom: 70px;
+    left: 30px;
 }
 
 /* ============ only desktop view ============ */
