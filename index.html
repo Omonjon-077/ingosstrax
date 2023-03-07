@@ -21,8 +21,8 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
     <!--================ STYLE CSS | Omonjon ================-->
-    <link rel="stylesheet" href="assets/css/main.css?v=0.0.4">
-    <link rel="stylesheet" href="assets/css/breakpoints.css?v=0.0.3">
+    <link rel="stylesheet" href="assets/css/main.css?v=0.0.5">
+    <link rel="stylesheet" href="assets/css/breakpoints.css?v=0.0.4">
 
     <title>Ingouzbekistan</title>
 </head>
@@ -38,12 +38,12 @@
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-fullscreen">
         <div class="modal-content">
-            <div class="modal-header d-block">
-                <button type="button" class="btn-close ms-lg-5 me-auto" data-bs-dismiss="modal"
+            <div class="modal-header">
+                <button type="button" class="btn-close ms-lg-5 ms-auto me-sm-5 me-lg-0" data-bs-dismiss="modal"
                         aria-label="Close"></button>
             </div>
-            <div class="modal-body bg-primary pt-5">
-                <div class="container">
+            <div class="modal-body bg-primary pt-md-5 pt-sm-3 pt-3">
+                <div class="container-sm container-fluid">
                     <div class="d-grid d-grid-custom row-gap-5">
                         <div class="d-flex flex-column row-gap-2">
                             <h1 class="text-white fs-4 fw-bold">О компании</h1>
@@ -86,7 +86,7 @@
 
 <!--==================== HEADER | Omonjon ====================-->
 <header class="header" id="header">
-    <nav class="nav-bottom position-lg-relative position-initial bg-primary">
+    <nav class="nav-bottom position-relative position-initial bg-primary">
         <div class="container">
             <div class="collapse navbar-collapse d-lg-flex align-items-lg-center justify-content-lg-between"
                  id="navbarNavAltMarkup">
@@ -263,25 +263,33 @@
             </div>
         </div>
     </nav>
-    <nav class="navbar navbar-expand-lg" id="myHeader">
-        <div class="container border-bottom pb-2">
+
+
+    <nav class="navbar" id="myHeader">
+        <div class="container border-bottom pb-2 justify-content-lg-between justify-content-sm-start">
             <div class="d-flex align-items-center">
-                <a href="#" class="align-items-center menu-item-burger me-3 pt-1" data-bs-toggle="modal"
+                <a href="#" class="d-none d-lg-flex align-items-center menu-item-burger me-3 pt-1"
+                   data-bs-toggle="modal"
                    data-bs-target="#exampleModal">
                     <i class='bx bx-menu fs-4 text-primary'></i>
                 </a>
 
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand me-0" href="#">
                     <img src="assets/images/icons/ingo_uzbekistan.svg" class="" alt="">
                 </a>
             </div>
-            <div class="d-lg-flex align-items-lg-center justify-content-lg-between">
+            <div class="d-lg-flex align-items-lg-center justify-content-lg-between ms-auto">
                 <div class="nav-top d-flex align-items-center justify-content-center ms-auto">
-                    <a class="text-white rounded-3 px-4 bg-primary py-2 me-3" href="#">Проверка Полиса</a>
-                    <a href="#" class="bg-danger text-white rounded-3 px-4 py-2">
+                    <a class="text-white rounded-3 px-4 bg-primary d-none d-sm-block py-2 me-3" href="#">
+                        Проверка Полиса
+                    </a>
+                    <a href="#" class="d-block d-sm-none me-2">
+                        <img class="" src="assets/images/icons/check-polis.svg" alt="">
+                    </a>
+                    <a href="#" class="bg-danger d-md-block d-none text-white rounded-3 px-4 py-2 me-md-3 me-lg-0">
                         Страховой случай
                     </a>
-                    <div class="d-flex align-items-center position-fixed position-darklight">
+                    <div class="d-none d-md-flex align-items-center position-fixed position-darklight">
                         <a class="dropdown-item w-auto noDefalult" href="#">
                             <div class="position-relative darkmode">
                                 <input type="checkbox" id="toggleThemeMode" class="mode__theme"/>
@@ -291,17 +299,16 @@
                     </div>
                 </div>
             </div>
-            <button class="navbar-toggler position-relative z-index-9" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup"
-                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <a href="#" class="d-flex align-items-center d-lg-none" data-bs-toggle="modal"
+               data-bs-target="#exampleModal">
+                <i class='bx bx-menu fs-4 text-primary'></i>
+            </a>
         </div>
     </nav>
 
 </header>
 <!--================ INTRO | Omonjon ================-->
-<section class="intro-section mt-5 mb-5" id="introSection">
+<section class="intro-section mt-5 mb-5 d-none" id="introSection">
     <div class="container">
         <div class="tabs-general rounded-5">
             <div class="tab-content pb-2" id="pills-tabContent">
@@ -447,40 +454,55 @@
 </section>
 
 <!--================ Types of insurance | Omonjon ================-->
-<section class="typeIns">
+<section class="typeIns mt-3 mt-lg-5 mb-5">
     <div class="container">
-        <h2 class="title-color fs-3 fw-bold text-start">Виды страхования </h2>
-        <div class="col-12 d-flex justify-content-between my-5">
-            <a href="#" class="offers-card transition-default border border-1 bg-white rounded-5 py-3 px-3 col-2">
-                <img src="assets/images/icons/bank.svg" class="card-img-top" alt="">
-                <div class="mt-3 ps-2">
-                    <p class="card-text fs-6 fw-semibold">Имущество</p>
-                </div>
-            </a>
-            <a href="#" class="offers-card transition-default border border-1 bg-white rounded-5 py-3 px-3 col-2">
-                <img src="assets/images/icons/health.svg" class="card-img-top" alt="">
-                <div class="mt-3 ps-2">
-                    <p class="card-text fs-6 fw-semibold">Жизнь</p>
-                </div>
-            </a>
-            <a href="#" class="offers-card transition-default border border-1 bg-white rounded-5 py-3 px-3 col-2">
-                <img src="assets/images/icons/bank.svg" class="card-img-top" alt="">
-                <div class="mt-3 ps-2">
-                    <p class="card-text fs-6 fw-semibold">Инвестиции</p>
-                </div>
-            </a>
-            <a href="#" class="offers-card transition-default border border-1 bg-white rounded-5 py-3 px-3 col-2">
-                <img src="assets/images/icons/heart.svg" class="card-img-top" alt="">
-                <div class="mt-3 ps-2">
-                    <p class="card-text fs-6 fw-semibold">Здоровье</p>
-                </div>
-            </a>
-            <a href="#" class="offers-card transition-default border border-1 bg-white rounded-5 py-3 px-3 col-2">
-                <img src="assets/images/icons/book-pen.svg" class="card-img-top" alt="">
-                <div class="mt-3 ps-2">
-                    <p class="card-text fs-6 fw-semibold">Пенсия</p>
-                </div>
-            </a>
+        <h2 class="title-color fs-2 fw-bold text-md-start text-center">Виды страхования </h2>
+        <div class="col-12 row mx-0 row-gap-3 my-5 justify-content-lg-between justify-content-center">
+            <div class="col-lg-2 col-md-4 col-sm-4 col-12">
+                <a href="#"
+                   class="d-flex align-items-center flex-column offers-card transition-default border border-1 bg-white rounded-5 py-3 px-lg-3 px-sm-2">
+                    <img src="assets/images/icons/bank.svg" class="card-img-top" alt="">
+                    <div class="mt-3 ps-2">
+                        <p class="card-text fs-6 fw-semibold">Имущество</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-4 col-12">
+                <a href="#"
+                   class="d-flex align-items-center flex-column offers-card transition-default border border-1 bg-white rounded-5 py-3 px-lg-3 px-sm-2">
+                    <img src="assets/images/icons/health.svg" class="card-img-top" alt="">
+                    <div class="mt-3 ps-2">
+                        <p class="card-text fs-6 fw-semibold">Жизнь</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-4 col-12">
+                <a href="#"
+                   class="d-flex align-items-center flex-column offers-card transition-default border border-1 bg-white rounded-5 py-3 px-lg-3 px-sm-2">
+                    <img src="assets/images/icons/bank.svg" class="card-img-top" alt="">
+                    <div class="mt-3 ps-2">
+                        <p class="card-text fs-6 fw-semibold">Инвестиции</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-4 col-12">
+                <a href="#"
+                   class="d-flex align-items-center flex-column offers-card transition-default border border-1 bg-white rounded-5 py-3 px-lg-3 px-sm-2">
+                    <img src="assets/images/icons/heart.svg" class="card-img-top" alt="">
+                    <div class="mt-3 ps-2">
+                        <p class="card-text fs-6 fw-semibold">Здоровье</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-4 col-12">
+                <a href="#"
+                   class="d-flex align-items-center flex-column offers-card transition-default border border-1 bg-white rounded-5 py-3 px-lg-3 px-sm-2">
+                    <img src="assets/images/icons/book-pen.svg" class="card-img-top" alt="">
+                    <div class="mt-3 ps-2">
+                        <p class="card-text fs-6 fw-semibold">Пенсия</p>
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
 </section>
@@ -490,13 +512,13 @@
 <section class="offers mt-5">
     <div class="container">
         <div class="offers-heading">
-            <h2 class="title-color fs-3 fw-bold text-start">Актуальные виды страхования</h2>
+            <h2 class="title-color fs-2 fw-bold text-center text-md-start">Актуальные виды страхования</h2>
         </div>
         <div class="offers-wrapper pt-5">
             <div class="row align-items-stretch gy-4">
-                <div class="col-6">
-                    <div class="offers-card transition-default  row overflow-hidden w-100 h-100">
-                        <div class="col-7 offers-card-text align-items-start py-30px px-30px pe-0 card-body d-flex justify-content-between flex-column">
+                <div class="col-12 col-lg-6">
+                    <div class="offers-card transition-default d-flex overflow-hidden w-100 h-100 py-3 px-3 py-lg-4 px-lg-4">
+                        <div class="col-12 col-sm-7 offers-card-text align-items-start card-body d-flex justify-content-between flex-column">
                             <h4 class="card-title opacity-7 fw-bold lh-1">ОСАГО</h4>
                             <p class="card-text mt-2 opacity-7 fw-light">Для оформления полиса понадобится только
                                 паспорт</p>
@@ -505,22 +527,22 @@
                                 <span class="badge rounded bg-body-secondary d-inline-block text-dark fs-7 p-2">Семейный полис</span>
                                 <span class="badge rounded bg-body-secondary d-inline-block text-dark fs-7 p-2">Для всех видов спорта</span>
                             </div>
-                            <div class="offers-card-btn d-flex align-items-center mt-4 gap-4">
+                            <div class="offers-card-btn d-flex align-items-center mt-4 column-gap-1 column-gap-md-3">
                                 <a href="#" class="btn custom-btn btn-outline-primary px-4 py-2">Рассчитать</a>
                                 <a href="#"
                                    class="bg-primary text-white rounded-3 px-4 py-2">Оформить</a>
                             </div>
                         </div>
-                        <div class="col-5 offers-card-img d-flex position-relative">
-                            <p class="position-absolute fs-7 py-1 px-3 bg-primary rounded-pill text-white">от 10 000
+                        <div class="col-5 d-none offers-card-img d-sm-flex position-relative">
+                            <p class="position-absolute fs-9 py-1 px-3 bg-primary rounded-pill text-white">от 10 000
                                 UZS</p>
                             <img class="m-auto w-100" src="assets/images/offers_card2.png" alt="">
                         </div>
                     </div>
                 </div>
-                <div class="col-6">
-                    <div class="offers-card transition-default  row overflow-hidden w-100 h-100">
-                        <div class="col-7 offers-card-text align-items-start py-30px px-30px pe-0 card-body d-flex justify-content-between flex-column">
+                <div class="col-12 col-lg-6">
+                    <div class="offers-card transition-default d-flex overflow-hidden w-100 h-100 py-3 px-3 py-lg-4 px-lg-4">
+                        <div class="col-12 col-sm-7 offers-card-text align-items-start card-body d-flex justify-content-between flex-column">
                             <h4 class="card-title opacity-7 fw-bold lh-1">Путешествия</h4>
                             <p class="card-text mt-2 opacity-7 fw-light">Организуем медпомощь
                                 и оплатим лекарства</p>
@@ -528,43 +550,43 @@
                                 <span class="badge rounded bg-body-secondary d-inline-block text-dark fs-7 p-2">Для любых видов виз</span>
                                 <span class="badge rounded bg-body-secondary d-inline-block text-dark fs-7 p-2">Покрывает риск COVID-19</span>
                             </div>
-                            <div class="offers-card-btn d-flex align-items-center mt-4 gap-4">
+                            <div class="offers-card-btn d-flex align-items-center mt-4 column-gap-1 column-gap-md-3">
                                 <a href="#" class="btn custom-btn btn-outline-primary px-4 py-2">Рассчитать</a>
                                 <a href="#"
                                    class="bg-primary text-white rounded-3 px-4 py-2">Оформить</a>
                             </div>
                         </div>
-                        <div class="col-5 offers-card-img d-flex position-relative">
-                            <p class="position-absolute fs-7 py-1 px-3 bg-success rounded-pill text-white">Выгодно</p>
+                        <div class="col-5 d-none offers-card-img d-sm-flex position-relative">
+                            <p class="position-absolute fs-9 py-1 px-3 bg-success rounded-pill text-white">Выгодно</p>
                             <img class="m-auto w-100" src="assets/images/offers_card3.png" alt="">
                         </div>
                     </div>
                 </div>
-                <div class="col-6">
-                    <div class="offers-card transition-default row overflow-hidden w-100 h-100">
-                        <div class="col-7 offers-card-text align-items-start py-30px px-30px pe-0 card-body d-flex justify-content-between flex-column">
+                <div class="col-12 col-lg-6">
+                    <div class="offers-card transition-default d-flex overflow-hidden w-100 h-100 py-3 px-3 py-lg-4 px-lg-4">
+                        <div class="col-12 col-sm-7 offers-card-text align-items-start card-body d-flex justify-content-between flex-column">
                             <h4 class="card-title opacity-7 fw-bold lh-1">ОСГОР</h4>
                             <p class="card-text mt-2 opacity-7 fw-light">Оформите онлайн и получите полис на e-mail</p>
                             <div class="offers-card-wrapper-span mt-4 d-flex flex-wrap gap-3">
                                 <span class="badge rounded bg-body-secondary d-inline-block text-dark fs-7 p-2">От 150 UZS в год</span>
                                 <span class="badge rounded bg-body-secondary d-inline-block text-dark fs-7 p-2">Поддержка 24/7</span>
                             </div>
-                            <div class="offers-card-btn d-flex align-items-center mt-4 gap-4">
+                            <div class="offers-card-btn d-flex align-items-center mt-4 column-gap-1 column-gap-md-3">
                                 <a href="#" class="btn custom-btn btn-outline-primary px-4 py-2">Рассчитать</a>
                                 <a href="#"
                                    class="bg-primary text-white rounded-3 px-4 py-2">Оформить</a>
                             </div>
                         </div>
-                        <div class="col-5 offers-card-img d-flex position-relative">
-                            <p class="position-absolute fs-7 py-1 px-3 bg-primary rounded-pill text-white">от 150 UZS в
+                        <div class="col-5 d-none offers-card-img d-sm-flex position-relative">
+                            <p class="position-absolute fs-9 py-1 px-3 bg-primary rounded-pill text-white">от 150 UZS в
                                 год</p>
                             <img class="m-auto w-100" src="assets/images/offers_card4.png" alt="">
                         </div>
                     </div>
                 </div>
-                <div class="col-6">
-                    <div class="offers-card transition-default row overflow-hidden w-100 h-100">
-                        <div class="col-7 offers-card-text align-items-start py-30px px-30px pe-0 card-body d-flex justify-content-between flex-column">
+                <div class="col-12 col-lg-6">
+                    <div class="offers-card transition-default d-flex overflow-hidden w-100 h-100 py-3 px-3 py-lg-4 px-lg-4">
+                        <div class="col-12 col-sm-7 offers-card-text align-items-start card-body d-flex justify-content-between flex-column">
                             <h4 class="card-title opacity-7 fw-bold lh-1">Каско</h4>
                             <p class="card-text mt-2 opacity-7 fw-light">Узнайте стоимость за 2 минуты <br> и оформите
                                 без визита в офис</p>
@@ -572,14 +594,14 @@
                                 <span class="badge rounded bg-body-secondary d-inline-block text-dark fs-7 p-2">Без осмотра авто</span>
                                 <span class="badge rounded bg-body-secondary d-inline-block text-dark fs-7 p-2">Без осмотра авто</span>
                             </div>
-                            <div class="offers-card-btn d-flex align-items-center mt-4 gap-4">
+                            <div class="offers-card-btn d-flex align-items-center mt-4 column-gap-1 column-gap-md-3">
                                 <a href="#"
                                    class="btn custom-btn btn-outline-primary px-4 py-2">Рассчитать</a>
                                 <a href="#"
                                    class="bg-primary text-white rounded-3 px-4 py-2">Оформить</a>
                             </div>
                         </div>
-                        <div class="col-5 offers-card-img d-flex position-relative">
+                        <div class="col-5 d-none offers-card-img d-sm-flex position-relative">
                             <span class="position-absolute fs-6 py-1 px-5 bg-success text-white soon">Скоро</span>
                             <img class="mt-auto " src="assets/images/offers_card1.png" alt="">
                         </div>
@@ -590,7 +612,6 @@
         <div class="text-center">
             <a class="d-inline-block text-center border-bottom-dashed text-secondary mt-50px" href="#!">Все продукты</a>
         </div>
-
     </div>
 </section>
 
@@ -600,7 +621,7 @@
 <!--========================================================================-->
 <section class="partners">
     <div class="container py-5">
-        <h2 class="fs-2dot25 title-color fw-bold lh-22px text-start my-4 pb-4 ps-xl-0 ps-lg-0 ps-md-4">Нам доверяют</h2>
+        <h2 class="title-color fs-2 fw-bold text-center text-md-start">Нам доверяют</h2>
     </div>
     <div class="swiper-container container-fluid">
         <div class="swiper partnersSlider px-3">
@@ -665,11 +686,11 @@
 <!--================ NEWS COMPANY | Sobirovs ================-->
 
 <section class="news-company mt-5 mb-5">
-    <div class="container-xl">
-        <h2 class="fs-2dot25 title-color fw-bold lh-22px text-start pb-5">Новости компании</h2>
-        <div class="d-flex justify-content-between">
-            <div class="card" style="width: 22rem;">
-                <div class="card-body">
+    <div class="container">
+        <h2 class="title-color fw-bold text-center text-md-start pb-5">Новости компании</h2>
+        <div class="col-12 row mx-0 row-gap-3">
+            <div class="col-12 col-lg-4 col-md-6">
+                <div class="border border-1 rounded-2 card-body px-3 py-3 px-sm-4 py-sm-4">
                     <h5 class="card-title fs-title-sec">Взлёт 20%</h5>
                     <p class="card-text text-secondary">Сборы «Ингоузбекистан»
                         <br>
@@ -680,8 +701,8 @@
                     </div>
                 </div>
             </div>
-            <div class="card" style="width: 22rem;">
-                <div class="card-body">
+            <div class="col-12 col-lg-4 col-md-6">
+                <div class="border border-1 rounded-2 card-body px-3 py-3 px-sm-4 py-sm-4">
                     <h5 class="card-title fs-title-sec">Выросли на 20%</h5>
                     <p class="card-text text-secondary">Сборы «Ингоузбекистан»
                         <br>
@@ -692,8 +713,8 @@
                     </div>
                 </div>
             </div>
-            <div class="card" style="width: 22rem;">
-                <div class="card-body">
+            <div class="col-12 col-lg-4 col-md-6">
+                <div class="border border-1 rounded-2 card-body px-3 py-3 px-sm-4 py-sm-4">
                     <h5 class="card-title fs-title-sec">Сборы «Ингоузбекистан» </h5>
                     <p class="card-text text-secondary">Сборы «Ингоузбекистан»
                         <br>
@@ -715,20 +736,25 @@
 
 <section class="mb-5 pb-5">
     <div class="container">
-        <h2 class="fs-2dot25 title-color fw-bold lh-22px text-start pb-5">
+        <h2 class="fs-2 title-color fw-bold text-center text-md-start pb-5">
             Забота о клиентах
         </h2>
-        <div class="row sadden-sec">
-            <div class="col-7 sadden-one pb-5">
-                <h3 class="sadden-h3 opacity-7">Служба контроля качества</h3>
-                <p class="pb-5 opacity-7">Ежедневно мы получаем множество отзывов от наших клиентов. С помощью обратной
-                    связи мы совершенствуем
-                    наши продукты и сервис. Поделитесь мнением об Ингоузбекистане, так вы делаете нас лучше</p>
-                <a class="text-decoration-none border-bottom-dashed border-2 border-primary pb-2 text-primary">Оставить
-                    отзыв</a>
+        <div class="row mx-0 col-12 sadden-sec">
+            <div class="col-12 col-lg-7">
+                <div class="ps-sm-4 pb-md-0 pb-5">
+                    <h3 class="sadden-h3 opacity-7">Служба контроля качества</h3>
+                    <p class="pb-4 opacity-7 w-100">Ежедневно мы получаем множество отзывов от наших клиентов. С помощью
+                        обратной
+                        связи мы совершенствуем
+                        наши продукты и сервис. Поделитесь мнением об Ингоузбекистане, так вы делаете нас лучше</p>
+                    <a class="text-decoration-none border-bottom-dashed border-2 border-primary pb-2 text-primary">Оставить
+                        отзыв</a>
+                </div>
             </div>
-            <div class="col-5 d-flex justify-content-end align-content-end">
-                <img class="sadden-img" src="./assets/images/business.png">
+            <div class="col-12 col-lg-5 d-none d-md-block">
+                <div class="d-flex justify-content-lg-end justify-content-center align-content-center">
+                    <img class="sadden-img" src="./assets/images/business.png">
+                </div>
             </div>
         </div>
     </div>
@@ -738,9 +764,9 @@
 <!--================ FOOTER | Omonjon ================-->
 <footer class="bg-light footer">
     <div class="container">
-        <div class="d-flex pt-5 pb-4">
-            <div class="row col-12">
-                <div class="col-3">
+        <div class="pt-3 pt-sm-5 pb-4 ">
+            <div class="row mx-0 col-12 row-gap-4">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-12">
                     <div class="d-flex flex-column">
                         <a href="#" class="footer-logo"><img src="assets/images/icons/ingo_uzbekistan.svg" class="w-100"
                                                              alt=""></a>
@@ -763,7 +789,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-12">
                     <ul class="">
                         <li class="mb-3">
                             <a href="#" class="footer-link-color fs-6">Офисы</a>
@@ -787,7 +813,7 @@
                         <a href="#" class="me-0"><img src="assets/images/icons/Instagram.svg" alt=""></a>
                     </ul>
                 </div>
-                <div class="col-3">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-12">
                     <ul class="">
                         <li class="mb-3">
                             <a href="#" class="footer-link-color fs-6">Авто</a>
@@ -806,7 +832,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-3">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-12">
                     <ul class="">
                         <li class="mb-2">
                             <a href="#" class="footer-link-color fs-7">О компании</a>
@@ -833,14 +859,14 @@
     </div>
     <div class="border-top">
         <div class="container pt-4 pb-5">
-            <p class="footer-link-color w-100" style="font-size: 12px">
+            <p class="px-3 footer-link-color w-100" style="font-size: 12px">
                 © 2015 - 2023 Все права защищены.<br>
                 Страховое акционерное общество «ИНГО-УЗБЕКИСТАН»
             </p>
         </div>
     </div>
 
-    <div class="position-fixed footer-social-fixed d-flex flex-column row-gap-2">
+    <div class="position-fixed footer-social-fixed d-none d-md-flex flex-column row-gap-2">
         <a href="#" class=""><i class='bx bxl-telegram fs-8 text-primary'></i></a>
         <a href="#" class=""><i class='bx bxl-instagram fs-8 text-primary'></i></a>
         <a href="#" class=""><i class='bx bxl-facebook fs-8 text-primary'></i></a>
@@ -849,7 +875,7 @@
 
 
 <!--================ SCROLL UP | Omonjon ================-->
-<a href="#" class="scrollup z-index-999" id="scroll-up">
+<a href="#" class="scrollup z-index-9" id="scroll-up">
     <i class="bx bxs-chevron-up"></i>
 </a>
 
@@ -867,7 +893,7 @@
 <script src="assets/js/bootstrap.bundle.min.js"></script>
 
 <!--================ MAIN JS | Omonjon ================-->
-<script src="assets/js/main.js?v=0.0.3"></script>
+<script src="assets/js/main.js?v=0.0.4"></script>
 
 </body>
 

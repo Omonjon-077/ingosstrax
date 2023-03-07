@@ -53,7 +53,8 @@ function disableScroll() {
 }
 
 function enableScroll() {
-    window.onscroll = function () { };
+    window.onscroll = function () {
+    };
 }
 
 darkModeToggle.addEventListener("click", () => {
@@ -66,8 +67,6 @@ darkModeToggle.addEventListener("click", () => {
         disableDarkMode();
     }
 });
-
-/* ########################################################## */
 // Partners | Swiper ********************************** */
 if ($(".partnersSlider").length) {
     var swiper = new Swiper(".partnersSlider", {
@@ -83,12 +82,12 @@ if ($(".partnersSlider").length) {
         breakpoints: {
             // when window width is >= 320px
             320: {
-                slidesPerView: 3,
+                slidesPerView: 1,
                 // spaceBetween: 20
             },
             // when window width is >= 480px
             480: {
-                slidesPerView: 3,
+                slidesPerView: 2,
                 spaceBetween: 5
             },
             // when window width is >= 640px
@@ -113,28 +112,6 @@ if ($(".partnersSlider").length) {
         },
     });
 }
-
-/* ********************************************************** */
-
-/*=============== HEADER NAV | Omonjon ===============*/
-
-var navbarToggle = document.querySelector('.navbar-toggler');
-var headerCollapse = document.querySelector('.navbar-collapse');
-var navBottom = document.querySelector('.nav-bottom');
-var isActive = headerCollapse.classList.contains("show");
-
-navbarToggle.addEventListener("click",function () {
-
-        if(isActive) {
-            console.log('work');
-        }
-        else {
-            console.log('dt work');
-        }
-    })
-
-
-
 /*=============== HEADER FIXED | Omonjon ===============*/
 if ($("#myHeader").length) {
     window.onscroll = function () {
@@ -161,11 +138,12 @@ if ($("#scroll-up").length) {
         if (this.scrollY >= 350) scrollUp.classList.add('show-scroll');
         else scrollUp.classList.remove('show-scroll')
     }
+
     window.addEventListener('scroll', scrollUp)
 }
 
 var e = ".dropdown-backdrop",
     f = '[data-toggle="dropdown"]',
-    g = function(b) {
+    g = function (b) {
         a(b).on("click.bs.dropdown", this.toggle)
     };
