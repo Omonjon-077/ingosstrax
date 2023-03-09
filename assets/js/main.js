@@ -140,7 +140,7 @@ if ($(".introSwiper").length) {
             renderBullet: function (i, className) {
                 return `
    <button class="${className}">
-  <svg class="swiper-progress" width="31" height="31"><circle class="circle-origin" r="15" cx="15.5" cy="15.5"></circle></svg><span class="d-flex align-content-center justify-content-center"><img class="d-flex align-content-center justify-content-center" src="../../assets/images/icons/dot.svg"></span>
+  <svg class="swiper-progress" width="31" height="31"><circle class="circle-origin" r="15" cx="15.5" cy="15.5"></circle></svg><span class="d-flex align-content-center justify-content-center"><img class="d-flex align-content-center justify-content-center" src="assets/images/icons/dot.svg"></span>
 </button>
       `;
             }
