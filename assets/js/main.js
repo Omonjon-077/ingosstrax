@@ -112,6 +112,67 @@ if ($(".partnersSlider").length) {
         },
     });
 }
+
+
+/*=============== INTRO SWIPER | Omonjon ===============*/
+if ($(".introSwiper").length) {
+    const slide = document.querySelectorAll(".introSwiper .swiper-slide");
+    for (const i of slide) {
+        const random = (number) => Math.floor(Math.random() * (number + 155));
+        const rndCol = `rgba(${random(255)},${random(255)},${random(255)},1)`;
+        i.style.backgroundColor = rndCol;
+    }
+    const swiperOptions = {
+        loop: "infinite",
+        effect: "fade",
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+        },
+        // custom pagination
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            renderBullet: function (i, className) {
+                return `
+   <button class="${className}">
+  <svg class="swiper-progress" width="31" height="31"><circle class="circle-origin" r="15" cx="15.5" cy="15.5"></circle></svg><span class="d-flex align-content-center justify-content-center"><img class="d-flex align-content-center justify-content-center" src="../../assets/images/icons/dot.svg"></span>
+</button>
+      `;
+            }
+        }
+    };
+/*
+${
+                    i + 1
+                } */
+    const swiper2 = new Swiper(".introSwiper", swiperOptions);
+
+
+
+
+
+
+
+    /*var swiper = new Swiper(".introSwiper", {
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });*/
+}
+
+
+
 /*=============== HEADER FIXED | Omonjon ===============*/
 if ($("#myHeader").length) {
     window.onscroll = function () {

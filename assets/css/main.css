@@ -71,6 +71,13 @@ body {
     padding-top: 0;
 }
 
+@media (min-width: 576px) {
+    .w-sm-100{
+        width: 100% !important;
+    }
+}
+
+
 .z-index-1 {
     z-index: 1;
 }
@@ -373,7 +380,7 @@ html.blind {
 }
 
 .header .navbar-brand img {
-    max-width: 220px;
+    max-width: 205px;
     width: 100%;
 }
 
@@ -428,23 +435,95 @@ html.blind {
     color: var(--btn-color);
 }
 
+/* INTRO SWIPER | Omonjon  */
+.introSwiper .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    font-size: 10vw;
+    text-align: center;
+    color: #fff;
+    transition: 0.5s all;
+}
+.introSwiper .swiper-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 30px !important;
+}
 
+.introSwiper .swiper-pagination-bullet{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    margin: 0 10px !important;
+    background-color: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.introSwiper .swiper-pagination-bullet span {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* button circle */
+.introSwiper .swiper-progress {
+    transform: rotate(-90deg);
+}
+.introSwiper .circle-origin {
+    fill: transparent;
+    stroke: var(--bs-primary);
+    stroke-width: 1;
+    stroke-linecap: round;
+    stroke-dasharray: 125.664px;
+    stroke-dashoffset: 125.664px;
+}
+
+/*.introSwiper .swiper-pagination-bullet-active {*/
+/*    background: var(--bs-primary);*/
+/*}*/
+
+.introSwiper .swiper-pagination-bullet-active .circle-origin {
+    animation: swiperProgress 5s;
+}
+
+@keyframes swiperProgress {
+    0% {
+        stroke-dashoffset: 125.664px;
+    }
+
+    90% {
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        stroke-dashoffset: -125.664px;
+    }
+}
 /*=============== Partners | Swiper ===============*/
-.bg-slider {
+.partnersSlider .bg-slider {
     background: var(--color-gray);
 }
 
-.filter-hover-gray {
+.partnersSlider .filter-hover-gray {
     filter: grayscale(1) opacity(0.3);
     transition: filter 300ms ease;
 }
 
-.filter-hover-gray:hover {
+.partnersSlider .filter-hover-gray:hover {
     filter: grayscale(0) opacity(1);
     transition: filter 300ms ease;
 }
 
-.swiper-container {
+.partnersSlider .swiper-container {
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
     max-width: 1230px;
@@ -498,12 +577,12 @@ html.blind {
 }
 
 
-.swiper {
+.partnersSlider .swiper {
     width: 100%;
     height: 600px;
 }
 
-.swiper-slide {
+.partnersSlider .swiper-slide {
     text-align: center;
     font-size: 18px;
     background: #fff;
@@ -523,21 +602,21 @@ html.blind {
     align-items: center;
 }
 
-.swiper-slide img {
+.partnersSlider .swiper-slide img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.swiper-pagination-bullet {
+.partnersSlider .swiper-pagination-bullet {
     background-color: #fff;
     opacity: .9;
     scale: 1.4;
     margin: 0 6px !important;
 }
 
-.swiper-pagination-bullet-active {
+.partnersSlider .swiper-pagination-bullet-active {
     background-color: var(--bs-primary);
     opacity: 1;
     scale: 1.7;
@@ -547,43 +626,43 @@ html.blind {
     height: auto !important;
 }
 
-.partner-card {
+.partnersSlider .partner-card {
     height: 120px;
 }
 
-.swiper-partners-btn-prev,
-.swiper-rtl .swiper-button-next {
+.partnersSlider .swiper-partners-btn-prev,
+.partnersSlider .swiper-rtl .swiper-button-next {
     left: 14px;
     right: 80px;
     box-shadow: 1px 1px 19px rgba(50, 50, 71, 0.08), 0 4px 8px rgba(50, 50, 71, 0.06);
     transition: all 300ms ease;
 }
 
-.swiper-partners-btn-prev:hover {
+.partnersSlider .swiper-partners-btn-prev:hover {
     background-color: var(--bs-primary) !important;
     color: var(--bs-white) !important;
     transition: all 300ms ease;
 }
 
-.swiper-partners-btn-prev::after,
-.swiper-partners-btn-next::after {
+.partnersSlider .swiper-partners-btn-prev::after,
+.partnersSlider .swiper-partners-btn-next::after {
     content: '';
 }
 
-.swiper-partners-btn-prev i,
-.swiper-partners-btn-next i {
+.partnersSlider .swiper-partners-btn-prev i,
+.partnersSlider .swiper-partners-btn-next i {
     font-size: 25px;
 }
 
-.swiper-partners-btn-next,
-.swiper-rtl .swiper-button-next {
+.partnersSlider .swiper-partners-btn-next,
+.partnersSlider .swiper-rtl .swiper-button-next {
     left: initial;
     right: 14px;
     box-shadow: 1px 1px 19px rgba(50, 50, 71, 0.08), 0 4px 8px rgba(50, 50, 71, 0.06);
     transition: all 300ms ease;
 }
 
-.swiper-partners-btn-next:hover {
+.partnersSlider .swiper-partners-btn-next:hover {
     background-color: var(--bs-primary) !important;
     color: var(--bs-white) !important;
     transition: all 300ms ease;
@@ -591,7 +670,7 @@ html.blind {
 }
 
 
-.sadden-img {
+.partnersSlider .sadden-img {
     margin-top: -48px;
 }
 
@@ -603,7 +682,7 @@ html.blind {
 /* Footer | Omonjon */
 
 .footer-logo img {
-    max-width: 220px;
+    max-width: 205px;
     width: 100%;
 }
 
