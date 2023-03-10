@@ -337,6 +337,10 @@ html.blind {
     margin: 0;
 }
 
+.sticky .border-bottom {
+    border-bottom: none !important;
+}
+
 .sticky {
     position: fixed;
     top: 0;
@@ -353,6 +357,10 @@ html.blind {
 
 .typeIns .card-img-top {
     width: 80px;
+}
+
+.btn-close:focus {
+    box-shadow: none;
 }
 
 .header .nav-bottom .dropdown-item:hover {
@@ -436,6 +444,57 @@ html.blind {
 }
 
 /* INTRO SWIPER | Omonjon  */
+
+.introSwiper .swiper-partners-btn-prev {
+    left: auto;
+    top: 40px;
+    right: 70px;
+    box-shadow: 1px 1px 19px rgba(50, 50, 71, 0.08), 0 4px 8px rgba(50, 50, 71, 0.06);
+    transition: all 300ms ease;
+    color: var(--bs-primary) !important;
+}
+
+.introSwiper .swiper-partners-btn-prev i,
+.introSwiper .swiper-partners-btn-next i{
+    color: var(--bs-primary);
+    transition: all 300ms ease;
+}
+
+.introSwiper .swiper-partners-btn-prev:hover i,
+.introSwiper .swiper-partners-btn-next:hover i{
+    color: var(--bs-white);
+}
+
+.introSwiper .swiper-partners-btn-prev:hover {
+    background-color: var(--bs-primary) !important;
+    color: var(--bs-white) !important;
+    transition: all 300ms ease;
+}
+
+.introSwiper .swiper-partners-btn-prev::after,
+.introSwiper .swiper-partners-btn-next::after {
+    content: '';
+}
+
+.introSwiper .swiper-partners-btn-prev i,
+.introSwiper .swiper-partners-btn-next i {
+    font-size: 25px;
+}
+
+.introSwiper .swiper-partners-btn-next{
+    left: initial;
+    top: 40px;
+    right: 15px;
+    box-shadow: 1px 1px 19px rgba(50, 50, 71, 0.08), 0 4px 8px rgba(50, 50, 71, 0.06);
+    transition: all 300ms ease;
+}
+
+.introSwiper .swiper-partners-btn-next:hover {
+    background-color: var(--bs-primary) !important;
+    color: var(--bs-white) !important;
+    transition: all 300ms ease;
+}
+
 .introSwiper .swiper-slide {
     display: flex;
     align-items: center;
@@ -683,7 +742,6 @@ html.blind {
     background-color: var(--bs-primary) !important;
     color: var(--bs-white) !important;
     transition: all 300ms ease;
-
 }
 
 
