@@ -117,16 +117,16 @@ if ($(".partnersSlider").length) {
 /*=============== INTRO SWIPER | Omonjon ===============*/
 if ($(".introSwiper").length) {
     const slide = document.querySelectorAll(".introSwiper .swiper-slide");
-    for (const i of slide) {
-        const random = (number) => Math.floor(Math.random() * (number + 155));
-        const rndCol = `rgba(${random(255)},${random(255)},${random(255)},1)`;
-        i.style.backgroundColor = rndCol;
-    }
+    // for (const i of slide) {
+    //     const random = (number) => Math.floor(Math.random() * (number + 155));
+    //     const rndCol = `rgba(${random(255)},${random(255)},${random(255)},0)`;
+    //     i.style.backgroundColor = rndCol;
+    // }
     const swiperOptions = {
         loop: "infinite",
         effect: "fade",
         autoplay: {
-            delay: 5000,
+            delay: 4700,
             disableOnInteraction: false
         },
         navigation: {

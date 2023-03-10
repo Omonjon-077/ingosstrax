@@ -343,7 +343,7 @@ html.blind {
     width: 100%;
     z-index: 10;
     background: var(--bs-white);
-    box-shadow: rgba(0, 0, 0, 0.25) 0px -10px 28px, rgba(0, 0, 0, 0.22) 0px 5px 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 
@@ -367,7 +367,7 @@ html.blind {
 .header .nav-bottom .dropdown-menu {
     border-radius: 0 0 24px 24px;
     border: none;
-    box-shadow: rgba(0, 0, 0, 0.30) 0px 20px 20px 0px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .header .nav-bottom .dropdown-menu .container {
@@ -480,16 +480,12 @@ html.blind {
 }
 .introSwiper .circle-origin {
     fill: transparent;
-    stroke: var(--bs-primary);
+    stroke: var(--bs-white);
     stroke-width: 1;
     stroke-linecap: round;
     stroke-dasharray: 125.664px;
     stroke-dashoffset: 125.664px;
 }
-
-/*.introSwiper .swiper-pagination-bullet-active {*/
-/*    background: var(--bs-primary);*/
-/*}*/
 
 .introSwiper .swiper-pagination-bullet-active .circle-origin {
     animation: swiperProgress 5s;
@@ -508,6 +504,15 @@ html.blind {
         stroke-dashoffset: -125.664px;
     }
 }
+
+.introSwiper .bg-image-1 {
+    background: url("../images/ingo-bg-3.jpg") no-repeat center/cover;
+}
+
+.introSwiper .bg-image-2 {
+    background: url("../images/ingo-bg-1.jpg") no-repeat center/cover;
+}
+
 /*=============== Partners | Swiper ===============*/
 .partnersSlider .bg-slider {
     background: var(--color-gray);
@@ -636,6 +641,18 @@ html.blind {
     right: 80px;
     box-shadow: 1px 1px 19px rgba(50, 50, 71, 0.08), 0 4px 8px rgba(50, 50, 71, 0.06);
     transition: all 300ms ease;
+    color: var(--bs-primary) !important;
+}
+
+.partnersSlider .swiper-partners-btn-prev i,
+.partnersSlider .swiper-partners-btn-next i{
+    color: var(--bs-primary);
+    transition: all 300ms ease;
+}
+
+.partnersSlider .swiper-partners-btn-prev:hover i,
+.partnersSlider .swiper-partners-btn-next:hover i{
+    color: var(--bs-white);
 }
 
 .partnersSlider .swiper-partners-btn-prev:hover {
@@ -721,7 +738,7 @@ html.blind {
 
 /*=============== SCROLL BAR | Omonjon ===============*/
 ::-webkit-scrollbar {
-    width: .6rem;
+    width: 9px;
     border-radius: .5rem;
     background-color: hsl(207, 4%, 80%);
 }
