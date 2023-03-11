@@ -40,11 +40,14 @@
 }
 
 /* ============ desktop view .end// ============ */
-
 @media (max-width: 575px) {
     .d-grid-custom {
         text-align: start;
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .introSwiper .swiper-slide {
+        height: 400px;
     }
 
     .scrollup {

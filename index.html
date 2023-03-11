@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  class="dataFont">
 
 <head>
     <meta charset="UTF-8">
@@ -20,13 +20,25 @@
     <!--================ BOOTSTRAP CSS 5.3v | Omonjon ================-->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
+    <!-- Animate Css 3.2.3v -->
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+
     <!--================ STYLE CSS | Omonjon ================-->
-    <link rel="stylesheet" href="assets/css/main.css?v=0.0.7">
-    <link rel="stylesheet" href="assets/css/breakpoints.css?v=0.0.4">
+    <link rel="stylesheet" href="assets/css/main.css?v=0.0.8">
+    <link rel="stylesheet" href="assets/css/breakpoints.css?v=0.0.5">
 
     <title>Ingouzbekistan</title>
 </head>
-<body>
+<body id="body" onload="">
+<!--========================================================================-->
+<!-- BUTTON HIGHGROUND TEXT READ (VOICES) -->
+<!--========================================================================-->
+<select class="voiceModeControl" id="voiceSelect" hidden></select>
+<button class="btn-voice shadow" id="voice">
+    <span class="icon-voice d-flex align-items-center justify-content-center">
+        <i class="bx bx-volume-full bx-sm"></i>
+    </span>
+</button>
 <!--==================== LOADER | Omonjon ====================-->
 <div class="load" id="load">
     <lottie-player autoplay loop mode="normal" src="assets/jsons/loader.json" class="load-gif">
@@ -34,17 +46,20 @@
 </div>
 
 
+
 <!-- Menus Modal | Omonjon  -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-fullscreen">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="btn-close ms-lg-5 ms-auto me-sm-5 me-lg-0" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
+                <div class="container-sm container-fluid d-flex">
+                    <button type="button" class="btn-close me-lg-auto ms-lg-0 ms-auto px-0" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                </div>
             </div>
             <div class="modal-body bg-primary pt-md-5 pt-sm-3 pt-3">
                 <div class="container-sm container-fluid">
-                    <div class="d-grid d-grid-custom row-gap-5">
+                    <div class="d-grid d-grid-custom row-gap-4 column-gap-4">
                         <div class="d-flex flex-column row-gap-2">
                             <h1 class="text-white fs-4 fw-bold">О компании</h1>
                             <a href="#" class="text-white fs-6">Коллегиальный и консультационные органы</a>
@@ -268,7 +283,7 @@
     <nav class="navbar" id="myHeader">
         <div class="container border-bottom pb-2 justify-content-lg-between justify-content-sm-start">
             <div class="d-flex align-items-center">
-                <a href="#" class="d-none d-lg-flex align-items-center menu-item-burger me-3 pt-1"
+                <a href="#" class="d-none d-lg-flex align-items-center menu-item-burger pt-1"
                    data-bs-toggle="modal"
                    data-bs-target="#exampleModal">
                     <i class='bx bx-menu fs-4 text-primary'></i>
@@ -289,14 +304,6 @@
                     <a href="#" class="bg-danger d-md-block d-none text-white rounded-3 px-4 py-2 me-md-3 me-lg-0">
                         Страховой случай
                     </a>
-                    <div class="d-none d-md-flex align-items-center position-fixed position-darklight">
-                        <a class="dropdown-item w-auto noDefalult" href="#">
-                            <div class="position-relative darkmode">
-                                <input type="checkbox" id="toggleThemeMode" class="mode__theme"/>
-                                <label class="label bg-primary" for="toggleThemeMode"></label>
-                            </div>
-                        </a>
-                    </div>
                 </div>
             </div>
             <a href="#" class="d-flex align-items-center d-lg-none" data-bs-toggle="modal"
@@ -313,14 +320,14 @@
     <div class="container">
         <div class="swiper introSwiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide bg-image-1 border border-2 border-primary rounded-4 d-flex justify-content-center justify-content-md-start ps-0 ps-md-5">
+                <div class="swiper-slide bg-image-1 border border-1 border-gray rounded-4 d-flex justify-content-center justify-content-md-start ps-0 ps-md-5">
                     <div class="d-flex flex-column align-items-center align-items-md-start row-gap-4 ms-lg-5 ms-0">
                         <h3 class="fs-1 text-white fw-bold">ОСАГО</h3>
                         <p class="text-white fs-5 w-75 w-sm-100">Купить онлайн за&nbsp;несколько минут</p>
                         <a href="#" class="text-white fs-5 bg-primary py-2 px-4 rounded-4">Оформить</a>
                     </div>
                 </div>
-                <div class="swiper-slide bg-image-2 border border-2 border-primary rounded-4 d-flex justify-content-center justify-content-md-start ps-0 ps-md-5">
+                <div class="swiper-slide bg-image-2 border border-1 border-secondary rounded-4 d-flex justify-content-center justify-content-md-start ps-0 ps-md-5">
                     <div class="d-flex flex-column align-items-center align-items-md-start row-gap-4 ms-lg-5 ms-0">
                         <h3 class="fs-1 text-white fw-bold">Путешествия</h3>
                         <p class="text-white fs-5 w-75 w-sm-100">Для любых направлений и&nbsp;видов виз</p>
@@ -758,13 +765,73 @@
             </p>
         </div>
     </div>
+</footer>
 
+<div class="d-flex">
     <div class="position-fixed z-index-9 footer-social-fixed d-none d-md-flex flex-column row-gap-2">
         <a href="#" class=""><i class='bx bxl-telegram fs-8 text-primary'></i></a>
         <a href="#" class=""><i class='bx bxl-instagram fs-8 text-primary'></i></a>
         <a href="#" class=""><i class='bx bxl-facebook fs-8 text-primary'></i></a>
     </div>
-</footer>
+<!--    <div class=" d-none align-items-center position-fixed position-darklight">&lt;!&ndash;d-md-flex&ndash;&gt;
+        <a class="dropdown-item w-auto noDefalult" href="#">
+            <div class="position-relative darkmode">
+                <input type="checkbox" id="toggleThemeModeTEST" class="mode__theme"/>
+                <label class="label bg-primary" for="toggleThemeMode"></label>
+            </div>
+        </a>
+    </div>-->
+</div>
+
+<div class="special-tag-gen position-relative">
+    <div class="special-tag bottom-0">
+        <input type="checkbox" id="toggle-btn">
+        <label class="toggle-btn" for="toggle-btn"></label>
+        <div class="special-tag-body bg-light-gray align-items-center">
+            <div>
+                <div class="d-flex align-items-center position-darkLight"><!--d-md-flex-->
+                    <a class="dropdown-item w-auto noDefalult" href="#">
+                        <div class="position-relative darkmode">
+                            <input type="checkbox" id="toggleThemeMode" class="mode__theme"/>
+                            <label class="label bg-primary" for="toggleThemeMode"></label>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="">
+                <div class="d-flex align-items-center position-voiceMode">
+                    <a class="dropdown-item w-auto noDefalult voiceOn" href="#" data-bs-target="#voiceModal">
+                        <!---->
+                        <div class="position-relative z-index-9 voicemode">
+                            <input type="checkbox" id="toggleVoiceMode" class="mode__voice" />
+                            <label class="label bg-primary" for="toggleVoiceMode"></label>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="">
+                <div class="d-flex align-items-center position-fontIncDec">
+                    <div class="d-flex align-items-center flex-wrap">
+                        <div
+                                class="d-flex align-items-center row-gap-2 justify-content-evenly mb-2 flex-wrap dropdown-not-close z-index-9">
+                                <div class="my-size text-center fw-bold p-1" id="currentSize">16px</div>
+                            <button class="dropdown-item dropdown-item-not-close decremet decreaseFont text-center"
+                                    value="decrease">A-
+                            </button>
+                            <button class="dropdown-item dropdown-item-not-close autoSize resetFont text-center mx-2"
+                                    value="resetFont" style="font-size: 16px;">auto
+                            </button>
+                            <button class="dropdown-item dropdown-item-not-close increment increaseFont text-center"
+                                    value="increase">A+
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 
 <!--================ SCROLL UP | Omonjon ================-->
@@ -785,8 +852,11 @@
 <!--================ BOOTSTRAP JS 5.3.1v | Omonjon ================-->
 <script src="assets/js/bootstrap.bundle.min.js"></script>
 
+<!--================ BOOTSTRAP NOTIFY JS 3.1.3v | Omonjon ================-->
+<script src="assets/js/bootstrap-notify.min.js"></script>
+
 <!--================ MAIN JS | Omonjon ================-->
-<script src="assets/js/main.js?v=0.0.5"></script>
+<script src="assets/js/main.js?v=0.0.7"></script>
 
 </body>
 

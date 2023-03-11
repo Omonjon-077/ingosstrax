@@ -77,6 +77,17 @@ body {
     }
 }
 
+.bg-light-gray {
+    background: #e1e1e1;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.border-gray {
+    border-color: #e1e1e1;
+}
 
 .z-index-1 {
     z-index: 1;
@@ -230,12 +241,13 @@ html.blind {
     color: #333 !important;
 }
 
-.position-darklight {
+.position-darkLight {
     bottom: 30px;
     left: 20px;
 }
 
-#toggleThemeMode[type=checkbox] {
+#toggleThemeMode[type=checkbox],
+#toggleVoiceMode[type=checkbox]{
     visibility: visible;
     width: 100%;
     height: 100%;
@@ -252,7 +264,8 @@ html.blind {
     background-image: url("../images/icons/moon.svg");
 }
 
-.darkmode .label {
+.darkmode .label,
+.voicemode .label{
     display: flex;
     width: 40px;
     height: 20px;
@@ -265,8 +278,14 @@ html.blind {
     background: url("../images/icons/moon.svg") no-repeat right/contain var(--text-color);
     background-size: 21px 13px !important;
 }
-
-.darkmode .label::after {
+.darkmode .label {
+    background: url("../images/icons/moon.svg") no-repeat right/contain var(--text-color);
+}
+.voicemode .label{
+    background: url("../images/icons/volume-on.svg") no-repeat right/contain var(--text-color);
+}
+.darkmode .label::after,
+.voicemode .label:after{
     content: "";
     display: block;
     position: absolute;
@@ -275,11 +294,19 @@ html.blind {
     top: 2px;
     left: 2px;
     z-index: 1;
-    background: url("../images/icons/sun.svg") no-repeat left/contain;
     background-size: 16px 15px !important;
 }
 
-.darkmode .label:before {
+.darkmode .label:after {
+    background: url("../images/icons/sun.svg") no-repeat left/contain;
+}
+
+.voicemode .label:after {
+    background: url("../images/icons/volume-off.svg") no-repeat left/contain;
+}
+
+.darkmode .label:before ,
+.voicemode .label:before{
     transition: transform 0.5s ease;
     transition-delay: 0s;
     content: "";
@@ -294,12 +321,14 @@ html.blind {
     z-index: 2;
 }
 
-#toggleThemeMode[type=checkbox]:checked + .label:before {
+#toggleThemeMode[type=checkbox]:checked + .label:before,
+#toggleVoiceMode[type=checkbox]:checked+ .label:before{
     transform: translateX(20px);
     background-color: var(--bs-white);
 }
 
-#toggleThemeMode[type=checkbox]:checked + .label {
+#toggleThemeMode[type=checkbox]:checked + .label,
+#toggleVoiceMode[type=checkbox]:checked+ .label{
     background-color: var(--text-color);
 }
 
@@ -312,6 +341,36 @@ html.blind {
     padding: 0 !important;
 }
 
+.btn-voice,
+#voiceSelect {
+    display: none;
+}
+
+.btn-voice {
+    z-index: 999;
+    border: 2px solid var(--bs-dark);
+    border-radius: 8px;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+}
+
+.visibility-hidden {
+    visibility: hidden !important;
+}
+
+.user-select {
+    user-select: none !important;
+}
+
+.icon-voice {
+    background: var(--bs-primary);
+    width: 100%;
+    height: 100%;
+    transition: 0.4s;
+    border-radius: 50%;
+}
 
 /* Header | Omonjon */
 .header .nav-bottom .navbar,
@@ -762,7 +821,7 @@ html.blind {
 }
 
 .footer-social-fixed {
-    bottom: 70px;
+    bottom: 90px;
     left: 30px;
 }
 
@@ -808,4 +867,172 @@ html.blind {
 
 ::-webkit-scrollbar-thumb:hover {
     background-color: var(--bs-primary);
+}
+
+
+/* Special section | Omonjon  */
+.plusminus {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.plusminus.active:before {
+    transform: translatey(-50%) rotate(-90deg);
+    opacity: 0;
+}
+.plusminus.active:after {
+    transform: translatey(-50%) rotate(0);
+}
+.plusminus:before, .plusminus:after {
+    content: "";
+    display: block;
+    background-color: var(--bs-primary);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transition: 0.35s;
+    width: 100%;
+    height: 3px;
+    border-radius: 10px;
+}
+.plusminus:before {
+    transform: translatey(-50%);
+}
+.plusminus:after {
+    transform: translatey(-50%) rotate(90deg);
+}
+
+.special-tag {
+    position: absolute;
+    left: 120px;
+    transform: translate(-50%, -50%);
+}
+
+.special-tag input{
+    display: none;
+}
+
+.special-tag label {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: var(--bs-primary);
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+    transform: rotate(0deg);
+    transition: all 300ms ease-in-out;
+}
+
+.special-tag label.toggle-btn:before,
+.special-tag label.toggle-btn:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 25px;
+    background-color: var(--bs-white);
+}
+
+.special-tag label.toggle-btn:before{
+    transform: translate(-50%, -50%);
+}
+
+.special-tag label.toggle-btn:after{
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.special-tag .special-tag-body {
+    position: relative;
+    top: -20px;
+    display: flex;
+    flex-direction: column;
+    width: 71px;
+    opacity: 0;
+    left: -100vw;
+    padding: 10px 10px;
+    row-gap: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px 2px rgba(0,0,0,0.02);
+    transition: left 0ms ease-in-out 300ms,
+    top 300ms ease-in-out,
+    opacity 300ms ease-in-out;
+}
+
+.special-tag .special-tag-body a{
+    display: block;
+    text-align: center;
+    color: var(--bs-primary);
+}
+
+.special-tag #toggle-btn:checked ~ .special-tag-body {
+    left: 0;
+    top: 10px;
+    opacity: 1;
+    transition: left 0ms ease-in-out 0ms,
+                top 300ms ease-in-out,
+                opacity 300ms ease-in-out;
+}
+
+.special-tag #toggle-btn:checked + label{
+    transform: rotate(135deg);
+}
+
+
+/* Inc Dec font-size | Omonjon */
+.decremet {
+    font-size: 10px;
+    opacity: 0.4;
+    user-select: none;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.decremet.visibile {
+    visibility: visible;
+    user-select: auto;
+    pointer-events: visible;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.increment {
+    font-size: 24px;
+    visibility: visible;
+    user-select: auto;
+    pointer-events: visible;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.increment.visibile-hide {
+    opacity: 0.4;
+    user-select: none;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.increment,
+.decremet,
+.autoSize {
+    width: 37px;
+    height: 37px;
+    background-color: var(--bs-primary);
+    color: var(--bs-white) !important;
+    transition: 0.3s ease;
+    border-radius: 8px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+}
+
+.dropdown-not-close .dropdown-item:hover,
+.dropdown-not-close .dropdown-item:focus {
+    background-color: var(--bs-white) !important;
+    color: var(--bs-primary) !important;
 }
