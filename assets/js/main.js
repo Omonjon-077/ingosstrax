@@ -6,84 +6,22 @@ window.addEventListener("load", function (eventObject) {
     $('.load').fadeOut("slow");
 });
 
-// For Dark Light mode | Omonjon //
-let darkMode = localStorage.getItem("darkMode");
-const darkModeToggle = document.querySelector(".mode__theme");
-let svgNone = document.querySelectorAll(".svg-none");
-let saveToggle = document.querySelector(".darkmode input[type='checkbox']");
-
-const enableDarkMode = () => {
-    document.documentElement.classList.add("blind");
-    darkModeToggle.classList.add("active");
-    saveToggle.setAttribute("checked", "true");
-
-    for (let i = 0; i < svgNone.length; i++) {
-        const element = svgNone[i];
-        element.style.display = "none";
-    }
-
-    localStorage.setItem("darkMode", "enabled");
-};
-
-const disableDarkMode = () => {
-    document.documentElement.classList.remove("blind");
-    darkModeToggle.classList.remove("active");
-    saveToggle.setAttribute("checked", "false");
-    for (let i = 0; i < svgNone.length; i++) {
-        const element = svgNone[i];
-        element.style.display = "block";
-    }
-
-    localStorage.setItem("darkMode", null);
-};
-
-if (darkMode === 'enabled') {
-    enableDarkMode();
-}
-
-function disableScroll() {
-    // Get the current page scroll position
-    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-
-        // if any scroll is attempted, set this to the previous value
-        window.onscroll = function () {
-            window.scrollTo(scrollLeft, scrollTop);
-        };
-}
-
-function enableScroll() {
-    window.onscroll = function () {
-    };
-}
-
-darkModeToggle.addEventListener("click", () => {
-    darkMode = localStorage.getItem("darkMode");
-
-    if (darkMode !== 'enabled') {
-        enableDarkMode();
-        /*disableScroll();*/
-    } else {
-        disableDarkMode();
-    }
-});
-
-
 /* ********************************************************** */
 /* ########################################################## */
 /* Voice on mode ******************************************** */
 /* Modal okna zvukovoy effect uchun ************************* */
-let Voicemode = localStorage.getItem("Voicemode");
+var VoiceModeStorage = localStorage.getItem("VoiceMode");
 var voiceTop = document.querySelector(".voiceOn");
-var timeCloseModalAlert = 1000;
-let voiceOn = false;
-let voiceCheck = true;
+var timeCloseModalAlert = 1;
+var voiceOn = false;
+var voiceCheck = true;
 var voiceModeControl = document.querySelector(".voiceModeControl");
 const voiceModeToggle = document.querySelector(".mode__voice");
-let voiceSaveToggle = document.querySelector(".voicemode input[type='checkbox']");
+var voiceSaveToggle = document.querySelector(".voiceMode input[type='checkbox']");
 
 /* Barcha matnlarni ovozlarni ******************************* */
 /* ijro etuvchi funksiyalar shuni ichida ******************** */
+
 function ifActiveVoice() {
     if (!voiceOn) {
         // Malum secundan keyin sahifa yangilanadi
@@ -95,7 +33,8 @@ function ifActiveVoice() {
         // Простая функция IIFE.
         // Oddiy IIFE funktsiyasi.
         (function () {
-            "use strict"; // For the sake of practice.
+            "use strict";
+            // For the sake of practice.
             // Ради практики.
             // Amaliyot uchun.
 
@@ -156,7 +95,7 @@ function ifActiveVoice() {
                 }
 
                 speechSynthesis.speak(utterThis);
-            };
+            }
 
             function buildBtn(e) {
                 let button = document.getElementById("voice");
@@ -281,41 +220,48 @@ function ifActiveVoice() {
         })();
     }
 }
+
 const enableVoiceMode = () => {
     voiceTop.classList.add("active");
     voiceModeControl.classList.add("active");
     voiceModeToggle.classList.add("active");
     voiceSaveToggle.setAttribute("checked", "true");
     voiceOn = true;
-    voiceCheck = true;
+    /*voiceCheck = false;*/
     ifActiveVoice();
-    localStorage.setItem("Voicemode", "enabled");
+    localStorage.setItem("VoiceMode", "enabled");
+};
+const EnableAllSound = () => {
+    document.getElementById("voice").classList.remove("d-none", "visibility-hidden", "user-select");
+}
+
+const disableVoiceMode = () => {
+    voiceTop.classList.remove("active");
+    voiceModeControl.classList.remove("active");
+    voiceModeToggle.classList.remove("active");
+    voiceSaveToggle.setAttribute("checked", "false");
+    voiceOn = true;
+    /*voiceCheck = true;*/
+    localStorage.setItem("VoiceMode", null);
 };
 const DisableAllSound = () => {
     voiceModeControl.innerHTML = "";
     document.getElementById("voice").classList.add("d-none", "visibility-hidden", "user-select");
     /*document.getElementById("voice").innerHTML = "";*/
 }
-const EnableAllSound = () => {
-    document.getElementById("voice").classList.remove("d-none", "visibility-hidden", "user-select");
-}
-const disableVoiceMode = () => {
-    voiceTop.classList.remove("active");
-    voiceModeControl.classList.remove("active");
-    voiceModeToggle.classList.remove("active");
-    voiceSaveToggle.setAttribute("checked", "false");
-    voiceOn = false;
-    voiceCheck = false;
-    localStorage.setItem("Voicemode", null);
-};
-if (Voicemode === 'enabled') {
+
+if (VoiceModeStorage === 'enabled') {
     enableVoiceMode();
+    EnableAllSound();
 }
+
 voiceTop.addEventListener("click", () => {
+
+    console.log(voiceOn)
     if (!voiceOn) {
         enableVoiceMode();
         EnableAllSound();
-    } else {
+    } else if (voiceOn) {
         disableVoiceMode();
         DisableAllSound();
 
@@ -326,10 +272,11 @@ voiceTop.addEventListener("click", () => {
 
 /* ********************************************************** */
 /* ########################################################## */
-/* Bootstrap Notify ***********************************************/
+/* Bootstrap Notify *******************************************/
+
 $('.voiceOn').click(function () {
     if ($(".voiceOn").hasClass("active")) {
-        console.log('Work');
+        console.log('Work Active');
         $.notify({
             // options
             icon: 'bx bx-volume-full bx-sm',
@@ -376,7 +323,9 @@ $('.voiceOn').click(function () {
             //     '<a href="{3}" target="{4}" data-notify="url"></a>' +
             //     '</div>'
         });
-    } else {
+    }
+    else {
+        console.log('Work without Active');
         $.notify({
             // options
             icon: 'bx bx-volume-mute bx-sm',
@@ -425,8 +374,187 @@ $('.voiceOn').click(function () {
         });
     }
 })
+/* ********************************************************** */
+/* ########################################################## */
+/* Plus toggle size incremine or decremine ************************* */
+
+let plusMode = localStorage.getItem("plusMode");
+const plusModeToggle = document.querySelector(".mode__plus");
+/*let plusSvgNone = document.querySelectorAll(".plus-svg-none");*/
+let plusSaveToggle = document.querySelector(".plusMode input[id='plusBtn']");
+let plusTagBody = document.querySelector(".plus-tag-body");
+
+const enablePlusMode = () => {
+    plusModeToggle.classList.add("active");
+    plusTagBody.classList.add("active");
+    plusSaveToggle.setAttribute("checked", "true");
+
+    // for (let i = 0; i < svgNone.length; i++) {
+    //     const element = svgNone[i];
+    //     element.style.display = "none";
+    // }
+    localStorage.setItem("plusMode", "enabled");
+};
+
+const disablePlusMode = () => {
+    plusModeToggle.classList.remove("active");
+    plusTagBody.classList.remove("active");
+    plusSaveToggle.setAttribute("checked", "false");
+
+/*    for (let i = 0; i < svgNone.length; i++) {
+        const element = svgNone[i];
+        element.style.display = "block";
+    }*/
+
+    localStorage.setItem("plusMode", null);
+};
+
+if (plusMode === 'enabled') {
+    enablePlusMode();
+}
+
+plusModeToggle.addEventListener("click", () => {
+
+    plusMode = localStorage.getItem("plusMode");
+
+    if (plusMode !== 'enabled') {
+
+        enablePlusMode();
+
+    } else {
+
+        disablePlusMode();
+
+    }
+});
+
+/* ********************************************************** */
+/* ########################################################## */
+/* Font size incremine or decremine ************************* */
+$(document).ready(function () {
+    let plus5Max = '22px';
+    let minus5Min = '16px';
+    let decrease = document.querySelector(".decremet");
+    let increase = document.querySelector(".increment");
+    let currentSize = document.getElementById("currentSize");
+    var curFontSize = localStorage["FontSize"];
+    if (curFontSize) {
+        //set to previously saved fontsize if available
+        $('.dataFont').css('font-size', curFontSize);
+        currentSize.innerText = curFontSize;
+        if (curFontSize === '22px') {
+            increase.classList.add('active-last');
+            increase.classList.add('visibile-hide');
+            decrease.classList.remove('active-last');
+            decrease.classList.add('visibile');
+
+        } else if (curFontSize === '16px') {
+            decrease.classList.remove('active-last');
+            decrease.classList.remove('visibile');
+        } else {
+            decrease.classList.add('active-last');
+            decrease.classList.add('visibile');
+        }
+
+    }
+    $(".increaseFont,.decreaseFont,.resetFont").click(function () {
+        var type = $(this).val();
+        curFontSize = $('.dataFont').css('font-size');
+        if (type === 'increase') {
+            decrease.classList.remove('active-last');
+            decrease.classList.add('visibile');
+            if (curFontSize !== plus5Max) {
+                $('.dataFont').css('font-size', parseInt(curFontSize) + 1 + "px");
+                curFontSize = parseInt(curFontSize) + 1 + "px";
+            } else {
+                increase.classList.add('active-last');
+                increase.classList.add('visibile-hide');
+            }
+        } else if (type === 'decrease') {
+            increase.classList.remove('active-last');
+            increase.classList.remove('visibile-hide');
+            if (curFontSize !== minus5Min) {
+                $('.dataFont').css('font-size', parseInt(curFontSize) - 1 + "px");
+                curFontSize = parseInt(curFontSize) - 1 + "px";
+            } else {
+                decrease.classList.add('active-last');
+                decrease.classList.remove('visibile');
+            }
+        } else if (type === 'resetFont') {
+            decrease.classList.remove('active-last');
+            decrease.classList.remove('visibile');
+            increase.classList.remove('active-last');
+            increase.classList.remove('visibile-hide');
+            $('.dataFont').css('font-size', "16px");
+            curFontSize = "16px";
+        }
+        currentSize.innerText = curFontSize;
+        localStorage.setItem('FontSize', curFontSize);
+    });
+});
 
 
+// For Dark Light mode | Omonjon //
+let darkMode = localStorage.getItem("darkMode");
+const darkModeToggle = document.querySelector(".mode__theme");
+let svgNone = document.querySelectorAll(".svg-none");
+let saveToggle = document.querySelector(".darkmode input[type='checkbox']");
+
+const enableDarkMode = () => {
+    document.documentElement.classList.add("blind");
+    darkModeToggle.classList.add("active");
+    saveToggle.setAttribute("checked", "true");
+
+    for (let i = 0; i < svgNone.length; i++) {
+        const element = svgNone[i];
+        element.style.display = "none";
+    }
+
+    localStorage.setItem("darkMode", "enabled");
+};
+
+const disableDarkMode = () => {
+    document.documentElement.classList.remove("blind");
+    darkModeToggle.classList.remove("active");
+    saveToggle.setAttribute("checked", "false");
+    for (let i = 0; i < svgNone.length; i++) {
+        const element = svgNone[i];
+        element.style.display = "block";
+    }
+
+    localStorage.setItem("darkMode", null);
+};
+
+if (darkMode === 'enabled') {
+    enableDarkMode();
+}
+
+function disableScroll() {
+    // Get the current page scroll position
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+
+        // if any scroll is attempted, set this to the previous value
+        window.onscroll = function () {
+            window.scrollTo(scrollLeft, scrollTop);
+        };
+}
+
+function enableScroll() {
+    window.onscroll = function () {
+    };
+}
+
+darkModeToggle.addEventListener("click", () => {
+    darkMode = localStorage.getItem("darkMode");
+
+    if (darkMode !== 'enabled') {
+        enableDarkMode();
+        /*disableScroll();*/
+    } else {
+        disableDarkMode();
+    }
+});
 
 // Partners | Swiper ********************************** */
 if ($(".partnersSlider").length) {

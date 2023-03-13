@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"  class="dataFont">
+<html lang="en" class="dataFont">
 
 <head>
     <meta charset="UTF-8">
@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="assets/css/animate.min.css">
 
     <!--================ STYLE CSS | Omonjon ================-->
-    <link rel="stylesheet" href="assets/css/main.css?v=0.0.8">
+    <link rel="stylesheet" href="assets/css/main.css?v=0.0.9">
     <link rel="stylesheet" href="assets/css/breakpoints.css?v=0.0.5">
 
     <title>Ingouzbekistan</title>
@@ -33,11 +33,11 @@
 <!--========================================================================-->
 <!-- BUTTON HIGHGROUND TEXT READ (VOICES) -->
 <!--========================================================================-->
-<select class="voiceModeControl" id="voiceSelect" hidden></select>
+<select class="voiceModeControl d-none invisible" id="voiceSelect" hidden></select>
 <button class="btn-voice shadow" id="voice">
-    <span class="icon-voice d-flex align-items-center justify-content-center">
+    <div class="icon-voice d-flex align-items-center justify-content-center">
         <i class="bx bx-volume-full bx-sm"></i>
-    </span>
+    </div>
 </button>
 <!--==================== LOADER | Omonjon ====================-->
 <div class="load" id="load">
@@ -45,6 +45,89 @@
     </lottie-player>
 </div>
 
+<!--========================================================================-->
+<!-- |SPECIAL OPPORTUNITIES| -->
+<!--========================================================================-->
+
+<div class="modal fade d-none" id="specialOpportunities" tabindex="-1" aria-labelledby="specialOpportunitiesLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-4 fw-bold" id="specialOpportunitiesLabel">Maxsus imkoniyatlar</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-gray">
+                <p>Qulaylik uchun saytning mahsus imkoniyataridan foydalanishingiz mumkin !</p>
+
+            </div>
+            <div class="modal-footer">
+                <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+            </div>
+        </div>
+    </div>
+</div>
+<div class="nav-item d-none">
+    <a class="nav-link d-flex align-items-center me-1 fs-7" data-bs-toggle="modal"
+       data-bs-target="#specialOpportunities" href="#"><i class="me-1 bx bx-show"></i>
+        Maxsus imkoniyatlar</a>
+</div>
+
+<div class="plus-tag-gen position-fixed footer-fixed-menus"><!--border border-1 rounded-3 border-primary backdrop-filter-blur-->
+    <div class="z-index-9 d-none d-md-flex flex-column row-gap-2 my-5">
+        <a href="#" class="d-flex justify-content-center align-items-center"><i
+                class='bx bxl-telegram fs-4 text-primary'></i></a>
+        <a href="#" class="d-flex justify-content-center align-items-center"><i
+                class='bx bxl-instagram fs-4 text-primary'></i></a>
+        <a href="#" class="d-flex justify-content-center align-items-center"><i
+                class='bx bxl-facebook fs-4 text-primary'></i></a>
+    </div>
+    <div class="plus-tag-body bg-light-gray align-items-center">
+        <div class="d-flex align-items-center position-darkLight pt-2"><!--d-md-flex-->
+            <a class="dropdown-item w-auto noDefalult" href="#">
+                <div class="position-relative darkmode">
+                    <input type="checkbox" id="toggleThemeMode" class="mode__theme"/>
+                    <label class="label bg-primary" for="toggleThemeMode"></label>
+                </div>
+            </a>
+        </div>
+        <div class="d-flex align-items-center pt-4">
+            <a class="dropdown-item w-auto noDefalult voiceOn" href="#"><!--data-bs-target="#voiceModal"-->
+                <!---->
+                <div class="position-relative z-index-9 voiceMode">
+                    <input type="checkbox" id="toggleVoiceMode" class="mode__voice"/>
+                    <label class="label bg-primary" for="toggleVoiceMode"></label>
+                </div>
+            </a>
+            <span class="modal-line"></span>
+            <div class="darkLightMode">
+                <b class="d-none"> matnni ovozli rejimda o’qish</b>
+            </div>
+        </div>
+        <div class="d-flex align-items-center position-fontIncDec">
+            <div class="d-flex align-items-center flex-wrap">
+                <div
+                        class="d-flex align-items-center row-gap-2 justify-content-evenly mb-2 flex-wrap dropdown-not-close z-index-9">
+                    <div class="my-size text-center fw-bold p-1" id="currentSize">16px</div>
+                    <button class="dropdown-item dropdown-item-not-close decremet decreaseFont text-center"
+                            value="decrease">A-
+                    </button>
+                    <button class="dropdown-item dropdown-item-not-close autoSize resetFont text-center mx-2"
+                            value="resetFont" style="font-size: 16px;">auto
+                    </button>
+                    <button class="dropdown-item dropdown-item-not-close increment increaseFont text-center"
+                            value="increase">A+
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="plusMode">
+        <input type="checkbox" id="plusBtn" class="mode__plus">
+        <label class="plus-btn" for="plusBtn"></label>
+    </div>
+</div>
 
 
 <!-- Menus Modal | Omonjon  -->
@@ -97,7 +180,6 @@
         </div>
     </div>
 </div>
-
 
 <!--==================== HEADER | Omonjon ====================-->
 <header class="header" id="header">
@@ -188,12 +270,14 @@
                                         <div class="container">
                                             <div class="row col-12">
                                                 <div class="col-7">
-                                                    <li><a class="dropdown-item title-color fs-6 p-0 py-2" href="#">ОСГО
-                                                        ВТС</a></li>
-                                                    <li><a class="dropdown-item title-color fs-6 p-0 py-2" href="#">ОСГОР</a>
-                                                    </li>
-                                                    <li><a class="dropdown-item title-color fs-6 p-0 py-2" href="#">Путешествие</a>
-                                                    </li>
+                                                    <ul>
+                                                        <li><a class="dropdown-item title-color fs-6 p-0 py-2" href="#">ОСГО
+                                                            ВТС</a></li>
+                                                        <li><a class="dropdown-item title-color fs-6 p-0 py-2" href="#">ОСГОР</a>
+                                                        </li>
+                                                        <li><a class="dropdown-item title-color fs-6 p-0 py-2" href="#">Путешествие</a>
+                                                        </li>
+                                                    </ul>
                                                 </div>
                                                 <div class="col-5 d-flex align-items-center">
                                                     <img class="img-thumbnail ms-auto"
@@ -217,12 +301,14 @@
                                         <div class="container">
                                             <div class="row col-12">
                                                 <div class="col-7">
-                                                    <li><a class="dropdown-item title-color fs-6 p-0 py-2" href="#">Страховой
-                                                        случай</a></li>
-                                                    <li><a class="dropdown-item title-color fs-6 p-0 py-2" href="#">Обратная
-                                                        связь</a></li>
-                                                    <li><a class="dropdown-item title-color fs-6 p-0 py-2" href="#">Суброгация</a>
-                                                    </li>
+                                                    <ul>
+                                                        <li><a class="dropdown-item title-color fs-6 p-0 py-2" href="#">Страховой
+                                                            случай</a></li>
+                                                        <li><a class="dropdown-item title-color fs-6 p-0 py-2" href="#">Обратная
+                                                            связь</a></li>
+                                                        <li><a class="dropdown-item title-color fs-6 p-0 py-2" href="#">Суброгация</a>
+                                                        </li>
+                                                    </ul>
                                                 </div>
                                                 <div class="col-5 d-flex align-items-center">
                                                     <img class="img-thumbnail ms-auto"
@@ -246,10 +332,13 @@
                                         <div class="container">
                                             <div class="row col-12">
                                                 <div class="col-7">
-                                                    <li><a class="dropdown-item title-color fs-6 p-0 py-2" href="#">Конкурсы</a>
-                                                    </li>
-                                                    <li><a class="dropdown-item title-color fs-6 p-0 py-2" href="#">Аукционы</a>
-                                                    </li>
+                                                    <ul>
+                                                        <li><a class="dropdown-item title-color fs-6 p-0 py-2" href="#">Конкурсы</a>
+                                                        </li>
+                                                        <li><a class="dropdown-item title-color fs-6 p-0 py-2" href="#">Аукционы</a>
+                                                        </li>
+                                                    </ul>
+                                                    >
                                                 </div>
                                                 <div class="col-5 d-flex align-items-center">
                                                     <img class="img-thumbnail ms-auto"
@@ -278,7 +367,6 @@
             </div>
         </div>
     </nav>
-
 
     <nav class="navbar" id="myHeader">
         <div class="container border-bottom pb-2 justify-content-lg-between justify-content-sm-start">
@@ -352,8 +440,8 @@
     </div>
 </section>
 
-
 <!--================ Types of insurance | Omonjon ================-->
+
 <section class="typeIns mt-3 mt-lg-5 mb-5">
     <div class="container">
         <h2 class="title-color fs-2 fw-bold text-md-start text-center">Виды страхования </h2>
@@ -407,8 +495,8 @@
     </div>
 </section>
 
-
 <!--================ OFFERS | Sirojiddin ================-->
+
 <section class="offers mt-5">
     <div class="container">
         <div class="offers-heading">
@@ -510,15 +598,15 @@
             </div>
         </div>
         <div class="text-center">
-            <a class="d-inline-block text-center border-bottom-dashed text-secondary mt-50px" href="#!">Все продукты</a>
+            <a class="d-inline-block text-center border-bottom-dashed text-secondary mt-50px" href="#">Все продукты</a>
         </div>
     </div>
 </section>
 
-
 <!--========================================================================-->
 <!-- |PARTNERS| SWIPER| -->
 <!--========================================================================-->
+
 <section class="partners">
     <div class="container py-5">
         <h2 class="title-color fs-2 fw-bold text-center text-md-start">Нам доверяют</h2>
@@ -581,7 +669,6 @@
     </div>
 
 </section>
-
 
 <!--================ NEWS COMPANY | Sobirovs ================-->
 
@@ -653,13 +740,12 @@
             </div>
             <div class="col-12 col-lg-5 d-none d-md-block">
                 <div class="d-flex justify-content-lg-end justify-content-center align-content-center">
-                    <img class="sadden-img" src="./assets/images/business.png">
+                    <img class="sadden-img" src="./assets/images/business.png" alt="img">
                 </div>
             </div>
         </div>
     </div>
 </section>
-
 
 <!--================ FOOTER | Omonjon ================-->
 <footer class="bg-light footer">
@@ -703,14 +789,27 @@
                         <li class="">
                             <a href="#" class="footer-link-color fs-6">Пресс - центр</a>
                         </li>
-                        <span class="" style="color: #939393; font-weight: 500; font-size: 14px;">Подписывайтесь и читайте нас в социальных сетях</span>
                     </ul>
-                    <ul class="mt-3">
-                        <a href="#" class="me-1"><img src="assets/images/icons/Facebook.svg" alt=""></a>
-                        <a href="#" class="me-1"><img src="assets/images/icons/Vkontakte%20(VK).svg" alt=""></a>
-                        <!--                        <a href="#" class="me-1"><img src="assets/images/icons/Odnoklassniki%20(OK).svg" alt=""></a>-->
-                        <!--                        <a href="#" class="me-1"><img src="assets/images/icons/YouTube.svg" alt=""></a>-->
-                        <a href="#" class="me-0"><img src="assets/images/icons/Instagram.svg" alt=""></a>
+                    <span class="" style="color: #939393; font-weight: 500; font-size: 14px;">Подписывайтесь и читайте нас в социальных сетях</span>
+                    <ul class="d-flex mt-3">
+                        <li>
+                            <a href="#" class="me-1"><img src="assets/images/icons/Facebook.svg" alt=""></a>
+                        </li>
+                        <li class="d-none">
+                            <a href="#" class="me-1"><img src="assets/images/icons/Vkontakte%20(VK).svg" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#" class="me-1"><img src="assets/images/icons/Instagram.svg" alt=""></a>
+                        </li>
+                        <li class="d-none">
+                            <a href="#" class="me-1"><img src="assets/images/icons/Odnoklassniki%20(OK).svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="me-1"><img src="assets/images/icons/YouTube.svg" alt=""></a>
+                        </li>
+
+
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6 col-12">
@@ -768,71 +867,15 @@
 </footer>
 
 <div class="d-flex">
-    <div class="position-fixed z-index-9 footer-social-fixed d-none d-md-flex flex-column row-gap-2">
-        <a href="#" class=""><i class='bx bxl-telegram fs-8 text-primary'></i></a>
-        <a href="#" class=""><i class='bx bxl-instagram fs-8 text-primary'></i></a>
-        <a href="#" class=""><i class='bx bxl-facebook fs-8 text-primary'></i></a>
-    </div>
-<!--    <div class=" d-none align-items-center position-fixed position-darklight">&lt;!&ndash;d-md-flex&ndash;&gt;
-        <a class="dropdown-item w-auto noDefalult" href="#">
-            <div class="position-relative darkmode">
-                <input type="checkbox" id="toggleThemeModeTEST" class="mode__theme"/>
-                <label class="label bg-primary" for="toggleThemeMode"></label>
-            </div>
-        </a>
-    </div>-->
+    <!--    <div class=" d-none align-items-center position-fixed position-darklight">&lt;!&ndash;d-md-flex&ndash;&gt;
+            <a class="dropdown-item w-auto noDefalult" href="#">
+                <div class="position-relative darkmode">
+                    <input type="checkbox" id="toggleThemeModeTEST" class="mode__theme"/>
+                    <label class="label bg-primary" for="toggleThemeMode"></label>
+                </div>
+            </a>
+        </div>-->
 </div>
-
-<div class="special-tag-gen position-relative">
-    <div class="special-tag bottom-0">
-        <input type="checkbox" id="toggle-btn">
-        <label class="toggle-btn" for="toggle-btn"></label>
-        <div class="special-tag-body bg-light-gray align-items-center">
-            <div>
-                <div class="d-flex align-items-center position-darkLight"><!--d-md-flex-->
-                    <a class="dropdown-item w-auto noDefalult" href="#">
-                        <div class="position-relative darkmode">
-                            <input type="checkbox" id="toggleThemeMode" class="mode__theme"/>
-                            <label class="label bg-primary" for="toggleThemeMode"></label>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="">
-                <div class="d-flex align-items-center position-voiceMode">
-                    <a class="dropdown-item w-auto noDefalult voiceOn" href="#" data-bs-target="#voiceModal">
-                        <!---->
-                        <div class="position-relative z-index-9 voicemode">
-                            <input type="checkbox" id="toggleVoiceMode" class="mode__voice" />
-                            <label class="label bg-primary" for="toggleVoiceMode"></label>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="">
-                <div class="d-flex align-items-center position-fontIncDec">
-                    <div class="d-flex align-items-center flex-wrap">
-                        <div
-                                class="d-flex align-items-center row-gap-2 justify-content-evenly mb-2 flex-wrap dropdown-not-close z-index-9">
-                                <div class="my-size text-center fw-bold p-1" id="currentSize">16px</div>
-                            <button class="dropdown-item dropdown-item-not-close decremet decreaseFont text-center"
-                                    value="decrease">A-
-                            </button>
-                            <button class="dropdown-item dropdown-item-not-close autoSize resetFont text-center mx-2"
-                                    value="resetFont" style="font-size: 16px;">auto
-                            </button>
-                            <button class="dropdown-item dropdown-item-not-close increment increaseFont text-center"
-                                    value="increase">A+
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
 
 <!--================ SCROLL UP | Omonjon ================-->
 <a href="#" class="scrollup z-index-9" id="scroll-up">
@@ -856,7 +899,7 @@
 <script src="assets/js/bootstrap-notify.min.js"></script>
 
 <!--================ MAIN JS | Omonjon ================-->
-<script src="assets/js/main.js?v=0.0.7"></script>
+<script src="assets/js/main.js?v=0.0.8"></script>
 
 </body>
 
