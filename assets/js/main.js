@@ -10,25 +10,28 @@ window.addEventListener("load", function (eventObject) {
 /* ########################################################## */
 /* Voice on mode ******************************************** */
 /* Modal okna zvukovoy effect uchun ************************* */
-var VoiceModeStorage = localStorage.getItem("VoiceMode");
-var voiceTop = document.querySelector(".voiceOn");
-var timeCloseModalAlert = 1;
-var voiceOn = false;
-var voiceCheck = true;
+var VoiceModeStorage = localStorage.getItem("voiceModeStorage");
+var voiceOn = document.querySelector(".voiceOn");
+var voiceMode = document.querySelector(".voiceMode");
+var timeCloseModalAlert = 100;
+var voiceCheckStatus = 0;
 var voiceModeControl = document.querySelector(".voiceModeControl");
-const voiceModeToggle = document.querySelector(".mode__voice");
-var voiceSaveToggle = document.querySelector(".voiceMode input[type='checkbox']");
+var voiceSaveToggle = document.querySelector("input[id='toggleVoiceMode']");
+// const voiceModeToggle = document.querySelector(".mode__voice");
+// var justVoiceId = document.getElementById("voiceId");
+var justVoiceClass = document.querySelector(".voiceUnique");
 
 /* Barcha matnlarni ovozlarni ******************************* */
+
 /* ijro etuvchi funksiyalar shuni ichida ******************** */
 
-function ifActiveVoice() {
-    if (!voiceOn) {
+function activeVoice() {
+    if (!voiceCheckStatus) {
         // Malum secundan keyin sahifa yangilanadi
         setInterval(() => {
             location.reload();
         }, timeCloseModalAlert);
-    } else if (voiceOn) {
+    } else if (voiceCheckStatus) {
         // A simple IIFE function.
         // Простая функция IIFE.
         // Oddiy IIFE funktsiyasi.
@@ -222,61 +225,48 @@ function ifActiveVoice() {
 }
 
 const enableVoiceMode = () => {
-    voiceTop.classList.add("active");
+    voiceOn.classList.add("active");
     voiceModeControl.classList.add("active");
-    voiceModeToggle.classList.add("active");
     voiceSaveToggle.setAttribute("checked", "true");
-    voiceOn = true;
-    /*voiceCheck = false;*/
-    ifActiveVoice();
-    localStorage.setItem("VoiceMode", "enabled");
+    voiceSaveToggle.classList.add('active');
+    voiceCheckStatus = 1;
+    activeVoice();
+    localStorage.setItem("voiceModeStorage", "enabled");
 };
-const EnableAllSound = () => {
-    document.getElementById("voice").classList.remove("d-none", "visibility-hidden", "user-select");
-}
 
-const disableVoiceMode = () => {
-    voiceTop.classList.remove("active");
-    voiceModeControl.classList.remove("active");
-    voiceModeToggle.classList.remove("active");
-    voiceSaveToggle.setAttribute("checked", "false");
-    voiceOn = true;
-    /*voiceCheck = true;*/
-    localStorage.setItem("VoiceMode", null);
-};
 const DisableAllSound = () => {
     voiceModeControl.innerHTML = "";
-    document.getElementById("voice").classList.add("d-none", "visibility-hidden", "user-select");
+    justVoiceClass.classList.add("d-none", "visibility-hidden", "user-select");
     /*document.getElementById("voice").innerHTML = "";*/
 }
 
-if (VoiceModeStorage === 'enabled') {
+const EnableAllSound = () => {
+    justVoiceClass.classList.remove("d-none", "visibility-hidden", "user-select");
+}
+
+const disableVoiceMode = () => {
+    voiceOn.classList.remove("active");
+    voiceModeControl.classList.remove("active");
+    voiceSaveToggle.setAttribute("checked", "false");
+    voiceSaveToggle.classList.remove('active');
+    voiceCheckStatus = 0;
+    localStorage.setItem("voiceModeStorage", null);
+};
+
+if (VoiceModeStorage === "enabled") {
     enableVoiceMode();
     EnableAllSound();
 }
 
-voiceTop.addEventListener("click", () => {
+voiceSaveToggle.addEventListener("click", () => {
 
-    console.log(voiceOn)
-    if (!voiceOn) {
+    console.log("VoiceON Clicked")
+    console.log(voiceCheckStatus);
+
+    if (!voiceCheckStatus) {
         enableVoiceMode();
         EnableAllSound();
-    } else if (voiceOn) {
-        disableVoiceMode();
-        DisableAllSound();
 
-    }
-
-    /*ifActiveVoice();*/
-});
-
-/* ********************************************************** */
-/* ########################################################## */
-/* Bootstrap Notify *******************************************/
-
-$('.voiceOn').click(function () {
-    if ($(".voiceOn").hasClass("active")) {
-        console.log('Work Active');
         $.notify({
             // options
             icon: 'bx bx-volume-full bx-sm',
@@ -304,7 +294,7 @@ $('.voiceOn').click(function () {
             url_target: '_blank',
             mouse_over: null,
             animate: {
-                enter: 'animated fadeInDown',
+                enter: 'animated fadeInDown shadow border-white  bg-primary text-white',
                 exit: 'animated fadeOutRight'
             },
             onShow: null,
@@ -323,9 +313,10 @@ $('.voiceOn').click(function () {
             //     '<a href="{3}" target="{4}" data-notify="url"></a>' +
             //     '</div>'
         });
-    }
-    else {
-        console.log('Work without Active');
+    } else {
+        disableVoiceMode();
+        DisableAllSound();
+
         $.notify({
             // options
             icon: 'bx bx-volume-mute bx-sm',
@@ -353,7 +344,7 @@ $('.voiceOn').click(function () {
             url_target: '_blank',
             mouse_over: null,
             animate: {
-                enter: 'animated fadeInDown',
+                enter: 'animated fadeInDown shadow border-white bg-primary text-white',
                 exit: 'animated fadeOutRight'
             },
             onShow: null,
@@ -373,7 +364,25 @@ $('.voiceOn').click(function () {
             //     '</div>'
         });
     }
-})
+});
+// $('.voiceOn').click(function () {
+//     if ($(".voiceOn").hasClass("active")) {
+//         console.log('Work Active');
+//
+//     }
+//     else {
+//         console.log('Work without Active');
+//
+//     }
+// })
+
+/* ********************************************************** */
+/* ########################################################## */
+/* Bootstrap Notify *******************************************/
+
+// $('.voiceOn').click(function () {
+//
+// })
 /* ********************************************************** */
 /* ########################################################## */
 /* Plus toggle size incremine or decremine ************************* */
@@ -383,11 +392,15 @@ const plusModeToggle = document.querySelector(".mode__plus");
 /*let plusSvgNone = document.querySelectorAll(".plus-svg-none");*/
 let plusSaveToggle = document.querySelector(".plusMode input[id='plusBtn']");
 let plusTagBody = document.querySelector(".plus-tag-body");
+let socialPosition = document.querySelector('.social-position');
+let widthRightNow = window.innerWidth;
+let descTopWidth = 1024;
 
 const enablePlusMode = () => {
     plusModeToggle.classList.add("active");
     plusTagBody.classList.add("active");
     plusSaveToggle.setAttribute("checked", "true");
+    socialPosition.classList.add("active");
 
     // for (let i = 0; i < svgNone.length; i++) {
     //     const element = svgNone[i];
@@ -400,16 +413,21 @@ const disablePlusMode = () => {
     plusModeToggle.classList.remove("active");
     plusTagBody.classList.remove("active");
     plusSaveToggle.setAttribute("checked", "false");
+    socialPosition.classList.remove("active");
 
-/*    for (let i = 0; i < svgNone.length; i++) {
-        const element = svgNone[i];
-        element.style.display = "block";
-    }*/
+    /*    for (let i = 0; i < svgNone.length; i++) {
+            const element = svgNone[i];
+            element.style.display = "block";
+        }*/
 
     localStorage.setItem("plusMode", null);
 };
 
 if (plusMode === 'enabled') {
+    enablePlusMode();
+}
+
+if ((widthRightNow >= descTopWidth) && (plusMode === null)) {
     enablePlusMode();
 }
 
@@ -436,24 +454,64 @@ $(document).ready(function () {
     let minus5Min = '16px';
     let decrease = document.querySelector(".decremet");
     let increase = document.querySelector(".increment");
+    let autoSizeInvisible = document.querySelector(".autoSizeInvisible");
     let currentSize = document.getElementById("currentSize");
     var curFontSize = localStorage["FontSize"];
+    var multipleTextBefore = 'Saytda font o\'lchovi';
+    var multipleBefore = '<span class="bg-white text-primary p-1 mx-2 rounded-3 w-56px d-block">' + '1x' + '</span>';
+    var multipleTextAfter = 'karra kattalashtirildi';
     if (curFontSize) {
         //set to previously saved fontsize if available
         $('.dataFont').css('font-size', curFontSize);
-        currentSize.innerText = curFontSize;
+
+
+        if (curFontSize === '16px') {
+            multipleTextAfter = ' dastlabki holatga qaytarildi!';
+            multipleBefore = '1x';
+        }
+        if (curFontSize === '17px') {
+            // multiple = '1.0625x';
+            multipleBefore = '1.1x';
+        }
+        if (curFontSize === '18px') {
+            // multiple = '1.125x';
+            multipleBefore = '1.2x';
+        }
+        if (curFontSize === '19px') {
+            // multiple = '1.1875x';
+            multipleBefore = '1.3x';
+        }
+        if (curFontSize === '20px') {
+            // multiple = '1.25x';
+            multipleBefore = '1.4x';
+        }
+        if (curFontSize === '21px') {
+            // multiple = '1.3125x';
+            multipleBefore = '1.5x';
+        }
+        if (curFontSize === '22px') {
+            // multiple = '1.375x';
+            multipleBefore = '1.6x';
+        }
+        currentSize.innerHTML = '<span class="bg-white text-primary p-1 mx-2 rounded-3 w-56px d-block">' + multipleBefore + '</span>';
+        // currentSize.innerHTML = ' <span class="bg-white text-primary p-1 mx-2 rounded-3">' + multiple + '</span> ';
         if (curFontSize === '22px') {
             increase.classList.add('active-last');
             increase.classList.add('visibile-hide');
             decrease.classList.remove('active-last');
             decrease.classList.add('visibile');
+            autoSizeInvisible.classList.add('visibile');
+
 
         } else if (curFontSize === '16px') {
             decrease.classList.remove('active-last');
             decrease.classList.remove('visibile');
+            autoSizeInvisible.classList.remove('visibile');
         } else {
             decrease.classList.add('active-last');
             decrease.classList.add('visibile');
+            autoSizeInvisible.classList.add('visibile');
+
         }
 
     }
@@ -463,39 +521,140 @@ $(document).ready(function () {
         if (type === 'increase') {
             decrease.classList.remove('active-last');
             decrease.classList.add('visibile');
+
+            autoSizeInvisible.classList.add('visibile');
+
             if (curFontSize !== plus5Max) {
                 $('.dataFont').css('font-size', parseInt(curFontSize) + 1 + "px");
                 curFontSize = parseInt(curFontSize) + 1 + "px";
+                if(curFontSize ===plus5Max){
+                    increase.classList.add('active-last');
+                    increase.classList.add('visibile-hide');
+                    autoSizeInvisible.classList.add('visibile');
+                }
             } else {
                 increase.classList.add('active-last');
                 increase.classList.add('visibile-hide');
+                autoSizeInvisible.classList.add('visibile');
             }
         } else if (type === 'decrease') {
             increase.classList.remove('active-last');
             increase.classList.remove('visibile-hide');
+
             if (curFontSize !== minus5Min) {
                 $('.dataFont').css('font-size', parseInt(curFontSize) - 1 + "px");
                 curFontSize = parseInt(curFontSize) - 1 + "px";
+                if (curFontSize === minus5Min) {
+                    autoSizeInvisible.classList.remove('visibile');
+                    decrease.classList.add('active-last');
+                    decrease.classList.remove('visibile');
+                }
+
             } else {
                 decrease.classList.add('active-last');
                 decrease.classList.remove('visibile');
+
             }
         } else if (type === 'resetFont') {
             decrease.classList.remove('active-last');
             decrease.classList.remove('visibile');
             increase.classList.remove('active-last');
             increase.classList.remove('visibile-hide');
+            autoSizeInvisible.classList.remove('visibile');
+
             $('.dataFont').css('font-size', "16px");
             curFontSize = "16px";
         }
-        currentSize.innerText = curFontSize;
+
         localStorage.setItem('FontSize', curFontSize);
+
+        var multipleTextBefore = 'Saytda font o\'lchovi';
+        var multiple = '16px';
+        var multipleTextAfter = 'karra kattalashtirildi';
+
+        if (curFontSize === '16px'){
+            multipleTextAfter = ' dastlabki holatga qaytarildi!';
+            multiple = '1x';
+        }
+        if (curFontSize === '17px'){
+            // multiple = '1.0625x';
+            multiple = '1.1x';
+        }
+        if (curFontSize === '18px'){
+            // multiple = '1.125x';
+            multiple = '1.2x';
+        }
+        if (curFontSize === '19px'){
+            // multiple = '1.1875x';
+            multiple = '1.3x';
+        }
+        if (curFontSize === '20px'){
+            // multiple = '1.25x';
+            multiple = '1.4x';
+        }
+        if (curFontSize === '21px'){
+            // multiple = '1.3125x';
+            multiple = '1.5x';
+        }
+        if (curFontSize === '22px'){
+            // multiple = '1.375x';
+            multiple = '1.6x';
+        }
+        // currentSize.innerText = curFontSize;
+        currentSize.innerHTML = ' <span class="bg-white text-primary p-1 mx-2 rounded-3 w-56px d-block">' + multiple + '</span> ';
+        $.notify({
+            // options
+            icon: 'bx bx-font-size bx-sm',
+            title: 'Font o\'lchovi',
+            message: multipleTextBefore + ' ' + ' <span class="bg-white text-primary p-2 mx-2 rounded-3 w-56px d-flex align-items-center justify-content-center">' + multiple + '</span> ' + ' ' + multipleTextAfter, //curFontSize
+            // message: 'Sayda kunduzgi rejim ishga tushdi !',
+            // url: 'https://github.com/mouse0270/bootstrap-notify',
+            // target: '_blank'
+        }, {
+            // settings
+            element: 'body',
+            // position: null,
+            type: "info",
+            // allow_dismiss: true,
+            // newest_on_top: false,
+            showProgressbar: false,
+            placement: {
+                from: "top",
+                align: "right"
+            },
+            offset: 20,
+            spacing: 10,
+            z_index: 9999,
+            delay: 2000,
+            timer: 1000,
+            url_target: '_blank',
+            mouse_over: null,
+            animate: {
+                enter: 'animated fadeInDown shadow border-white  bg-primary text-white',
+                exit: 'animated fadeOutRight'
+            },
+            onShow: null,
+            onShown: null,
+            onClose: null,
+            onClosed: null,
+            icon_type: 'class',
+            // template: '<div data-notify="container" class="col-xs-11 col-sm-3 alert alert-{0}" role="alert">' +
+            //     '<button type="button" aria-hidden="true" class="close" data-notify="dismiss">×</button>' +
+            //     '<span data-notify="icon"></span> ' +
+            //     '<span data-notify="title">{1}</span> ' +
+            //     '<span data-notify="message">{2}</span>' +
+            //     '<div class="progress" data-notify="progressbar">' +
+            //     '<div class="progress-bar progress-bar-{0}" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>' +
+            //     '</div>' +
+            //     '<a href="{3}" target="{4}" data-notify="url"></a>' +
+            //     '</div>'
+        });
     });
 });
 
 
 // For Dark Light mode | Omonjon //
-let darkMode = localStorage.getItem("darkMode");
+let darkModeStorage = localStorage.getItem("darkModeStorage");
 const darkModeToggle = document.querySelector(".mode__theme");
 let svgNone = document.querySelectorAll(".svg-none");
 let saveToggle = document.querySelector(".darkmode input[type='checkbox']");
@@ -510,22 +669,23 @@ const enableDarkMode = () => {
         element.style.display = "none";
     }
 
-    localStorage.setItem("darkMode", "enabled");
+    localStorage.setItem("darkModeStorage", "enabled");
 };
 
 const disableDarkMode = () => {
     document.documentElement.classList.remove("blind");
     darkModeToggle.classList.remove("active");
     saveToggle.setAttribute("checked", "false");
+
     for (let i = 0; i < svgNone.length; i++) {
         const element = svgNone[i];
         element.style.display = "block";
     }
 
-    localStorage.setItem("darkMode", null);
+    localStorage.setItem("darkModeStorage", null);
 };
 
-if (darkMode === 'enabled') {
+if (darkModeStorage === 'enabled') {
     enableDarkMode();
 }
 
@@ -546,13 +706,105 @@ function enableScroll() {
 }
 
 darkModeToggle.addEventListener("click", () => {
-    darkMode = localStorage.getItem("darkMode");
+    darkModeStorage = localStorage.getItem("darkModeStorage");
 
-    if (darkMode !== 'enabled') {
+    if (darkModeStorage !== 'enabled') {
         enableDarkMode();
+        $.notify({
+            // options
+            icon: 'bx bx-moon bx-sm',
+            title: 'Tungi rejim yoqildi',
+            message: 'Sayda kunduzgi rejim ishga tushdi !',
+            // url: 'https://github.com/mouse0270/bootstrap-notify',
+            // target: '_blank'
+        }, {
+            // settings
+            element: 'body',
+            // position: null,
+            type: "info",
+            // allow_dismiss: true,
+            // newest_on_top: false,
+            showProgressbar: false,
+            placement: {
+                from: "top",
+                align: "right"
+            },
+            offset: 20,
+            spacing: 10,
+            z_index: 9999,
+            delay: 3500,
+            timer: 1000,
+            url_target: '_blank',
+            mouse_over: null,
+            animate: {
+                enter: 'animated fadeInDown shadow border-white  bg-primary text-white',
+                exit: 'animated fadeOutRight'
+            },
+            onShow: null,
+            onShown: null,
+            onClose: null,
+            onClosed: null,
+            icon_type: 'class',
+            // template: '<div data-notify="container" class="col-xs-11 col-sm-3 alert alert-{0}" role="alert">' +
+            //     '<button type="button" aria-hidden="true" class="close" data-notify="dismiss">×</button>' +
+            //     '<span data-notify="icon"></span> ' +
+            //     '<span data-notify="title">{1}</span> ' +
+            //     '<span data-notify="message">{2}</span>' +
+            //     '<div class="progress" data-notify="progressbar">' +
+            //     '<div class="progress-bar progress-bar-{0}" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>' +
+            //     '</div>' +
+            //     '<a href="{3}" target="{4}" data-notify="url"></a>' +
+            //     '</div>'
+        });
         /*disableScroll();*/
     } else {
         disableDarkMode();
+        $.notify({
+            // options
+            icon: 'bx bx-sun bx-sm',
+            title: 'Kunduzgi rejim yoqildi',
+            message: 'Sayda kunduzgi rejim ishga tushdi !',
+            // url: 'https://github.com/mouse0270/bootstrap-notify',
+            // target: '_blank'
+        }, {
+            // settings
+            element: 'body',
+            // position: null,
+            type: "info",
+            // allow_dismiss: true,
+            // newest_on_top: false,
+            showProgressbar: false,
+            placement: {
+                from: "top",
+                align: "right"
+            },
+            offset: 20,
+            spacing: 10,
+            z_index: 9999,
+            delay: 3500,
+            timer: 1000,
+            url_target: '_blank',
+            mouse_over: null,
+            animate: {
+                enter: 'animated fadeInDown shadow border-white bg-primary text-white',
+                exit: 'animated fadeOutRight'
+            },
+            onShow: null,
+            onShown: null,
+            onClose: null,
+            onClosed: null,
+            icon_type: 'class',
+            // template: '<div data-notify="container" class="col-xs-11 col-sm-3 alert alert-{0}" role="alert">' +
+            //     '<button type="button" aria-hidden="true" class="close" data-notify="dismiss">×</button>' +
+            //     '<span data-notify="icon"></span> ' +
+            //     '<span data-notify="title">{1}</span> ' +
+            //     '<span data-notify="message">{2}</span>' +
+            //     '<div class="progress" data-notify="progressbar">' +
+            //     '<div class="progress-bar progress-bar-{0}" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>' +
+            //     '</div>' +
+            //     '<a href="{3}" target="{4}" data-notify="url"></a>' +
+            //     '</div>'
+        });
     }
 });
 
@@ -613,7 +865,9 @@ if ($(".introSwiper").length) {
     // }
     const swiperOptions = {
         loop: "infinite",
-        effect: "fade",
+        effect: "flip",
+        grabCursor: true,
+        // sliderPerView:1,
         autoplay: {
             delay: 4700,
             disableOnInteraction: false
@@ -633,18 +887,26 @@ if ($(".introSwiper").length) {
 </button>
       `;
             }
+        },
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                effect: "creative",
+                // spaceBetween: 20
+            },
+            // when window width is >= 320px
+            768: {
+                effect: "flip",
+                // spaceBetween: 20
+            },
         }
+
     };
-/*
-${
-                    i + 1
-                } */
+    /*
+    ${
+                        i + 1
+                    } */
     const swiper2 = new Swiper(".introSwiper", swiperOptions);
-
-
-
-
-
 
 
     /*var swiper = new Swiper(".introSwiper", {
@@ -659,7 +921,6 @@ ${
         },
     });*/
 }
-
 
 
 /*=============== HEADER FIXED | Omonjon ===============*/
@@ -697,3 +958,20 @@ var e = ".dropdown-backdrop",
     g = function (b) {
         a(b).on("click.bs.dropdown", this.toggle)
     };
+
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+//Initialize bootstrap tooltips
+// var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+// var tooltipList = tooltipTriggerList.map( function(tooltipTriggerEl) {
+//     return new bootstrap.Tooltip(tooltipTriggerEl, {
+//         trigger : 'hover'
+//     });
+// });
+// $('[data-toggle="tooltip"]').tooltip({
+//     trigger : 'hover'
+// })
+$('[rel="tooltip"]').on('click', function () {
+    $(this).tooltip('hide')
+})

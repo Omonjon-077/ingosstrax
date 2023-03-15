@@ -11,17 +11,20 @@
     <!--================ FAVICON | Omonjon ================-->
     <link rel="shortcut icon" href="assets/images/icons/favicon.svg" type="image/x-icon">
 
-    <!--================ BOX ICONS CSS 2.1.4v | Omonjon ================-->
+    <!--============== BOX ICONS CSS 2.1.4v | Omonjon ==============-->
     <link rel="stylesheet" href="assets/css/boxicons.min.css">
 
     <!--================ SWIPER CSS 8.1.1v | Omonjon ================-->
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
 
-    <!--================ BOOTSTRAP CSS 5.3v | Omonjon ================-->
+    <!--================ BOOTSTRAP CSS 5.3v | Omonjon ===============-->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
-    <!-- Animate Css 3.2.3v -->
+    <!--================ animate CSS ?v | Omonjon ===============-->
     <link rel="stylesheet" href="assets/css/animate.min.css">
+
+    <!--================ AOS CSS ?v | Omonjon ===============-->
+    <link rel="stylesheet" href="assets/css/aos.css">
 
     <!--================ STYLE CSS | Omonjon ================-->
     <link rel="stylesheet" href="assets/css/main.css?v=0.0.9">
@@ -34,9 +37,9 @@
 <!-- BUTTON HIGHGROUND TEXT READ (VOICES) -->
 <!--========================================================================-->
 <select class="voiceModeControl d-none invisible" id="voiceSelect" hidden></select>
-<button class="btn-voice shadow" id="voice">
+<button class="btn-voice border-0 shadow voiceUnique" id="voice">
     <div class="icon-voice d-flex align-items-center justify-content-center">
-        <i class="bx bx-volume-full bx-sm"></i>
+        <i class="bx bx-volume-full bx-sm text-white bx-volume-effect"></i>
     </div>
 </button>
 <!--==================== LOADER | Omonjon ====================-->
@@ -74,16 +77,16 @@
 </div>
 
 <div class="plus-tag-gen position-fixed footer-fixed-menus"><!--border border-1 rounded-3 border-primary backdrop-filter-blur-->
-    <div class="z-index-9 d-none d-md-flex flex-column row-gap-2 my-5">
-        <a href="#" class="d-flex justify-content-center align-items-center"><i
+    <div class="z-index-9 position-absolute social-position d-flex flex-column row-gap-2">
+        <a href="#" class="d-flex justify-content-center align-items-center w-37-px h-37-px bg-light-gray rounded-3 "><i
                 class='bx bxl-telegram fs-4 text-primary'></i></a>
-        <a href="#" class="d-flex justify-content-center align-items-center"><i
+        <a href="#" class="d-flex justify-content-center align-items-center w-37-px h-37-px bg-light-gray rounded-3"><i
                 class='bx bxl-instagram fs-4 text-primary'></i></a>
-        <a href="#" class="d-flex justify-content-center align-items-center"><i
+        <a href="#" class="d-flex justify-content-center align-items-center w-37-px h-37-px bg-light-gray rounded-3"><i
                 class='bx bxl-facebook fs-4 text-primary'></i></a>
     </div>
-    <div class="plus-tag-body bg-light-gray align-items-center">
-        <div class="d-flex align-items-center position-darkLight pt-2"><!--d-md-flex-->
+    <div class="plus-tag-body bg-light-gray align-items-center pt-3">
+        <div class="d-flex align-items-center position-darkLight" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" data-bs-title="tungi/kunduzgi rejim yoqish" data-bs-custom-class="custom-tooltip"><!--d-md-flex-->
             <a class="dropdown-item w-auto noDefalult" href="#">
                 <div class="position-relative darkmode">
                     <input type="checkbox" id="toggleThemeMode" class="mode__theme"/>
@@ -91,28 +94,27 @@
                 </div>
             </a>
         </div>
-        <div class="d-flex align-items-center pt-4">
-            <a class="dropdown-item w-auto noDefalult voiceOn" href="#"><!--data-bs-target="#voiceModal"-->
-                <!---->
+        <div class="d-flex align-items-center pt-0" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" data-bs-title="ovozli rejimni ishga tushirish" data-bs-custom-class="custom-tooltip">
+            <div class="w-auto voiceOn"><!-- noDefalult data-bs-target="#voiceModal"-->
                 <div class="position-relative z-index-9 voiceMode">
                     <input type="checkbox" id="toggleVoiceMode" class="mode__voice"/>
                     <label class="label bg-primary" for="toggleVoiceMode"></label>
                 </div>
-            </a>
+            </div>
             <span class="modal-line"></span>
             <div class="darkLightMode">
-                <b class="d-none"> matnni ovozli rejimda o’qish</b>
+                <b class="d-none invisible">matnni ovozli rejimda o’qish</b>
             </div>
         </div>
         <div class="d-flex align-items-center position-fontIncDec">
             <div class="d-flex align-items-center flex-wrap">
                 <div
                         class="d-flex align-items-center row-gap-2 justify-content-evenly mb-2 flex-wrap dropdown-not-close z-index-9">
-                    <div class="my-size text-center fw-bold p-1" id="currentSize">16px</div>
+                    <div class="my-size text-center fw-bold p-0" id="currentSize"><span class="bg-white text-primary p-1 mx-2 rounded-3 w-56px d-block">1x</span></div>
                     <button class="dropdown-item dropdown-item-not-close decremet decreaseFont text-center"
                             value="decrease">A-
                     </button>
-                    <button class="dropdown-item dropdown-item-not-close autoSize resetFont text-center mx-2"
+                    <button class="dropdown-item dropdown-item-not-close autoSize autoSizeInvisible resetFont text-center mx-2"
                             value="resetFont" style="font-size: 16px;">auto
                     </button>
                     <button class="dropdown-item dropdown-item-not-close increment increaseFont text-center"
@@ -145,34 +147,34 @@
                     <div class="d-grid d-grid-custom row-gap-4 column-gap-4">
                         <div class="d-flex flex-column row-gap-2">
                             <h1 class="text-white fs-4 fw-bold">О компании</h1>
-                            <a href="#" class="text-white fs-6">Коллегиальный и консультационные органы</a>
-                            <a href="#" class="text-white fs-6">Учредительные и внутренние документы</a>
-                            <a href="#" class="text-white fs-6">Руководство</a>
-                            <a href="#" class="text-white fs-6">Организационная структура общества</a>
-                            <a href="#" class="text-white fs-6">Финансовая отчетность</a>
-                            <a href="#" class="text-white fs-6">Результаты год. деятельности</a>
-                            <a href="#" class="text-white fs-6">Клиенты и партнеры</a>
-                            <a href="#" class="text-white fs-6">Международная страховая груша «ИНГО»</a>
+                            <a href="#" class="text-white fs-6 w-max-content">Коллегиальный и консультационные органы</a>
+                            <a href="#" class="text-white fs-6 w-max-content">Учредительные и внутренние документы</a>
+                            <a href="#" class="text-white fs-6 w-max-content">Руководство</a>
+                            <a href="#" class="text-white fs-6 w-max-content">Организационная структура общества</a>
+                            <a href="#" class="text-white fs-6 w-max-content">Финансовая отчетность</a>
+                            <a href="#" class="text-white fs-6 w-max-content">Результаты год. деятельности</a>
+                            <a href="#" class="text-white fs-6 w-max-content">Клиенты и партнеры</a>
+                            <a href="#" class="text-white fs-6 w-max-content">Международная страховая груша «ИНГО»</a>
                         </div>
 
                         <div class="d-flex flex-column row-gap-2">
                             <h1 class="text-white fs-4 fw-bold">Онлайн страхование</h1>
-                            <a href="#" class="text-white fs-6">ОСГО</a>
-                            <a href="#" class="text-white fs-6">ОСГОР</a>
-                            <a href="#" class="text-white fs-6">Путешествие</a>
+                            <a href="#" class="text-white fs-6 w-max-content">ОСГО</a>
+                            <a href="#" class="text-white fs-6 w-max-content">ОСГОР</a>
+                            <a href="#" class="text-white fs-6 w-max-content">Путешествие</a>
                         </div>
 
                         <div class="d-flex flex-column row-gap-2">
                             <h1 class="text-white fs-4 fw-bold">Интерактивные онлайн услуги</h1>
-                            <a href="#" class="text-white fs-6">Страховой случай</a>
-                            <a href="#" class="text-white fs-6">Обратная связь</a>
-                            <a href="#" class="text-white fs-6">Суброгация</a>
+                            <a href="#" class="text-white fs-6 w-max-content">Страховой случай</a>
+                            <a href="#" class="text-white fs-6 w-max-content">Обратная связь</a>
+                            <a href="#" class="text-white fs-6 w-max-content">Суброгация</a>
                         </div>
 
                         <div class="d-flex flex-column row-gap-2">
                             <h1 class="text-white fs-4 fw-bold">Тендеры</h1>
-                            <a href="#" class="text-white fs-6">Конкурсы</a>
-                            <a href="#" class="text-white fs-6">Аукционы</a>
+                            <a href="#" class="text-white fs-6 w-max-content">Конкурсы</a>
+                            <a href="#" class="text-white fs-6 w-max-content">Аукционы</a>
                         </div>
                     </div>
                 </div>
@@ -271,11 +273,11 @@
                                             <div class="row col-12">
                                                 <div class="col-7">
                                                     <ul>
-                                                        <li><a class="dropdown-item title-color fs-6 p-0 py-2" href="#">ОСГО
+                                                        <li><a class="dropdown-item title-color fs-6 p-0 py-2 w-max-content" href="#">ОСГО
                                                             ВТС</a></li>
-                                                        <li><a class="dropdown-item title-color fs-6 p-0 py-2" href="#">ОСГОР</a>
+                                                        <li><a class="dropdown-item title-color fs-6 p-0 py-2 w-max-content" href="#">ОСГОР</a>
                                                         </li>
-                                                        <li><a class="dropdown-item title-color fs-6 p-0 py-2" href="#">Путешествие</a>
+                                                        <li><a class="dropdown-item title-color fs-6 p-0 py-2 w-max-content" href="#">Путешествие</a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -302,11 +304,11 @@
                                             <div class="row col-12">
                                                 <div class="col-7">
                                                     <ul>
-                                                        <li><a class="dropdown-item title-color fs-6 p-0 py-2" href="#">Страховой
+                                                        <li><a class="dropdown-item title-color fs-6 p-0 py-2 w-max-content" href="#">Страховой
                                                             случай</a></li>
-                                                        <li><a class="dropdown-item title-color fs-6 p-0 py-2" href="#">Обратная
+                                                        <li><a class="dropdown-item title-color fs-6 p-0 py-2 w-max-content" href="#">Обратная
                                                             связь</a></li>
-                                                        <li><a class="dropdown-item title-color fs-6 p-0 py-2" href="#">Суброгация</a>
+                                                        <li><a class="dropdown-item title-color fs-6 p-0 py-2 w-max-content" href="#">Суброгация</a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -333,12 +335,11 @@
                                             <div class="row col-12">
                                                 <div class="col-7">
                                                     <ul>
-                                                        <li><a class="dropdown-item title-color fs-6 p-0 py-2" href="#">Конкурсы</a>
+                                                        <li><a class="dropdown-item title-color fs-6 p-0 py-2 w-max-content" href="#">Конкурсы</a>
                                                         </li>
-                                                        <li><a class="dropdown-item title-color fs-6 p-0 py-2" href="#">Аукционы</a>
+                                                        <li><a class="dropdown-item title-color fs-6 p-0 py-2 w-max-content" href="#">Аукционы</a>
                                                         </li>
                                                     </ul>
-                                                    >
                                                 </div>
                                                 <div class="col-5 d-flex align-items-center">
                                                     <img class="img-thumbnail ms-auto"
@@ -408,26 +409,46 @@
     <div class="container">
         <div class="swiper introSwiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide bg-image-1 border border-1 border-gray rounded-4 d-flex justify-content-center justify-content-md-start ps-0 ps-md-5">
-                    <div class="d-flex flex-column align-items-center align-items-md-start row-gap-4 ms-lg-5 ms-0">
-                        <h3 class="fs-1 text-white fw-bold">ОСАГО</h3>
-                        <p class="text-white fs-5 w-75 w-sm-100">Купить онлайн за&nbsp;несколько минут</p>
-                        <a href="#" class="text-white fs-5 bg-primary py-2 px-4 rounded-4">Оформить</a>
+                <div class="swiper-slide bg-white border border-1 rounded-4 row justify-content-center justify-content-md-between">
+                    <div class="col-7">
+                        <div class="d-flex flex-column align-items-center align-items-md-start ps-lg-5 ps-md-4 ps-0 lh-lg row-gap-2">
+                            <h3 class="fs-1 text-primary fw-bold">ОСАГО</h3>
+                            <p class="text-primary fs-5">Купить онлайн за&nbsp;несколько минут</p>
+                            <a href="#" class="fs-5 bg-primary text-white py-2 px-4 rounded-4">Оформить</a>
+                        </div>
+
                     </div>
+                    <div class="col-5  d-md-flex d-none" >
+                        <div class="pe-3"><!--d-md-flex d-none-->
+                            <img src="assets/images/ipoteka.png" class="w-100 d-md-block d-none object-fit-contain" alt="alt">
+                        </div>
+
+                    </div>
+
                 </div>
-                <div class="swiper-slide bg-image-2 border border-1 border-secondary rounded-4 d-flex justify-content-center justify-content-md-start ps-0 ps-md-5">
-                    <div class="d-flex flex-column align-items-center align-items-md-start row-gap-4 ms-lg-5 ms-0">
-                        <h3 class="fs-1 text-white fw-bold">Путешествия</h3>
-                        <p class="text-white fs-5 w-75 w-sm-100">Для любых направлений и&nbsp;видов виз</p>
-                        <a href="#" class="text-white fs-5 bg-primary py-2 px-4 rounded-4">Оформить</a>
+                <div class="swiper-slide bg-white border border-1 rounded-4 row justify-content-center justify-content-md-between">
+                    <div class="col-7">
+                        <div class="d-flex  flex-column align-items-center align-items-md-start ps-lg-5 ps-md-4 ps-0 lh-lg row-gap-2">
+                            <h3 class="fs-1 text-primary fw-bold">Путешествия</h3>
+                            <p class="text-primary fs-5">Для любых направлений и&nbsp;видов виз</p>
+                            <a href="#" class="fs-5 bg-primary text-white py-2 px-4 rounded-4">Оформить</a>
+                        </div>
+
                     </div>
+                    <div class="col-5 d-md-flex d-none">
+                        <div class="pe-3"> <!--d-md-flex d-none-->
+                            <img src="assets/images/travel.png" class="w-100 d-md-block d-none object-fit-contain" alt="alt">
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
             <!-- If we need navigation buttons -->
-            <div class="swiper-button-next swiper-partners-btn-next shadow-hover rounded-pill w-35px h-35px bg-white">
+            <div class="swiper-button-next swiper-partners-btn-next shadow-hover rounded-pill w-35px h-35px bg-primary">
                 <i class="bx bx-chevron-right"></i>
             </div>
-            <div class="swiper-button-prev swiper-partners-btn-prev shadow-hover rounded-pill w-35px h-35px bg-white">
+            <div class="swiper-button-prev swiper-partners-btn-prev shadow-hover rounded-pill w-35px h-35px bg-primary">
                 <i class="bx bx-chevron-left"></i>
             </div>
             <!-- If we need pagination -->
@@ -675,38 +696,42 @@
 <section class="news-company mt-5 mb-5">
     <div class="container">
         <h2 class="title-color fw-bold text-center text-md-start pb-5">Новости компании</h2>
-        <div class="col-12 row mx-0 row-gap-3">
+        <div class="row row-gap-3">
             <div class="col-12 col-lg-4 col-md-6">
-                <div class="border border-1 rounded-2 card-body px-3 py-3 px-sm-4 py-sm-4">
-                    <h5 class="card-title fs-title-sec">Взлёт 20%</h5>
-                    <p class="card-text text-secondary">Сборы «Ингоузбекистан»
-                        <br>
-                        в Приволжье в 1 полугодии 2021 года выросли на 20%</p>
-                    <div class="d-flex justify-content-between align-items-start mt-3">
+                <div class="border border-1 rounded-2 card-body d-flex flex-column justify-content-between px-3 py-3 px-sm-4 py-sm-4 h-100">
+                    <div class="d-flex flex-column">
+                        <h5 class="card-title fs-title-sec mb-2">Взлёт 20%</h5>
+                        <p class="card-text text-secondary">Сборы «Ингоузбекистан»
+                            в Приволжье в 1 полугодии 2021 года выросли на 20%</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-start mt-2">
                         <a href="#" class="card-link text-primary border-bottom-dashed border-2 border-primary pb-1">Подробнее</a>
                         <p class="card-link d-flex text-color">12.08.2021</p>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-lg-4 col-md-6">
-                <div class="border border-1 rounded-2 card-body px-3 py-3 px-sm-4 py-sm-4">
-                    <h5 class="card-title fs-title-sec">Выросли на 20%</h5>
-                    <p class="card-text text-secondary">Сборы «Ингоузбекистан»
-                        <br>
-                        в Приволжье в 1 полугодии 2021 года выросли на 20%</p>
-                    <div class="d-flex justify-content-between align-items-start mt-3">
+                <div class="border border-1 rounded-2 card-body d-flex flex-column justify-content-between px-3 py-3 px-sm-4 py-sm-4 h-100">
+                    <div class="d-flex flex-column">
+                        <h5 class="card-title fs-title-sec mb-2">Выросли на 20%</h5>
+                        <p class="card-text text-secondary">Сборы «Ингоузбекистан»
+                            в Приволжье в 1 полугодии 2021 года выросли на 20%</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-start mt-2">
                         <a href="#" class="card-link text-primary border-bottom-dashed border-2 border-primary pb-1">Подробнее</a>
                         <p class="card-link d-flex text-color">12.08.2021</p>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-lg-4 col-md-6">
-                <div class="border border-1 rounded-2 card-body px-3 py-3 px-sm-4 py-sm-4">
-                    <h5 class="card-title fs-title-sec">Сборы «Ингоузбекистан» </h5>
-                    <p class="card-text text-secondary">Сборы «Ингоузбекистан»
-                        <br>
-                        в Приволжье в 1 полугодии 2021 года выросли на 20%</p>
-                    <div class="d-flex justify-content-between align-items-start mt-3">
+                <div class="border border-1 rounded-2 card-body d-flex flex-column justify-content-between px-3 py-3 px-sm-4 py-sm-4 h-100">
+                    <div class="d-flex flex-column">
+                        <h5 class="card-title fs-title-sec mb-2">Сборы «Ингоузбекистан» </h5>
+                        <p class="card-text text-secondary">Сборы «Ингоузбекистан»
+                            в Приволжье в 1 полугодии 2021 года выросли на 20%
+                        </p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-start mt-2">
                         <a href="#" class="card-link text-primary border-bottom-dashed border-2 border-primary pb-1">Подробнее</a>
                         <p class="card-link d-flex text-color">12.08.2021</p>
                     </div>
@@ -753,11 +778,11 @@
         <div class="pt-3 pt-sm-5 pb-4 ">
             <div class="row mx-0 col-12 row-gap-4">
                 <div class="col-lg-3 col-md-3 col-sm-6 col-12">
-                    <div class="d-flex flex-column">
-                        <a href="#" class="footer-logo"><img src="assets/images/icons/ingo_uzbekistan.svg" class="w-100"
+                    <div class="d-flex flex-column row-gap-2">
+                        <a href="#" class="footer-logo w-max-content"><img src="assets/images/icons/ingo_uzbekistan.svg" class="w-100"
                                                              alt=""></a>
-                        <a href="tel:+998781509999" class="text-primary fs-5 fw-lighter mt-3 mb-2">+998(78) 150 9999</a>
-                        <p class="fs-7 fw-lighter mt-2 mb-2 footer-link-color">
+                        <a href="tel:+998781509999" class="text-primary fs-5 fw-lighter w-max-content">+998(78) 150 9999</a>
+                        <p class="fs-7 fw-lighter footer-link-color column-gap-1">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
                                 <path fill="none" d="M0 0h24v24H0z"/>
                                 <path fill="var(--bs-primary)"
@@ -765,7 +790,7 @@
                             </svg>
                             100084, г.Ташкент, Юнусабад р, ул. Ш.Рашидов, 99А
                         </p>
-                        <p class="d-flex align-items-center gap-1 fs-7 fw-lighter mt-2 footer-link-color">
+                        <p class="d-flex align-items-center column-gap-1 fs-7 fw-lighter mt-2 footer-link-color">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
                                 <path fill="none" d="M0 0h24v24H0z"/>
                                 <path fill="var(--bs-primary)"
@@ -776,80 +801,78 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6 col-12">
-                    <ul class="">
-                        <li class="mb-3">
-                            <a href="#" class="footer-link-color fs-6">Офисы</a>
-                        </li>
-                        <li class="mb-3">
-                            <a href="#" class="footer-link-color fs-6">Обратная связь</a>
-                        </li>
-                        <li class="mb-3">
-                            <a href="#" class="footer-link-color fs-6">Контакты</a>
+                    <ul class="d-flex flex-column row-gap-2 mb-4">
+                        <li class="">
+                            <a href="#" class="footer-link-color transition fs-6">Офисы</a>
                         </li>
                         <li class="">
-                            <a href="#" class="footer-link-color fs-6">Пресс - центр</a>
+                            <a href="#" class="footer-link-color transition fs-6">Обратная связь</a>
+                        </li>
+                        <li class="">
+                            <a href="#" class="footer-link-color transition fs-6">Контакты</a>
+                        </li>
+                        <li class="">
+                            <a href="#" class="footer-link-color transition fs-6">Пресс - центр</a>
                         </li>
                     </ul>
-                    <span class="" style="color: #939393; font-weight: 500; font-size: 14px;">Подписывайтесь и читайте нас в социальных сетях</span>
-                    <ul class="d-flex mt-3">
+                    <span class="footer-link-color fs-6 mt-3">Подписывайтесь и читайте нас в социальных сетях</span>
+                    <ul class="d-flex column-gap-2 mt-3">
                         <li>
-                            <a href="#" class="me-1"><img src="assets/images/icons/Facebook.svg" alt=""></a>
+                            <a href="#" class="me-1 transition social-images"><img src="assets/images/icons/Facebook.svg" alt=""></a>
                         </li>
                         <li class="d-none">
-                            <a href="#" class="me-1"><img src="assets/images/icons/Vkontakte%20(VK).svg" alt=""></a>
+                            <a href="#" class="me-1 transition social-images"><img src="assets/images/icons/Vkontakte%20(VK).svg" alt=""></a>
                         </li>
                         <li>
-                            <a href="#" class="me-1"><img src="assets/images/icons/Instagram.svg" alt=""></a>
+                            <a href="#" class="me-1 transition social-images"><img src="assets/images/icons/Instagram.svg" alt=""></a>
                         </li>
                         <li class="d-none">
-                            <a href="#" class="me-1"><img src="assets/images/icons/Odnoklassniki%20(OK).svg" alt="">
+                            <a href="#" class="me-1 transition social-images"><img src="assets/images/icons/Odnoklassniki%20(OK).svg" alt="">
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="me-1"><img src="assets/images/icons/YouTube.svg" alt=""></a>
+                            <a href="#" class="me-1 transition social-images"><img src="assets/images/icons/YouTube.svg" alt=""></a>
                         </li>
-
-
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6 col-12">
-                    <ul class="">
-                        <li class="mb-3">
-                            <a href="#" class="footer-link-color fs-6">Авто</a>
-                        </li>
-                        <li class="mb-3">
-                            <a href="#" class="footer-link-color fs-6">Путешествия</a>
-                        </li>
-                        <li class="mb-3">
-                            <a href="#" class="footer-link-color fs-6">Каско</a>
-                        </li>
-                        <li class="mb-3">
-                            <a href="#" class="footer-link-color fs-6">Осгор</a>
+                    <ul class="d-flex flex-column row-gap-2">
+                        <li class="">
+                            <a href="#" class="footer-link-color transition fs-6">Авто</a>
                         </li>
                         <li class="">
-                            <a href="#" class="footer-link-color fs-6">Другие продукты</a>
+                            <a href="#" class="footer-link-color transition fs-6">Путешествия</a>
+                        </li>
+                        <li class="">
+                            <a href="#" class="footer-link-color transition fs-6">Каско</a>
+                        </li>
+                        <li class="">
+                            <a href="#" class="footer-link-color transition fs-6">Осгор</a>
+                        </li>
+                        <li class="">
+                            <a href="#" class="footer-link-color transition fs-6">Другие продукты</a>
                         </li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6 col-12">
-                    <ul class="">
-                        <li class="mb-2">
-                            <a href="#" class="footer-link-color fs-7">О компании</a>
+                    <ul class="d-flex flex-column row-gap-2">
+                        <li class="">
+                            <a href="#" class="footer-link-color transition fs-6">О компании</a>
                         </li>
-                        <li class="mb-2">
-                            <a href="#" class="footer-link-color fs-7">Новости компании</a>
+                        <li class="">
+                            <a href="#" class="footer-link-color transition fs-6">Новости компании</a>
                         </li>
-                        <li class="mb-2">
-                            <a href="#" class="footer-link-color fs-7">Руковдоство</a>
+                        <li class="">
+                            <a href="#" class="footer-link-color transition fs-6">Руковдоство</a>
                         </li>
-                        <li class="mb-2">
-                            <a href="#" class="footer-link-color fs-7">Инвесторам и акционерам</a>
+                        <li class="">
+                            <a href="#" class="footer-link-color transition fs-6">Инвесторам и акционерам</a>
                         </li>
-                        <li class="mb-2">
-                            <a href="#" class="footer-link-color fs-7">Раскрытие информации</a>
+                        <li class="">
+                            <a href="#" class="footer-link-color transition fs-6">Раскрытие информации</a>
                         </li>
-                        <li class="mb-2">
-                            <a href="#" class="footer-link-color fs-7">Тарифы и правила</a>
+                        <li class="">
+                            <a href="#" class="footer-link-color transition fs-6">Тарифы и правила</a>
                         </li>
                     </ul>
                 </div>
@@ -865,17 +888,6 @@
         </div>
     </div>
 </footer>
-
-<div class="d-flex">
-    <!--    <div class=" d-none align-items-center position-fixed position-darklight">&lt;!&ndash;d-md-flex&ndash;&gt;
-            <a class="dropdown-item w-auto noDefalult" href="#">
-                <div class="position-relative darkmode">
-                    <input type="checkbox" id="toggleThemeModeTEST" class="mode__theme"/>
-                    <label class="label bg-primary" for="toggleThemeMode"></label>
-                </div>
-            </a>
-        </div>-->
-</div>
 
 <!--================ SCROLL UP | Omonjon ================-->
 <a href="#" class="scrollup z-index-9" id="scroll-up">
@@ -898,8 +910,14 @@
 <!--================ BOOTSTRAP NOTIFY JS 3.1.3v | Omonjon ================-->
 <script src="assets/js/bootstrap-notify.min.js"></script>
 
+<!--================ BOOTSTRAP NOTIFY JS 3.1.3v | Omonjon ================-->
+<script src="assets/js/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
 <!--================ MAIN JS | Omonjon ================-->
-<script src="assets/js/main.js?v=0.0.8"></script>
+<script src="assets/js/main.js?v=0.0.7"></script>
 
 </body>
 
