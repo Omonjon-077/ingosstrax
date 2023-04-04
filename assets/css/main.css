@@ -439,6 +439,11 @@ html.blind {
     box-shadow: none;
 }
 
+.header #navbarNavAltMarkup .navbar {
+    --bs-navbar-padding-y: 0 !important;
+    padding-top: .5rem;
+}
+
 .header .nav-bottom .dropdown-item:hover {
     background-color: transparent;
 }
